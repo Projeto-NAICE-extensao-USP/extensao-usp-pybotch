@@ -65,7 +65,7 @@ function Home() {
           />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
-          <div className="max-w-3xl text-primary-foreground">
+          <div className="max-w-3xl mx-auto text-center text-primary-foreground">
             <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold backdrop-blur">
               Projeto Extensionista · USP São Carlos
             </span>
@@ -76,12 +76,12 @@ function Home() {
               <span className="text-[oklch(0.78_0.13_220)]">Robótica</span>{" "}
               em escolas públicas.
             </h1>
-            <p className="mt-6 text-lg text-white/85 max-w-2xl leading-relaxed">
+            <p className="mt-6 text-lg text-white/85 max-w-2xl mx-auto leading-relaxed">
               Compartilhamos planos de aula, códigos e guias usados nas nossas turmas
               do Ensino Fundamental II — para que outras escolas e professores possam
               aplicar e adaptar livremente.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap gap-3 justify-center">
               <Link
                 to="/python"
                 className="inline-flex items-center gap-2 rounded-md bg-white px-5 py-3 text-sm font-semibold text-foreground hover:bg-white/90 transition-all shadow-lg"
