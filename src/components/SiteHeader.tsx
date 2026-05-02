@@ -32,29 +32,30 @@ export function SiteHeader() {
           </div>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1">
-          {navLinks.map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              activeOptions={{ exact: link.to === "/" }}
-              className="px-3 py-2 text-sm font-medium text-muted-foreground rounded-md transition-colors hover:text-foreground hover:bg-muted"
-              activeProps={{
-                className:
-                  "px-3 py-2 text-sm font-medium rounded-md text-foreground bg-muted",
-              }}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-
-        <Link
-          to="/contato"
-          className="hidden lg:inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-all hover:opacity-90 hover:shadow-md"
-        >
-          Fale conosco
-        </Link>
+        <div className="hidden lg:flex items-center gap-2 ml-auto">
+          <nav className="flex items-center gap-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                activeOptions={{ exact: link.to === "/" }}
+                className="px-3 py-2 text-sm font-medium text-muted-foreground rounded-md transition-colors hover:text-foreground hover:bg-muted"
+                activeProps={{
+                  className:
+                    "px-3 py-2 text-sm font-medium rounded-md text-foreground bg-muted",
+                }}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          <Link
+            to="/contato"
+            className="ml-2 inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-all hover:opacity-90 hover:shadow-md"
+          >
+            Fale conosco
+          </Link>
+        </div>
 
         <button
           onClick={() => setOpen((v) => !v)}
