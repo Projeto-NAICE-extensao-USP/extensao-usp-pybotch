@@ -9,8 +9,44 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ScratchRouteImport } from './routes/scratch'
+import { Route as RoboticaRouteImport } from './routes/robotica'
+import { Route as PythonRouteImport } from './routes/python'
+import { Route as GaleriaRouteImport } from './routes/galeria'
+import { Route as EquipeRouteImport } from './routes/equipe'
+import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ScratchRoute = ScratchRouteImport.update({
+  id: '/scratch',
+  path: '/scratch',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RoboticaRoute = RoboticaRouteImport.update({
+  id: '/robotica',
+  path: '/robotica',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PythonRoute = PythonRouteImport.update({
+  id: '/python',
+  path: '/python',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GaleriaRoute = GaleriaRouteImport.update({
+  id: '/galeria',
+  path: '/galeria',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EquipeRoute = EquipeRouteImport.update({
+  id: '/equipe',
+  path: '/equipe',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +55,116 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
+  '/equipe': typeof EquipeRoute
+  '/galeria': typeof GaleriaRoute
+  '/python': typeof PythonRoute
+  '/robotica': typeof RoboticaRoute
+  '/scratch': typeof ScratchRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
+  '/equipe': typeof EquipeRoute
+  '/galeria': typeof GaleriaRoute
+  '/python': typeof PythonRoute
+  '/robotica': typeof RoboticaRoute
+  '/scratch': typeof ScratchRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
+  '/equipe': typeof EquipeRoute
+  '/galeria': typeof GaleriaRoute
+  '/python': typeof PythonRoute
+  '/robotica': typeof RoboticaRoute
+  '/scratch': typeof ScratchRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/contato'
+    | '/equipe'
+    | '/galeria'
+    | '/python'
+    | '/robotica'
+    | '/scratch'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/contato'
+    | '/equipe'
+    | '/galeria'
+    | '/python'
+    | '/robotica'
+    | '/scratch'
+  id:
+    | '__root__'
+    | '/'
+    | '/contato'
+    | '/equipe'
+    | '/galeria'
+    | '/python'
+    | '/robotica'
+    | '/scratch'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContatoRoute: typeof ContatoRoute
+  EquipeRoute: typeof EquipeRoute
+  GaleriaRoute: typeof GaleriaRoute
+  PythonRoute: typeof PythonRoute
+  RoboticaRoute: typeof RoboticaRoute
+  ScratchRoute: typeof ScratchRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/scratch': {
+      id: '/scratch'
+      path: '/scratch'
+      fullPath: '/scratch'
+      preLoaderRoute: typeof ScratchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/robotica': {
+      id: '/robotica'
+      path: '/robotica'
+      fullPath: '/robotica'
+      preLoaderRoute: typeof RoboticaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/python': {
+      id: '/python'
+      path: '/python'
+      fullPath: '/python'
+      preLoaderRoute: typeof PythonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/galeria': {
+      id: '/galeria'
+      path: '/galeria'
+      fullPath: '/galeria'
+      preLoaderRoute: typeof GaleriaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/equipe': {
+      id: '/equipe'
+      path: '/equipe'
+      fullPath: '/equipe'
+      preLoaderRoute: typeof EquipeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +177,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContatoRoute: ContatoRoute,
+  EquipeRoute: EquipeRoute,
+  GaleriaRoute: GaleriaRoute,
+  PythonRoute: PythonRoute,
+  RoboticaRoute: RoboticaRoute,
+  ScratchRoute: ScratchRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
