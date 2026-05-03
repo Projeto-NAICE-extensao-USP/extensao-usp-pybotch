@@ -202,8 +202,15 @@ export const disciplines: Record<DisciplineId, Discipline> = {
         ],
       },
     ],
+    gallery: [
+      { alt: "Bancada de robótica montada pelos alunos" },
+      { alt: "Teste do semáforo inteligente" },
+      { alt: "Carrinho seguidor de linha em ação" },
+      { alt: "Alunos programando o Arduino" },
+      { alt: "Equipe orientando montagem do circuito" },
+      { alt: "Demonstração para a escola parceira" },
+    ],
   },
-};
 
 export const disciplineList: Discipline[] = [
   disciplines.python,
