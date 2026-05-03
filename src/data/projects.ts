@@ -211,8 +211,7 @@ export const disciplines: Record<DisciplineId, Discipline> = {
       { alt: "Demonstração para a escola parceira" },
     ],
   },
-
-export const disciplineList: Discipline[] = [
+};
   disciplines.python,
   disciplines.scratch,
   disciplines.robotica,
