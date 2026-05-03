@@ -98,6 +98,14 @@ export const disciplines: Record<DisciplineId, Discipline> = {
         ],
       },
     ],
+    gallery: [
+      { alt: "Aula de Python — turma do 6º ano" },
+      { alt: "Alunos desenvolvendo o jogo de adivinhação" },
+      { alt: "Apresentação dos projetos finais de Python" },
+      { alt: "Monitoria em dupla durante atividade prática" },
+      { alt: "Arte gerada com Turtle pelos alunos" },
+      { alt: "Encerramento do módulo de Python" },
+    ],
   },
   scratch: {
     id: "scratch",
