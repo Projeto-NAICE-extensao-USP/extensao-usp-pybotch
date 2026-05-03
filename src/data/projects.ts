@@ -150,8 +150,15 @@ export const disciplines: Record<DisciplineId, Discipline> = {
         ],
       },
     ],
+    gallery: [
+      { alt: "Alunos criando história interativa no Scratch" },
+      { alt: "Demonstração do jogo do labirinto" },
+      { alt: "Workshop de Scratch com a turma" },
+      { alt: "Personagens criados pelos alunos" },
+      { alt: "Apresentação dos jogos finais" },
+      { alt: "Monitor explicando blocos de eventos" },
+    ],
   },
-  robotica: {
     id: "robotica",
     name: "Robótica",
     tagline: "Do mundo físico ao código que pensa",
