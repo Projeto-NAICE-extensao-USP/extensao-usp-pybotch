@@ -90,6 +90,11 @@
   --scratch-foreground: oklch(0.16 0.04 55);
   --scratch-soft: oklch(0.96 0.05 65);
 
+  /* Equipe — tom sóbrio (slate/teal escuro) */
+  --equipe: oklch(0.42 0.05 220);
+  --equipe-soft: oklch(0.95 0.02 220);
+  --equipe-tint: oklch(0.92 0.03 220);
+
   /* Gradientes & sombras */
   --gradient-hero: linear-gradient(
     135deg,
