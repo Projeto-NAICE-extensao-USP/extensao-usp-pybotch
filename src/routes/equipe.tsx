@@ -33,16 +33,31 @@ function EquipePage() {
   const alumni = team.filter((m) => m.status === "alumni");
 
   return (
-    <div>
-      <section className="border-b border-border bg-muted/30">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+    <div className="bg-[var(--equipe-soft)]/40 min-h-screen">
+      <section
+        className="relative overflow-hidden border-b border-border"
+        style={{
+          background:
+            "linear-gradient(135deg, var(--equipe) 0%, oklch(0.32 0.06 230) 60%, oklch(0.26 0.05 250) 100%)",
+        }}
+      >
+        <div
+          aria-hidden
+          className="absolute inset-0 opacity-[0.07]"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
+            backgroundSize: "22px 22px",
+          }}
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-white">
+          <span className="inline-flex items-center rounded-full bg-white/10 border border-white/20 px-3 py-1 text-xs font-semibold backdrop-blur">
             Quem somos
           </span>
-          <h1 className="mt-4 font-display text-4xl sm:text-5xl font-bold text-foreground">
+          <h1 className="mt-4 font-display text-4xl sm:text-5xl font-bold">
             A equipe por trás do projeto
           </h1>
-          <p className="mt-4 max-w-2xl text-muted-foreground">
+          <p className="mt-4 max-w-2xl text-white/80">
             Estudantes universitários da USP São Carlos que dedicam suas tardes para
             levar tecnologia, criatividade e oportunidade a alunos da rede pública.
           </p>
