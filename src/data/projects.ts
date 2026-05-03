@@ -159,6 +159,7 @@ export const disciplines: Record<DisciplineId, Discipline> = {
       { alt: "Monitor explicando blocos de eventos" },
     ],
   },
+  robotica: {
     id: "robotica",
     name: "Robótica",
     tagline: "Do mundo físico ao código que pensa",
