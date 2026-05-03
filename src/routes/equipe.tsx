@@ -15,8 +15,21 @@ export const Route = createFileRoute("/equipe")({
   component: EquipePage,
 });
 
+const ORG_ROLES = new Set([
+  "Diretora Geral",
+  "Diretor Geral",
+  "Coordenadora",
+  "Coordenador",
+]);
+
+function isOrg(role: string) {
+  return ORG_ROLES.has(role);
+}
+
 function EquipePage() {
   const current = team.filter((m) => m.status === "current");
+  const organization = current.filter((m) => isOrg(m.role));
+  const volunteers = current.filter((m) => !isOrg(m.role));
   const alumni = team.filter((m) => m.status === "alumni");
 
   return (
@@ -37,25 +50,42 @@ function EquipePage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-        <h2 className="font-display text-2xl font-bold text-foreground mb-6">Membros atuais</h2>
+        <h2 className="font-display text-2xl font-bold text-foreground mb-2">Organização</h2>
+        <p className="text-sm text-muted-foreground mb-6">
+          Direção e coordenação responsáveis por conduzir o projeto.
+        </p>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {current.map((m) => (
-            <MemberCard key={m.name} {...m} />
+          {organization.map((m) => (
+            <MemberCard key={m.name} {...m} highlight />
           ))}
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-        <h2 className="font-display text-2xl font-bold text-foreground mb-2">Ex-membros</h2>
+        <h2 className="font-display text-2xl font-bold text-foreground mb-2">Voluntários</h2>
         <p className="text-sm text-muted-foreground mb-6">
-          Pessoas que passaram pelo projeto e ajudaram a construir o que somos hoje.
+          Estudantes que dedicam seu tempo para dar aulas e produzir materiais.
         </p>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {alumni.map((m) => (
-            <MemberCard key={m.name} {...m} muted />
+          {volunteers.map((m) => (
+            <MemberCard key={m.name} {...m} />
           ))}
         </div>
       </section>
+
+      {alumni.length > 0 && (
+        <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="font-display text-2xl font-bold text-foreground mb-2">Ex-membros</h2>
+          <p className="text-sm text-muted-foreground mb-6">
+            Pessoas que passaram pelo projeto e ajudaram a construir o que somos hoje.
+          </p>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {alumni.map((m) => (
+              <MemberCard key={m.name} {...m} muted />
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 }
@@ -63,24 +93,39 @@ function EquipePage() {
 function MemberCard({
   name,
   role,
+  photo,
   muted,
+  highlight,
 }: {
   name: string;
   role: string;
+  photo?: string;
   muted?: boolean;
+  highlight?: boolean;
 }) {
   return (
     <div
-      className={`flex items-center gap-4 rounded-xl border border-border bg-card p-4 shadow-[var(--shadow-soft)] transition-all hover:shadow-[var(--shadow-card)] ${
-        muted ? "opacity-90" : ""
-      }`}
+      className={`flex items-center gap-4 rounded-xl border bg-card p-4 shadow-[var(--shadow-soft)] transition-all hover:shadow-[var(--shadow-card)] ${
+        highlight ? "border-primary/30" : "border-border"
+      } ${muted ? "opacity-90" : ""}`}
     >
-      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-muted text-muted-foreground">
-        <User className="h-6 w-6" />
+      <div className="relative flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full bg-muted text-muted-foreground">
+        {photo ? (
+          <img
+            src={photo}
+            alt={name}
+            loading="lazy"
+            className="h-full w-full object-cover"
+          />
+        ) : (
+          <User className="h-6 w-6" />
+        )}
       </div>
       <div className="min-w-0">
         <div className="font-display font-semibold text-foreground truncate">{name}</div>
-        <div className="text-sm text-muted-foreground">{role}</div>
+        <div className={`text-sm ${highlight ? "text-primary font-medium" : "text-muted-foreground"}`}>
+          {role}
+        </div>
       </div>
     </div>
   );
