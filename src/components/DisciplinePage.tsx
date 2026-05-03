@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Download, FileText, Clock, GraduationCap, Target } from "lucide-react";
+import { Download, FileText, Clock, GraduationCap, Target, Camera } from "lucide-react";
 import type { Discipline, DisciplineId } from "@/data/projects";
 import { disciplineTheme } from "@/lib/discipline-theme";
 
@@ -144,6 +144,54 @@ export function DisciplinePage({ discipline, cover }: Props) {
           )}
         </div>
       </section>
+
+      {/* Galeria da disciplina */}
+      {discipline.gallery.length > 0 && (
+        <section className={`border-t border-border ${theme.soft}/40`}>
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+            <div className="flex items-center gap-3 mb-2">
+              <Camera className={`h-5 w-5 ${theme.text}`} />
+              <span className={`text-xs font-semibold uppercase tracking-wide ${theme.text}`}>
+                Galeria
+              </span>
+            </div>
+            <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground">
+              Momentos de {discipline.name}
+            </h2>
+            <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
+              Registros das aulas, projetos e apresentações da turma de {discipline.name}.
+            </p>
+
+            <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {discipline.gallery.map((photo, i) => (
+                <figure
+                  key={i}
+                  className="group relative aspect-[4/3] overflow-hidden rounded-xl border border-border bg-gradient-to-br from-muted to-muted/50 shadow-[var(--shadow-soft)]"
+                >
+                  {photo.src ? (
+                    <img
+                      src={photo.src}
+                      alt={photo.alt}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground">
+                      <Camera className="h-8 w-8 opacity-40" />
+                      <span className="mt-2 text-xs">Foto em breve</span>
+                    </div>
+                  )}
+                  {photo.caption && (
+                    <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 text-xs font-medium text-white opacity-0 transition-opacity group-hover:opacity-100">
+                      {photo.caption}
+                    </figcaption>
+                  )}
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </div>
   );
 }

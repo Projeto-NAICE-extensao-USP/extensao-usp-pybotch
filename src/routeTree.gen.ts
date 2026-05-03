@@ -12,7 +12,6 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as ScratchRouteImport } from './routes/scratch'
 import { Route as RoboticaRouteImport } from './routes/robotica'
 import { Route as PythonRouteImport } from './routes/python'
-import { Route as GaleriaRouteImport } from './routes/galeria'
 import { Route as EquipeRouteImport } from './routes/equipe'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as IndexRouteImport } from './routes/index'
@@ -30,11 +29,6 @@ const RoboticaRoute = RoboticaRouteImport.update({
 const PythonRoute = PythonRouteImport.update({
   id: '/python',
   path: '/python',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const GaleriaRoute = GaleriaRouteImport.update({
-  id: '/galeria',
-  path: '/galeria',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EquipeRoute = EquipeRouteImport.update({
@@ -57,7 +51,6 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contato': typeof ContatoRoute
   '/equipe': typeof EquipeRoute
-  '/galeria': typeof GaleriaRoute
   '/python': typeof PythonRoute
   '/robotica': typeof RoboticaRoute
   '/scratch': typeof ScratchRoute
@@ -66,7 +59,6 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contato': typeof ContatoRoute
   '/equipe': typeof EquipeRoute
-  '/galeria': typeof GaleriaRoute
   '/python': typeof PythonRoute
   '/robotica': typeof RoboticaRoute
   '/scratch': typeof ScratchRoute
@@ -76,36 +68,20 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/contato': typeof ContatoRoute
   '/equipe': typeof EquipeRoute
-  '/galeria': typeof GaleriaRoute
   '/python': typeof PythonRoute
   '/robotica': typeof RoboticaRoute
   '/scratch': typeof ScratchRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/contato'
-    | '/equipe'
-    | '/galeria'
-    | '/python'
-    | '/robotica'
-    | '/scratch'
+  fullPaths: '/' | '/contato' | '/equipe' | '/python' | '/robotica' | '/scratch'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/contato'
-    | '/equipe'
-    | '/galeria'
-    | '/python'
-    | '/robotica'
-    | '/scratch'
+  to: '/' | '/contato' | '/equipe' | '/python' | '/robotica' | '/scratch'
   id:
     | '__root__'
     | '/'
     | '/contato'
     | '/equipe'
-    | '/galeria'
     | '/python'
     | '/robotica'
     | '/scratch'
@@ -115,7 +91,6 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContatoRoute: typeof ContatoRoute
   EquipeRoute: typeof EquipeRoute
-  GaleriaRoute: typeof GaleriaRoute
   PythonRoute: typeof PythonRoute
   RoboticaRoute: typeof RoboticaRoute
   ScratchRoute: typeof ScratchRoute
@@ -142,13 +117,6 @@ declare module '@tanstack/react-router' {
       path: '/python'
       fullPath: '/python'
       preLoaderRoute: typeof PythonRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/galeria': {
-      id: '/galeria'
-      path: '/galeria'
-      fullPath: '/galeria'
-      preLoaderRoute: typeof GaleriaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/equipe': {
@@ -179,7 +147,6 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContatoRoute: ContatoRoute,
   EquipeRoute: EquipeRoute,
-  GaleriaRoute: GaleriaRoute,
   PythonRoute: PythonRoute,
   RoboticaRoute: RoboticaRoute,
   ScratchRoute: ScratchRoute,

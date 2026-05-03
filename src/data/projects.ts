@@ -18,12 +18,19 @@ export interface Project {
   photos?: string[];
 }
 
+export interface GalleryPhoto {
+  src?: string; // URL da foto (deixe vazio para placeholder)
+  alt: string;
+  caption?: string;
+}
+
 export interface Discipline {
   id: DisciplineId;
   name: string;
   tagline: string;
   description: string;
   projects: Project[];
+  gallery: GalleryPhoto[];
 }
 
 // Substitua os links abaixo pelos arquivos reais (Google Drive, GitHub, etc.)
@@ -91,6 +98,14 @@ export const disciplines: Record<DisciplineId, Discipline> = {
         ],
       },
     ],
+    gallery: [
+      { alt: "Aula de Python — turma do 6º ano" },
+      { alt: "Alunos desenvolvendo o jogo de adivinhação" },
+      { alt: "Apresentação dos projetos finais de Python" },
+      { alt: "Monitoria em dupla durante atividade prática" },
+      { alt: "Arte gerada com Turtle pelos alunos" },
+      { alt: "Encerramento do módulo de Python" },
+    ],
   },
   scratch: {
     id: "scratch",
@@ -134,6 +149,14 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { name: "assets-labirinto.zip", size: "3.1 MB", type: "ZIP", url: placeholder },
         ],
       },
+    ],
+    gallery: [
+      { alt: "Alunos criando história interativa no Scratch" },
+      { alt: "Demonstração do jogo do labirinto" },
+      { alt: "Workshop de Scratch com a turma" },
+      { alt: "Personagens criados pelos alunos" },
+      { alt: "Apresentação dos jogos finais" },
+      { alt: "Monitor explicando blocos de eventos" },
     ],
   },
   robotica: {
@@ -179,6 +202,14 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { name: "lista-materiais.pdf", size: "180 KB", type: "PDF", url: placeholder },
         ],
       },
+    ],
+    gallery: [
+      { alt: "Bancada de robótica montada pelos alunos" },
+      { alt: "Teste do semáforo inteligente" },
+      { alt: "Carrinho seguidor de linha em ação" },
+      { alt: "Alunos programando o Arduino" },
+      { alt: "Equipe orientando montagem do circuito" },
+      { alt: "Demonstração para a escola parceira" },
     ],
   },
 };
