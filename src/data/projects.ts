@@ -18,12 +18,19 @@ export interface Project {
   photos?: string[];
 }
 
+export interface GalleryPhoto {
+  src?: string; // URL da foto (deixe vazio para placeholder)
+  alt: string;
+  caption?: string;
+}
+
 export interface Discipline {
   id: DisciplineId;
   name: string;
   tagline: string;
   description: string;
   projects: Project[];
+  gallery: GalleryPhoto[];
 }
 
 // Substitua os links abaixo pelos arquivos reais (Google Drive, GitHub, etc.)
