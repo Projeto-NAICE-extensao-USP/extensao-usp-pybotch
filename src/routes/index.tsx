@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Download, BookOpen, Users, Mail } from "lucide-react";
 import heroImg from "@/assets/hero-students.jpg";
+import { AboutImpact } from "@/components/AboutImpact";
 import pythonImg from "@/assets/python-cover.jpg";
 import scratchImg from "@/assets/scratch-cover.jpg";
 import roboticaImg from "@/assets/robotica-cover.jpg";
@@ -132,6 +133,9 @@ function Home() {
           ))}
         </div>
       </section>
+
+      {/* Sobre + Impacto */}
+      <AboutImpact />
 
       {/* Disciplinas */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
