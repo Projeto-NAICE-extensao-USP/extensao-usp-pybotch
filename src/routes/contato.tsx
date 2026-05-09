@@ -48,10 +48,10 @@ function ContatoPage() {
     setErrors({});
     const { name, email, subject, message } = result.data;
     const body = `Nome: ${name}\nE-mail: ${email}\n\n${message}`;
-    const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+      CONTACT_EMAIL,
+    )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(gmailUrl, "_blank", "noopener,noreferrer");
   }
 
   return (
@@ -78,7 +78,7 @@ function ContatoPage() {
               Envie uma mensagem
             </h2>
             <p className="mt-1 text-sm text-muted-foreground">
-              Vamos abrir o seu app de e-mail com a mensagem pronta para envio.
+              Vamos abrir o Gmail em uma nova aba com a mensagem pronta para envio.
             </p>
 
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
