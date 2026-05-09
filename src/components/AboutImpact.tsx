@@ -124,7 +124,6 @@ export function AboutImpact() {
 
         {/* Painel de impacto */}
         <div
-          ref={ref}
           className="relative overflow-hidden rounded-2xl p-8 text-white shadow-[var(--shadow-card)]"
           style={{ background: "var(--gradient-hero)" }}
         >
@@ -141,7 +140,7 @@ export function AboutImpact() {
               <h3 className="font-display text-2xl font-bold">Nosso Impacto</h3>
             </div>
 
-            <div className="mt-6 grid grid-cols-2 gap-4">
+            <div ref={ref} className="mt-6 grid grid-cols-2 gap-4">
               {stats.map((s) => (
                 <StatCard key={s.label} stat={s} start={visible} />
               ))}
