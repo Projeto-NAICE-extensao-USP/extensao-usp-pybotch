@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Mail, MapPin, Instagram, Github, Send } from "lucide-react";
+import { Mail, MapPin, Instagram, Send } from "lucide-react";
 import { z } from "zod";
 
 export const Route = createFileRoute("/contato")({
@@ -56,27 +56,22 @@ function ContatoPage() {
 
   return (
     <div>
-      <section className="border-b border-border bg-muted/30">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
-            Fale conosco
-          </span>
-          <h1 className="mt-4 font-display text-4xl sm:text-5xl font-bold text-foreground">
-            Vamos conversar
-          </h1>
-          <p className="mt-4 max-w-2xl text-muted-foreground">
-            Professores, escolas e parceiros: envie sua mensagem e responderemos em
-            breve. Estamos abertos a colaborações.
-          </p>
-        </div>
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 pb-4 text-center">
+        <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+          Fale conosco
+        </span>
+        <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
+          Professores, escolas e parceiros: envie sua mensagem e responderemos em
+          breve. Estamos abertos a colaborações.
+        </p>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid gap-10 lg:grid-cols-[1fr_360px]">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+        <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr] lg:items-stretch">
           {/* Formulário */}
           <form
             onSubmit={handleSubmit}
-            className="rounded-2xl border border-border bg-card p-6 sm:p-8 shadow-[var(--shadow-card)]"
+            className="rounded-2xl border border-border bg-card p-6 sm:p-8 shadow-[var(--shadow-card)] flex flex-col"
             noValidate
           >
             <h2 className="font-display text-xl font-bold text-foreground">
@@ -114,7 +109,7 @@ function ContatoPage() {
               />
             </div>
 
-            <div className="mt-4">
+            <div className="mt-4 flex-1 flex flex-col">
               <label className="block text-sm font-medium text-foreground mb-1.5">
                 Mensagem
               </label>
@@ -123,7 +118,7 @@ function ContatoPage() {
                 onChange={(e) => update("message", e.target.value)}
                 rows={6}
                 maxLength={2000}
-                className="w-full rounded-md border border-input bg-background px-3 py-2.5 text-sm shadow-sm focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/30"
+                className="w-full flex-1 min-h-[140px] rounded-md border border-input bg-background px-3 py-2.5 text-sm shadow-sm focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/30"
               />
               {errors.message && (
                 <p className="mt-1.5 text-xs text-destructive">{errors.message}</p>
@@ -132,14 +127,14 @@ function ContatoPage() {
 
             <button
               type="submit"
-              className="mt-6 inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:opacity-90 shadow-sm"
+              className="mt-6 inline-flex w-fit items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:opacity-90 shadow-sm"
             >
               <Send className="h-4 w-4" /> Enviar mensagem
             </button>
           </form>
 
           {/* Info de contato */}
-          <aside className="space-y-4">
+          <aside className="grid gap-4 grid-rows-3">
             <InfoCard icon={Mail} title="E-mail">
               <a
                 href={`mailto:${CONTACT_EMAIL}`}
@@ -157,9 +152,6 @@ function ContatoPage() {
             </InfoCard>
             <InfoCard icon={Instagram} title="Instagram">
               <span className="text-sm text-muted-foreground">@projeto.extensao</span>
-            </InfoCard>
-            <InfoCard icon={Github} title="GitHub">
-              <span className="text-sm text-muted-foreground">github.com/projeto-extensao</span>
             </InfoCard>
           </aside>
         </div>
