@@ -78,7 +78,7 @@ function ContatoPage() {
               Envie uma mensagem
             </h2>
             <p className="mt-1 text-sm text-muted-foreground">
-              Vamos abrir o seu app de e-mail com a mensagem pronta para envio.
+              Vamos abrir o Gmail em uma nova aba com a mensagem pronta para envio.
             </p>
 
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
