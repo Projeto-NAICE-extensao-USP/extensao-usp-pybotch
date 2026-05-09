@@ -48,10 +48,10 @@ function ContatoPage() {
     setErrors({});
     const { name, email, subject, message } = result.data;
     const body = `Nome: ${name}\nE-mail: ${email}\n\n${message}`;
-    const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+      CONTACT_EMAIL,
+    )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(gmailUrl, "_blank", "noopener,noreferrer");
   }
 
   return (
