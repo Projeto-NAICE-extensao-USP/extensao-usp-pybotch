@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Mail, MapPin, Instagram, Github, Send } from "lucide-react";
+import { Mail, MapPin, Instagram, Send } from "lucide-react";
 import { z } from "zod";
 
 export const Route = createFileRoute("/contato")({
