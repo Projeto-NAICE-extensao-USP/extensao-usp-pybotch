@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Download, BookOpen, Users, Mail } from "lucide-react";
 import heroImg from "@/assets/hero-students.jpg";
+import { AboutImpact } from "@/components/AboutImpact";
 import pythonImg from "@/assets/python-cover.jpg";
 import scratchImg from "@/assets/scratch-cover.jpg";
 import roboticaImg from "@/assets/robotica-cover.jpg";
