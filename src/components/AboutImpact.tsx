@@ -67,7 +67,7 @@ export function AboutImpact() {
           }
         });
       },
-      { threshold: 0.25 },
+      { threshold: 0.6, rootMargin: "0px 0px -15% 0px" },
     );
     obs.observe(el);
     return () => obs.disconnect();
