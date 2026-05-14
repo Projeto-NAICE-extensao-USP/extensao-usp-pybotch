@@ -8,7 +8,6 @@ const navLinks = [
   { to: "/scratch", label: "Scratch" },
   { to: "/robotica", label: "Robótica" },
   { to: "/equipe", label: "Equipe" },
-  { to: "/contato", label: "Contato" },
 ] as const;
 
 export function SiteHeader() {
