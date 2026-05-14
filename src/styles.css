@@ -42,8 +42,8 @@
   --color-scratch-soft: var(--scratch-soft);
 
   --font-sans:
-    "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-display: "IBM Plex Serif", "IBM Plex Sans", Georgia, ui-serif, serif;
+    "Arvo", Georgia, ui-serif, serif;
+  --font-display: "Arvo", Georgia, ui-serif, serif;
 }
 
 :root {
