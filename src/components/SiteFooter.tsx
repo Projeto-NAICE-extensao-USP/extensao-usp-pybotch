@@ -20,14 +20,15 @@ export function SiteFooter() {
 
         <div>
           <h3 className="font-display text-sm font-semibold uppercase tracking-wide text-foreground">
-            Disciplinas
+            Navegar
           </h3>
           <ul className="mt-4 space-y-2 text-sm">
+            <li><Link to="/" className="text-muted-foreground hover:text-foreground">Home</Link></li>
             <li><Link to="/python" className="text-muted-foreground hover:text-foreground">Python</Link></li>
             <li><Link to="/scratch" className="text-muted-foreground hover:text-foreground">Scratch</Link></li>
             <li><Link to="/robotica" className="text-muted-foreground hover:text-foreground">Robótica</Link></li>
-            <li><Link to="/equipe" className="text-muted-foreground hover:text-foreground">Equipe</Link></li>
-            <li><Link to="/contato" className="text-muted-foreground hover:text-foreground">Fale conosco</Link></li>
+            <li><Link to="/escolas" className="text-muted-foreground hover:text-foreground">Escolas</Link></li>
+            <li><Link to="/sobre-nos" className="text-muted-foreground hover:text-foreground">Sobre nós</Link></li>
           </ul>
         </div>
 
