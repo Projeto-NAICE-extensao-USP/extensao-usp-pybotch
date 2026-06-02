@@ -9,13 +9,18 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SobreNosRouteImport } from './routes/sobre-nos'
 import { Route as ScratchRouteImport } from './routes/scratch'
 import { Route as RoboticaRouteImport } from './routes/robotica'
 import { Route as PythonRouteImport } from './routes/python'
-import { Route as EquipeRouteImport } from './routes/equipe'
-import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as EscolasRouteImport } from './routes/escolas'
 import { Route as IndexRouteImport } from './routes/index'
 
+const SobreNosRoute = SobreNosRouteImport.update({
+  id: '/sobre-nos',
+  path: '/sobre-nos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ScratchRoute = ScratchRouteImport.update({
   id: '/scratch',
   path: '/scratch',
@@ -31,14 +36,9 @@ const PythonRoute = PythonRouteImport.update({
   path: '/python',
   getParentRoute: () => rootRouteImport,
 } as any)
-const EquipeRoute = EquipeRouteImport.update({
-  id: '/equipe',
-  path: '/equipe',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContatoRoute = ContatoRouteImport.update({
-  id: '/contato',
-  path: '/contato',
+const EscolasRoute = EscolasRouteImport.update({
+  id: '/escolas',
+  path: '/escolas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -49,55 +49,68 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/contato': typeof ContatoRoute
-  '/equipe': typeof EquipeRoute
+  '/escolas': typeof EscolasRoute
   '/python': typeof PythonRoute
   '/robotica': typeof RoboticaRoute
   '/scratch': typeof ScratchRoute
+  '/sobre-nos': typeof SobreNosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/contato': typeof ContatoRoute
-  '/equipe': typeof EquipeRoute
+  '/escolas': typeof EscolasRoute
   '/python': typeof PythonRoute
   '/robotica': typeof RoboticaRoute
   '/scratch': typeof ScratchRoute
+  '/sobre-nos': typeof SobreNosRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/contato': typeof ContatoRoute
-  '/equipe': typeof EquipeRoute
+  '/escolas': typeof EscolasRoute
   '/python': typeof PythonRoute
   '/robotica': typeof RoboticaRoute
   '/scratch': typeof ScratchRoute
+  '/sobre-nos': typeof SobreNosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/contato' | '/equipe' | '/python' | '/robotica' | '/scratch'
-  fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contato' | '/equipe' | '/python' | '/robotica' | '/scratch'
-  id:
-    | '__root__'
+  fullPaths:
     | '/'
-    | '/contato'
-    | '/equipe'
+    | '/escolas'
     | '/python'
     | '/robotica'
     | '/scratch'
+    | '/sobre-nos'
+  fileRoutesByTo: FileRoutesByTo
+  to: '/' | '/escolas' | '/python' | '/robotica' | '/scratch' | '/sobre-nos'
+  id:
+    | '__root__'
+    | '/'
+    | '/escolas'
+    | '/python'
+    | '/robotica'
+    | '/scratch'
+    | '/sobre-nos'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  ContatoRoute: typeof ContatoRoute
-  EquipeRoute: typeof EquipeRoute
+  EscolasRoute: typeof EscolasRoute
   PythonRoute: typeof PythonRoute
   RoboticaRoute: typeof RoboticaRoute
   ScratchRoute: typeof ScratchRoute
+  SobreNosRoute: typeof SobreNosRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sobre-nos': {
+      id: '/sobre-nos'
+      path: '/sobre-nos'
+      fullPath: '/sobre-nos'
+      preLoaderRoute: typeof SobreNosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/scratch': {
       id: '/scratch'
       path: '/scratch'
@@ -119,18 +132,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PythonRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/equipe': {
-      id: '/equipe'
-      path: '/equipe'
-      fullPath: '/equipe'
-      preLoaderRoute: typeof EquipeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contato': {
-      id: '/contato'
-      path: '/contato'
-      fullPath: '/contato'
-      preLoaderRoute: typeof ContatoRouteImport
+    '/escolas': {
+      id: '/escolas'
+      path: '/escolas'
+      fullPath: '/escolas'
+      preLoaderRoute: typeof EscolasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -145,21 +151,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  ContatoRoute: ContatoRoute,
-  EquipeRoute: EquipeRoute,
+  EscolasRoute: EscolasRoute,
   PythonRoute: PythonRoute,
   RoboticaRoute: RoboticaRoute,
   ScratchRoute: ScratchRoute,
+  SobreNosRoute: SobreNosRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}

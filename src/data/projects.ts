@@ -1,25 +1,31 @@
+import convite1 from "@/assets/projects/super-scratch-24-01/convite-1.jpg.asset.json";
+import convite2 from "@/assets/projects/super-scratch-24-01/convite-2.jpg.asset.json";
+import convite3 from "@/assets/projects/super-scratch-24-01/convite-3.jpg.asset.json";
+
 export type DisciplineId = "python" | "scratch" | "robotica";
 
 export interface ProjectFile {
   name: string;
   size: string;
-  type: string; // ex: PDF, PY, SB3, ZIP
-  url: string; // link para download
+  type: string;
+  url: string;
 }
 
 export interface Project {
   id: string;
   title: string;
   summary: string;
-  level: string; // ex: 6º ano, 7º ano
-  duration: string; // ex: 2 aulas
+  level: string;
+  duration: string;
   objectives: string[];
   files: ProjectFile[];
-  photos?: string[];
+  /** Pessoas que participaram do projeto (monitores / coordenação) */
+  team?: string[];
+  photos?: { src: string; alt: string; caption?: string }[];
 }
 
 export interface GalleryPhoto {
-  src?: string; // URL da foto (deixe vazio para placeholder)
+  src?: string;
   alt: string;
   caption?: string;
 }
@@ -33,7 +39,6 @@ export interface Discipline {
   gallery: GalleryPhoto[];
 }
 
-// Substitua os links abaixo pelos arquivos reais (Google Drive, GitHub, etc.)
 const placeholder = "#";
 
 export const disciplines: Record<DisciplineId, Discipline> = {
@@ -45,56 +50,70 @@ export const disciplines: Record<DisciplineId, Discipline> = {
       "Introduzimos o pensamento computacional usando Python como ferramenta de criação. Os alunos exploram variáveis, condicionais, repetições e funções por meio de jogos, animações e pequenos projetos com dados reais.",
     projects: [
       {
-        id: "py-jogo-adivinhacao",
-        title: "Jogo de Adivinhação",
+        id: "py-descoberta-25-01",
+        title: "Python: A Descoberta (25-01)",
         summary:
-          "Primeiro contato com input, condicionais e loops. Os alunos constroem um jogo onde o computador sorteia um número e dá dicas.",
-        level: "6º e 7º ano",
-        duration: "2 aulas",
-        objectives: [
-          "Compreender variáveis e tipos numéricos",
-          "Usar if/elif/else para tomar decisões",
-          "Aplicar laços while em situações reais",
-        ],
-        files: [
-          { name: "plano-de-aula.pdf", size: "320 KB", type: "PDF", url: placeholder },
-          { name: "jogo_adivinhacao.py", size: "2 KB", type: "PY", url: placeholder },
-          { name: "slides-introducao.pdf", size: "1.2 MB", type: "PDF", url: placeholder },
-        ],
-      },
-      {
-        id: "py-arte-turtle",
-        title: "Arte com Turtle",
-        summary:
-          "Desenhos geométricos e fractais com a biblioteca Turtle, conectando matemática e programação visual.",
-        level: "7º ano",
-        duration: "3 aulas",
-        objectives: [
-          "Trabalhar laços for com parâmetros variáveis",
-          "Explorar ângulos e polígonos regulares",
-          "Criar funções reutilizáveis",
-        ],
-        files: [
-          { name: "guia-turtle.pdf", size: "780 KB", type: "PDF", url: placeholder },
-          { name: "exemplos_turtle.zip", size: "14 KB", type: "ZIP", url: placeholder },
-        ],
-      },
-      {
-        id: "py-quiz",
-        title: "Quiz Interativo",
-        summary:
-          "Os alunos criam um quiz sobre temas escolhidos por eles, treinando listas, dicionários e contagem de pontuação.",
+          "Eletiva no SOR para 8º e 9º ano: primeiros passos em Python com foco em lógica, variáveis e pequenos projetos.",
         level: "8º e 9º ano",
-        duration: "4 aulas",
+        duration: "Semestre 2025/1",
         objectives: [
-          "Trabalhar com listas e dicionários",
-          "Estruturar funções com retorno",
-          "Salvar e ler dados de arquivo",
+          "Apresentar a sintaxe básica de Python",
+          "Trabalhar lógica de programação com problemas reais",
+          "Construir projetos autorais ao final do semestre",
         ],
         files: [
-          { name: "plano-quiz.pdf", size: "410 KB", type: "PDF", url: placeholder },
-          { name: "quiz_base.py", size: "3 KB", type: "PY", url: placeholder },
-          { name: "perguntas-exemplo.json", size: "5 KB", type: "JSON", url: placeholder },
+          { name: "plano-descoberta.pdf", size: "—", type: "PDF", url: placeholder },
+        ],
+        team: [
+          "Moniely Silva Barboza (coordenação)",
+          "Dante Brito Lourenço",
+          "Diego Fernandes Lemos",
+          "Pedro Lunkes Villela",
+        ],
+      },
+      {
+        id: "py-akd-25-02",
+        title: "Introdução à Programação com Python (25-02)",
+        summary:
+          "Curso extracurricular na E.E. Aduar Kemell Dibo para 8º, 9º e 1º ano, com turmas iniciantes em Python.",
+        level: "8º, 9º e 1º ano",
+        duration: "Semestre 2025/2",
+        objectives: [
+          "Introduzir programação para iniciantes",
+          "Praticar com pequenos desafios semanais",
+          "Estimular autonomia para resolver problemas",
+        ],
+        files: [
+          { name: "plano-akd.pdf", size: "—", type: "PDF", url: placeholder },
+        ],
+        team: [
+          "Moniely Silva Barboza (coordenação)",
+          "Antonio Feolsa",
+          "Rafael Senger",
+        ],
+      },
+      {
+        id: "py-akd-26-01",
+        title: "Python — Iniciantes e Ciência de Dados (26-01)",
+        summary:
+          "Duas turmas na AKD: iniciantes em programação (8º/9º/1º) e introdução à ciência de dados (1º/2º).",
+        level: "8º ao 2º ano",
+        duration: "Semestre 2026/1",
+        objectives: [
+          "Atender alunos iniciantes e intermediários",
+          "Introduzir manipulação de dados com Python",
+          "Aproximar os alunos da cultura científica",
+        ],
+        files: [
+          { name: "plano-iniciantes.pdf", size: "—", type: "PDF", url: placeholder },
+          { name: "plano-ciencia-de-dados.pdf", size: "—", type: "PDF", url: placeholder },
+        ],
+        team: [
+          "Moniely Silva Barboza (coordenação iniciantes)",
+          "Rafael Senger (coordenação ciência de dados)",
+          "Alvaro Minto Ramos",
+          "Antonio Feolsa",
+          "Aron Caturelli Braga",
         ],
       },
     ],
@@ -115,38 +134,134 @@ export const disciplines: Record<DisciplineId, Discipline> = {
       "Com o Scratch, alunos criam animações, histórias interativas e jogos arrastando blocos. É a porta de entrada perfeita para o pensamento computacional sem a barreira da sintaxe.",
     projects: [
       {
-        id: "sc-historia-interativa",
-        title: "Minha História Interativa",
+        id: "sc-super-scratch-24-01",
+        title: "Super Scratch (24-01)",
         summary:
-          "Os alunos criam uma narrativa com personagens, falas e cenários, aprendendo eventos e mensagens.",
-        level: "6º ano",
-        duration: "2 aulas",
+          "Disciplina eletiva no SOR para 6º e 7º ano. Primeira turma do semestre 2024/1, com convite aos alunos, aulas semanais, culminância e visita à USP.",
+        level: "6º e 7º ano",
+        duration: "Semestre 2024/1 · 38 alunos",
         objectives: [
-          "Usar blocos de eventos e movimento",
-          "Trocar cenários e fantasias",
-          "Trabalhar com mensagens entre atores",
+          "Apresentar o Scratch como ferramenta de criação",
+          "Estimular projetos autorais de jogos e histórias",
+          "Realizar culminância com apresentação dos projetos",
         ],
         files: [
-          { name: "plano-historia.pdf", size: "290 KB", type: "PDF", url: placeholder },
-          { name: "historia-base.sb3", size: "1.8 MB", type: "SB3", url: placeholder },
+          { name: "plano-super-scratch.pdf", size: "—", type: "PDF", url: placeholder },
+        ],
+        team: [
+          "Moniely Silva Barboza (coordenação)",
+          "Lucca Baptista Silva Ferraz",
+        ],
+        photos: [
+          { src: convite1.url, alt: "Monitores recebendo alunos na quadra", caption: "Convite aos alunos" },
+          { src: convite2.url, alt: "Aluna apresentando o projeto no notebook", caption: "Convite aos alunos" },
+          { src: convite3.url, alt: "Apresentação do projeto na quadra da escola", caption: "Convite aos alunos" },
         ],
       },
       {
-        id: "sc-jogo-labirinto",
-        title: "Jogo do Labirinto",
+        id: "sc-esporte-24-02",
+        title: "Esporte em Scratch (24-02)",
         summary:
-          "Construção de um jogo clássico com colisões, pontuação e fases. Excelente para introduzir condicionais.",
-        level: "7º e 8º ano",
-        duration: "3 aulas",
+          "Eletiva no SOR para 6º e 7º ano com tema esportivo. Os alunos criaram jogos inspirados em modalidades olímpicas.",
+        level: "6º e 7º ano",
+        duration: "Semestre 2024/2 · 35 alunos",
         objectives: [
-          "Detectar colisões com cores e bordas",
-          "Criar variáveis de pontuação",
-          "Estruturar fases com cenários",
+          "Conectar programação a temas do cotidiano",
+          "Trabalhar variáveis de pontuação e física simples",
+          "Estimular trabalho em equipe",
         ],
         files: [
-          { name: "guia-labirinto.pdf", size: "520 KB", type: "PDF", url: placeholder },
-          { name: "labirinto.sb3", size: "2.4 MB", type: "SB3", url: placeholder },
-          { name: "assets-labirinto.zip", size: "3.1 MB", type: "ZIP", url: placeholder },
+          { name: "plano-esporte.pdf", size: "—", type: "PDF", url: placeholder },
+        ],
+        team: [
+          "Francisco Rafael Argueta Pérez (coordenação)",
+          "Thales do Espírito Santo Silva",
+          "Vitória Gomes Guimarães",
+        ],
+      },
+      {
+        id: "sc-sustenta-24-02",
+        title: "Sustenta Scratch (24-02)",
+        summary:
+          "Eletiva no SOR para 8º e 9º ano com tema sustentabilidade. Jogos e simulações sobre meio ambiente.",
+        level: "8º e 9º ano",
+        duration: "Semestre 2024/2 · 38 alunos",
+        objectives: [
+          "Aplicar programação para causas sociais",
+          "Trabalhar interatividade e simulação",
+          "Estimular pensamento crítico",
+        ],
+        files: [
+          { name: "plano-sustenta.pdf", size: "—", type: "PDF", url: placeholder },
+        ],
+        team: [
+          "Moniely Silva Barboza (coordenação)",
+          "Daniel Martins Arrais",
+          "João Victor Alonso de Mello",
+          "Paulo Henrique Vedovatto Turquetti",
+        ],
+      },
+      {
+        id: "sc-super-scratch-25-01",
+        title: "Super Scratch (25-01)",
+        summary:
+          "Eletiva no SOR para 6º e 7º ano no semestre 2025/1, com nova turma de 38 alunos.",
+        level: "6º e 7º ano",
+        duration: "Semestre 2025/1 · 38 alunos",
+        objectives: [
+          "Dar continuidade ao Super Scratch",
+          "Aprimorar o roteiro de aulas",
+          "Realizar culminância com a comunidade escolar",
+        ],
+        files: [
+          { name: "plano-super-scratch-25.pdf", size: "—", type: "PDF", url: placeholder },
+        ],
+        team: [
+          "Francisco Rafael Argueta Pérez (coordenação)",
+          "Thales do Espírito Santo Silva",
+          "Vitória Gomes Guimarães",
+        ],
+      },
+      {
+        id: "sc-super-scratch-25-02",
+        title: "Super Scratch (25-02)",
+        summary:
+          "Eletiva no SOR para 6º e 7º ano no semestre 2025/2.",
+        level: "6º e 7º ano",
+        duration: "Semestre 2025/2 · 38 alunos",
+        objectives: [
+          "Consolidar o roteiro de Super Scratch",
+          "Formar novos monitores",
+          "Ampliar o repertório de projetos finais",
+        ],
+        files: [
+          { name: "plano-25-02.pdf", size: "—", type: "PDF", url: placeholder },
+        ],
+        team: [
+          "Vitória Gomes Guimarães (coordenação)",
+          "José Carlos Andrade do Nascimento",
+          "João Pedro Boiago Gomes Santana",
+        ],
+      },
+      {
+        id: "sc-scratchmat-26-01",
+        title: "ScratchMat (26-01)",
+        summary:
+          "Eletiva de Scratch com foco em matemática para 6º e 7º ano no SOR.",
+        level: "6º e 7º ano",
+        duration: "Semestre 2026/1",
+        objectives: [
+          "Integrar programação e matemática",
+          "Explorar geometria e operações com blocos",
+          "Estimular raciocínio lógico",
+        ],
+        files: [
+          { name: "plano-scratchmat.pdf", size: "—", type: "PDF", url: placeholder },
+        ],
+        team: [
+          "João Pedro Boiago Gomes Santana (coordenação)",
+          "Felipe Volkweis de Oliveira",
+          "Lúcia Karoline Marques de Azevedo",
         ],
       },
     ],
@@ -167,39 +282,65 @@ export const disciplines: Record<DisciplineId, Discipline> = {
       "Trabalhamos com kits acessíveis (Arduino e componentes simples) para que os alunos prototipem soluções reais: semáforos inteligentes, sensores, pequenos veículos e muito mais.",
     projects: [
       {
-        id: "ro-semaforo",
-        title: "Semáforo Inteligente",
+        id: "ro-clube-25",
+        title: "Clube de Robótica (2025)",
         summary:
-          "Montagem e programação de um semáforo com LEDs, introduzindo eletrônica básica e controle de tempo.",
-        level: "7º ano",
-        duration: "2 aulas",
+          "Clube anual no SOR aberto do 7º ano ao 3º do EM, com 16 alunos. Foco em prototipação com Arduino.",
+        level: "7º ano ao 3º EM",
+        duration: "Ano letivo 2025 · 16 alunos",
         objectives: [
-          "Montar circuito em protoboard",
-          "Programar saídas digitais com Arduino",
-          "Compreender resistores e LEDs",
+          "Apresentar eletrônica básica",
+          "Programar microcontroladores",
+          "Construir protótipos autorais",
         ],
         files: [
-          { name: "plano-semaforo.pdf", size: "640 KB", type: "PDF", url: placeholder },
-          { name: "semaforo.ino", size: "2 KB", type: "INO", url: placeholder },
-          { name: "esquema-circuito.png", size: "210 KB", type: "PNG", url: placeholder },
+          { name: "plano-clube-robotica.pdf", size: "—", type: "PDF", url: placeholder },
+        ],
+        team: [
+          "Eduardo Magno (coordenação)",
+          "Newton Eduardo Pena Villegas",
         ],
       },
       {
-        id: "ro-carrinho",
-        title: "Carrinho Seguidor de Linha",
+        id: "ro-disciplina-25-01",
+        title: "Disciplinas de Robótica (25-01)",
         summary:
-          "Projeto integrador: sensores infravermelhos, motores DC e tomada de decisão em tempo real.",
-        level: "8º e 9º ano",
-        duration: "5 aulas",
+          "Disciplina obrigatória no SOR para 6º e 7º ano, com turmas de cerca de 38 alunos cada.",
+        level: "6º e 7º ano",
+        duration: "Semestre 2025/1",
         objectives: [
-          "Ler sensores analógicos",
-          "Controlar motores via ponte H",
-          "Implementar lógica de seguimento",
+          "Atender a grade obrigatória da escola",
+          "Adaptar conteúdo para grandes turmas",
+          "Desenvolver atividades práticas com kits",
         ],
         files: [
-          { name: "guia-carrinho.pdf", size: "1.1 MB", type: "PDF", url: placeholder },
-          { name: "carrinho.ino", size: "4 KB", type: "INO", url: placeholder },
-          { name: "lista-materiais.pdf", size: "180 KB", type: "PDF", url: placeholder },
+          { name: "plano-disciplina.pdf", size: "—", type: "PDF", url: placeholder },
+        ],
+        team: [
+          "Henrique Ribeiro de Figueiredo (coordenação)",
+          "Pedro da Silva Panini",
+        ],
+      },
+      {
+        id: "ro-disciplina-26-01",
+        title: "Disciplinas de Robótica — 9º ano (26-01)",
+        summary:
+          "Duas turmas obrigatórias de 9º ano no SOR (turmas A e B) no semestre 2026/1.",
+        level: "9º ano",
+        duration: "Semestre 2026/1",
+        objectives: [
+          "Aprofundar prototipação eletrônica",
+          "Integrar sensores e atuadores",
+          "Desenvolver projeto final por turma",
+        ],
+        files: [
+          { name: "plano-9ano.pdf", size: "—", type: "PDF", url: placeholder },
+        ],
+        team: [
+          "Vinicius (coordenação 9A)",
+          "Francisco Rafael Argueta Pérez (coordenação 9B)",
+          "Kauã Benjamin Trombim Silva",
+          "Caio Lucas Indalecio",
         ],
       },
     ],

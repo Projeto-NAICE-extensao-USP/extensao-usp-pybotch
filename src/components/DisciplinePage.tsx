@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Download, FileText, Clock, GraduationCap, Target, Camera } from "lucide-react";
+import { Download, FileText, Clock, GraduationCap, Target, Camera, Users } from "lucide-react";
 import type { Discipline, DisciplineId } from "@/data/projects";
 import { disciplineTheme } from "@/lib/discipline-theme";
 
@@ -139,6 +139,52 @@ export function DisciplinePage({ discipline, cover }: Props) {
                     ))}
                   </div>
                 </div>
+
+                {active.team && active.team.length > 0 && (
+                  <div className="mt-8">
+                    <h3 className="flex items-center gap-2 font-display text-sm font-semibold uppercase tracking-wide text-foreground">
+                      <Users className={`h-4 w-4 ${theme.text}`} /> Quem participou
+                    </h3>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {active.team.map((person) => (
+                        <span
+                          key={person}
+                          className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${theme.chip}`}
+                        >
+                          {person}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {active.photos && active.photos.length > 0 && (
+                  <div className="mt-8">
+                    <h3 className="flex items-center gap-2 font-display text-sm font-semibold uppercase tracking-wide text-foreground">
+                      <Camera className={`h-4 w-4 ${theme.text}`} /> Fotos do projeto
+                    </h3>
+                    <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                      {active.photos.map((p, i) => (
+                        <figure
+                          key={i}
+                          className="group relative aspect-[4/3] overflow-hidden rounded-xl border border-border bg-muted"
+                        >
+                          <img
+                            src={p.src}
+                            alt={p.alt}
+                            loading="lazy"
+                            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+                          {p.caption && (
+                            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 text-xs font-medium text-white opacity-0 transition-opacity group-hover:opacity-100">
+                              {p.caption}
+                            </figcaption>
+                          )}
+                        </figure>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </article>
           )}
