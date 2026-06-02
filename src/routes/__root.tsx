@@ -46,6 +46,12 @@ export const Route = createRootRoute({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Extensão USP São Carlos — Python, Scratch e Robótica" },
+      { name: "description", content: "Projetos USP: Educação Digital showcases educational projects and materials for public schools." },
+      { property: "og:description", content: "Projetos USP: Educação Digital showcases educational projects and materials for public schools." },
+      { name: "twitter:description", content: "Projetos USP: Educação Digital showcases educational projects and materials for public schools." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/355322e0-51c9-4b44-851b-47750e1f168b/id-preview-2ae7c912--91298f5e-50aa-4b65-976b-1265cab5786d.lovable.app-1780418207963.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/355322e0-51c9-4b44-851b-47750e1f168b/id-preview-2ae7c912--91298f5e-50aa-4b65-976b-1265cab5786d.lovable.app-1780418207963.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
