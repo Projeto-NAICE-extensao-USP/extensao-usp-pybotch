@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Download, FileText, Clock, GraduationCap, Target, Camera } from "lucide-react";
+import { Download, FileText, Clock, GraduationCap, Target, Camera, Users } from "lucide-react";
 import type { Discipline, DisciplineId } from "@/data/projects";
 import { disciplineTheme } from "@/lib/discipline-theme";
 
