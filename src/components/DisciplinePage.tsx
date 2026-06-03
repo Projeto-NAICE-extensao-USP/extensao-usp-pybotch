@@ -1,29 +1,48 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Download, FileText, Clock, GraduationCap, Target, Camera, Users } from "lucide-react";
-import type { Discipline, DisciplineId } from "@/data/projects";
+import type { Discipline, DisciplineId, ProjectPhoto, PhotoCategory } from "@/data/projects";
 import { disciplineTheme } from "@/lib/discipline-theme";
+import { Lightbox } from "@/components/Lightbox";
 
 interface Props {
   discipline: Discipline;
   cover: string;
 }
 
+const categoryLabels: Record<PhotoCategory, string> = {
+  aula: "Aulas",
+  visita: "Visita",
+  convite: "Convite aos alunos",
+  culminancia: "Culminância",
+};
+
+const categoryOrder: PhotoCategory[] = ["convite", "aula", "visita", "culminancia"];
+
 export function DisciplinePage({ discipline, cover }: Props) {
   const theme = disciplineTheme[discipline.id as DisciplineId];
   const [activeId, setActiveId] = useState(discipline.projects[0]?.id);
   const active = discipline.projects.find((p) => p.id === activeId) ?? discipline.projects[0];
+  const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
+
+  const groupedPhotos = useMemo(() => {
+    const photos = active?.photos ?? [];
+    const groups = new Map<string, ProjectPhoto[]>();
+    for (const p of photos) {
+      const key = p.category ?? "outros";
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key)!.push(p);
+    }
+    return groups;
+  }, [active]);
+
+  const allPhotos = active?.photos ?? [];
 
   return (
     <div>
       {/* Hero */}
       <section className={`relative overflow-hidden ${theme.soft}`}>
         <div className="absolute inset-0 opacity-30">
-          <img
-            src={cover}
-            alt=""
-            className="h-full w-full object-cover"
-            loading="eager"
-          />
+          <img src={cover} alt="" className="h-full w-full object-cover" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
@@ -33,19 +52,14 @@ export function DisciplinePage({ discipline, cover }: Props) {
           <h1 className="mt-4 font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground">
             {discipline.name}
           </h1>
-          <p className={`mt-3 text-lg sm:text-xl font-medium ${theme.text}`}>
-            {discipline.tagline}
-          </p>
-          <p className="mt-6 max-w-2xl text-base text-muted-foreground leading-relaxed">
-            {discipline.description}
-          </p>
+          <p className={`mt-3 text-lg sm:text-xl font-medium ${theme.text}`}>{discipline.tagline}</p>
+          <p className="mt-6 max-w-2xl text-base text-muted-foreground leading-relaxed">{discipline.description}</p>
         </div>
       </section>
 
       {/* Conteúdo + abas */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid gap-8 lg:grid-cols-[280px_1fr]">
-          {/* Abas (projetos) */}
           <aside>
             <h2 className="font-display text-sm font-semibold uppercase tracking-wide text-muted-foreground mb-3">
               Projetos
@@ -75,13 +89,10 @@ export function DisciplinePage({ discipline, cover }: Props) {
             </div>
           </aside>
 
-          {/* Detalhe do projeto */}
           {active && (
             <article className="rounded-2xl border border-border bg-card shadow-[var(--shadow-card)] overflow-hidden">
               <div className="p-6 sm:p-8">
-                <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground">
-                  {active.title}
-                </h2>
+                <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground">{active.title}</h2>
                 <p className="mt-3 text-muted-foreground leading-relaxed">{active.summary}</p>
 
                 <div className="mt-6 flex flex-wrap gap-3">
@@ -126,9 +137,7 @@ export function DisciplinePage({ discipline, cover }: Props) {
                             <FileText className="h-4 w-4" />
                           </div>
                           <div className="min-w-0">
-                            <div className="text-sm font-medium text-foreground truncate">
-                              {f.name}
-                            </div>
+                            <div className="text-sm font-medium text-foreground truncate">{f.name}</div>
                             <div className="text-xs text-muted-foreground">
                               {f.type} · {f.size}
                             </div>
@@ -158,30 +167,89 @@ export function DisciplinePage({ discipline, cover }: Props) {
                   </div>
                 )}
 
-                {active.photos && active.photos.length > 0 && (
-                  <div className="mt-8">
+                {allPhotos.length > 0 && (
+                  <div className="mt-10">
                     <h3 className="flex items-center gap-2 font-display text-sm font-semibold uppercase tracking-wide text-foreground">
-                      <Camera className={`h-4 w-4 ${theme.text}`} /> Fotos do projeto
+                      <Camera className={`h-4 w-4 ${theme.text}`} /> Registros do projeto
                     </h3>
-                    <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                      {active.photos.map((p, i) => (
-                        <figure
-                          key={i}
-                          className="group relative aspect-[4/3] overflow-hidden rounded-xl border border-border bg-muted"
-                        >
-                          <img
-                            src={p.src}
-                            alt={p.alt}
-                            loading="lazy"
-                            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                          />
-                          {p.caption && (
-                            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 text-xs font-medium text-white opacity-0 transition-opacity group-hover:opacity-100">
-                              {p.caption}
-                            </figcaption>
-                          )}
-                        </figure>
-                      ))}
+                    <p className="mt-1 text-xs text-muted-foreground">
+                      Clique em uma imagem para ampliar e navegar.
+                    </p>
+
+                    <div className="mt-5 space-y-8">
+                      {categoryOrder
+                        .filter((cat) => groupedPhotos.has(cat))
+                        .map((cat) => {
+                          const photosInCat = groupedPhotos.get(cat)!;
+                          return (
+                            <div key={cat}>
+                              <div className="flex items-center gap-2 mb-3">
+                                <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-[11px] font-semibold ${theme.chip}`}>
+                                  {categoryLabels[cat]}
+                                </span>
+                                <span className="text-xs text-muted-foreground">
+                                  {photosInCat.length} {photosInCat.length === 1 ? "foto" : "fotos"}
+                                </span>
+                              </div>
+                              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                                {photosInCat.map((p) => {
+                                  const globalIdx = allPhotos.indexOf(p);
+                                  return (
+                                    <button
+                                      type="button"
+                                      key={globalIdx}
+                                      onClick={() => setLightboxIdx(globalIdx)}
+                                      className="group relative aspect-[4/3] overflow-hidden rounded-xl border border-border bg-muted text-left focus:outline-none focus:ring-2 focus:ring-ring"
+                                    >
+                                      <img
+                                        src={p.src}
+                                        alt={p.alt}
+                                        loading="lazy"
+                                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                      />
+                                      {p.caption && (
+                                        <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 to-transparent p-3 text-xs font-medium text-white">
+                                          {p.caption}
+                                        </span>
+                                      )}
+                                    </button>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          );
+                        })}
+
+                      {/* Fotos sem categoria */}
+                      {groupedPhotos.has("outros") && (
+                        <div>
+                          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                            {groupedPhotos.get("outros")!.map((p) => {
+                              const globalIdx = allPhotos.indexOf(p);
+                              return (
+                                <button
+                                  type="button"
+                                  key={globalIdx}
+                                  onClick={() => setLightboxIdx(globalIdx)}
+                                  className="group relative aspect-[4/3] overflow-hidden rounded-xl border border-border bg-muted text-left focus:outline-none focus:ring-2 focus:ring-ring"
+                                >
+                                  <img
+                                    src={p.src}
+                                    alt={p.alt}
+                                    loading="lazy"
+                                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                  />
+                                  {p.caption && (
+                                    <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 to-transparent p-3 text-xs font-medium text-white">
+                                      {p.caption}
+                                    </span>
+                                  )}
+                                </button>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                 )}
@@ -191,52 +259,13 @@ export function DisciplinePage({ discipline, cover }: Props) {
         </div>
       </section>
 
-      {/* Galeria da disciplina */}
-      {discipline.gallery.length > 0 && (
-        <section className={`border-t border-border ${theme.soft}/40`}>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-            <div className="flex items-center gap-3 mb-2">
-              <Camera className={`h-5 w-5 ${theme.text}`} />
-              <span className={`text-xs font-semibold uppercase tracking-wide ${theme.text}`}>
-                Galeria
-              </span>
-            </div>
-            <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground">
-              Momentos de {discipline.name}
-            </h2>
-            <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
-              Registros das aulas, projetos e apresentações da turma de {discipline.name}.
-            </p>
-
-            <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {discipline.gallery.map((photo, i) => (
-                <figure
-                  key={i}
-                  className="group relative aspect-[4/3] overflow-hidden rounded-xl border border-border bg-gradient-to-br from-muted to-muted/50 shadow-[var(--shadow-soft)]"
-                >
-                  {photo.src ? (
-                    <img
-                      src={photo.src}
-                      alt={photo.alt}
-                      loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground">
-                      <Camera className="h-8 w-8 opacity-40" />
-                      <span className="mt-2 text-xs">Foto em breve</span>
-                    </div>
-                  )}
-                  {photo.caption && (
-                    <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 text-xs font-medium text-white opacity-0 transition-opacity group-hover:opacity-100">
-                      {photo.caption}
-                    </figcaption>
-                  )}
-                </figure>
-              ))}
-            </div>
-          </div>
-        </section>
+      {lightboxIdx !== null && allPhotos.length > 0 && (
+        <Lightbox
+          images={allPhotos}
+          index={lightboxIdx}
+          onClose={() => setLightboxIdx(null)}
+          onChange={setLightboxIdx}
+        />
       )}
     </div>
   );
