@@ -6,7 +6,7 @@ import cover from "@/assets/python-cover.jpg";
 export const Route = createFileRoute("/python")({
   head: () => ({
     meta: [
-      { title: "Python — Extensão USP São Carlos" },
+      { title: "Python — Extensão USP | ICMC" },
       {
         name: "description",
         content:

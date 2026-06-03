@@ -6,7 +6,7 @@ import cover from "@/assets/scratch-cover.jpg";
 export const Route = createFileRoute("/scratch")({
   head: () => ({
     meta: [
-      { title: "Scratch — Extensão USP São Carlos" },
+      { title: "Scratch — Extensão USP | ICMC" },
       {
         name: "description",
         content:
