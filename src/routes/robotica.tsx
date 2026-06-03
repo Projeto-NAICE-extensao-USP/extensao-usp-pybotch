@@ -6,7 +6,7 @@ import cover from "@/assets/robotica-cover.jpg";
 export const Route = createFileRoute("/robotica")({
   head: () => ({
     meta: [
-      { title: "Robótica — Extensão USP São Carlos" },
+      { title: "Robótica — Extensão USP | ICMC" },
       {
         name: "description",
         content:

@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import logo from "@/assets/logo.png.asset.json";
 
 const professoresLinks = [
   { to: "/python" as const, label: "Python" },
@@ -15,13 +16,15 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/70">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-2 group">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground font-display font-bold transition-transform group-hover:scale-105">
-            E+
-          </div>
+        <Link to="/" className="flex items-center gap-3 group">
+          <img
+            src={logo.url}
+            alt="Logo Extensão USP ICMC"
+            className="h-10 w-10 object-contain transition-transform group-hover:scale-105"
+          />
           <div className="hidden sm:flex flex-col leading-tight">
             <span className="font-display text-base font-semibold text-foreground">
-              Extensão USP São Carlos
+              Extensão USP <span className="text-muted-foreground font-normal">|</span> ICMC
             </span>
             <span className="text-[11px] text-muted-foreground">
               Python · Scratch · Robótica

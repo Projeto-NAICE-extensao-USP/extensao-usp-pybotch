@@ -1,14 +1,32 @@
 import convite1 from "@/assets/projects/super-scratch-24-01/convite-1.jpg.asset.json";
 import convite2 from "@/assets/projects/super-scratch-24-01/convite-2.jpg.asset.json";
 import convite3 from "@/assets/projects/super-scratch-24-01/convite-3.jpg.asset.json";
+import aula1 from "@/assets/projects/super-scratch-24-01/aula-1.jpg.asset.json";
+import aula2 from "@/assets/projects/super-scratch-24-01/aula-2.jpg.asset.json";
+import aula3 from "@/assets/projects/super-scratch-24-01/aula-3.jpg.asset.json";
+import aula4 from "@/assets/projects/super-scratch-24-01/aula-4.jpg.asset.json";
+import aula5 from "@/assets/projects/super-scratch-24-01/aula-5.jpg.asset.json";
+import aula6 from "@/assets/projects/super-scratch-24-01/aula-6.jpg.asset.json";
+import aula7 from "@/assets/projects/super-scratch-24-01/aula-7.jpg.asset.json";
+import aula8 from "@/assets/projects/super-scratch-24-01/aula-8.jpg.asset.json";
+import aula9 from "@/assets/projects/super-scratch-24-01/aula-9.jpg.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
+
+export type PhotoCategory = "aula" | "visita" | "convite" | "culminancia";
 
 export interface ProjectFile {
   name: string;
   size: string;
   type: string;
   url: string;
+}
+
+export interface ProjectPhoto {
+  src: string;
+  alt: string;
+  caption?: string;
+  category?: PhotoCategory;
 }
 
 export interface Project {
@@ -21,13 +39,7 @@ export interface Project {
   files: ProjectFile[];
   /** Pessoas que participaram do projeto (monitores / coordenação) */
   team?: string[];
-  photos?: { src: string; alt: string; caption?: string }[];
-}
-
-export interface GalleryPhoto {
-  src?: string;
-  alt: string;
-  caption?: string;
+  photos?: ProjectPhoto[];
 }
 
 export interface Discipline {
@@ -36,7 +48,6 @@ export interface Discipline {
   tagline: string;
   description: string;
   projects: Project[];
-  gallery: GalleryPhoto[];
 }
 
 const placeholder = "#";
@@ -117,14 +128,6 @@ export const disciplines: Record<DisciplineId, Discipline> = {
         ],
       },
     ],
-    gallery: [
-      { alt: "Aula de Python — turma do 6º ano" },
-      { alt: "Alunos desenvolvendo o jogo de adivinhação" },
-      { alt: "Apresentação dos projetos finais de Python" },
-      { alt: "Monitoria em dupla durante atividade prática" },
-      { alt: "Arte gerada com Turtle pelos alunos" },
-      { alt: "Encerramento do módulo de Python" },
-    ],
   },
   scratch: {
     id: "scratch",
@@ -153,9 +156,18 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           "Lucca Baptista Silva Ferraz",
         ],
         photos: [
-          { src: convite1.url, alt: "Monitores recebendo alunos na quadra", caption: "Convite aos alunos" },
-          { src: convite2.url, alt: "Aluna apresentando o projeto no notebook", caption: "Convite aos alunos" },
-          { src: convite3.url, alt: "Apresentação do projeto na quadra da escola", caption: "Convite aos alunos" },
+          { src: convite1.url, alt: "Monitores recebendo alunos na quadra", caption: "Convite aos alunos", category: "convite" },
+          { src: convite2.url, alt: "Aluna apresentando o projeto no notebook", caption: "Convite aos alunos", category: "convite" },
+          { src: convite3.url, alt: "Apresentação do projeto na quadra da escola", caption: "Convite aos alunos", category: "convite" },
+          { src: aula1.url, alt: "Alunos programando no Scratch durante a aula", caption: "Aula prática no laboratório", category: "aula" },
+          { src: aula2.url, alt: "Turma trabalhando em duplas nos notebooks", caption: "Turma engajada na atividade", category: "aula" },
+          { src: aula3.url, alt: "Tela do Scratch com projeto em desenvolvimento", caption: "Projeto em construção", category: "aula" },
+          { src: aula4.url, alt: "Aluno desenvolvendo seu jogo no Scratch", caption: "Construção do jogo autoral", category: "aula" },
+          { src: aula5.url, alt: "Vista da sala com a turma toda usando Scratch", caption: "Sala cheia, todos programando", category: "aula" },
+          { src: aula6.url, alt: "Monitora explicando o conteúdo na lousa", caption: "Explicação na lousa", category: "aula" },
+          { src: aula7.url, alt: "Atividade de Kahoot com a turma", caption: "Atividade gamificada com Kahoot", category: "aula" },
+          { src: aula8.url, alt: "Apresentação inicial sobre lógica de programação", caption: "Apresentação da eletiva", category: "aula" },
+          { src: aula9.url, alt: "Discussão sobre algoritmos com a turma", caption: "Introdução a algoritmos", category: "aula" },
         ],
       },
       {
@@ -265,14 +277,6 @@ export const disciplines: Record<DisciplineId, Discipline> = {
         ],
       },
     ],
-    gallery: [
-      { alt: "Alunos criando história interativa no Scratch" },
-      { alt: "Demonstração do jogo do labirinto" },
-      { alt: "Workshop de Scratch com a turma" },
-      { alt: "Personagens criados pelos alunos" },
-      { alt: "Apresentação dos jogos finais" },
-      { alt: "Monitor explicando blocos de eventos" },
-    ],
   },
   robotica: {
     id: "robotica",
@@ -343,14 +347,6 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           "Caio Lucas Indalecio",
         ],
       },
-    ],
-    gallery: [
-      { alt: "Bancada de robótica montada pelos alunos" },
-      { alt: "Teste do semáforo inteligente" },
-      { alt: "Carrinho seguidor de linha em ação" },
-      { alt: "Alunos programando o Arduino" },
-      { alt: "Equipe orientando montagem do circuito" },
-      { alt: "Demonstração para a escola parceira" },
     ],
   },
 };

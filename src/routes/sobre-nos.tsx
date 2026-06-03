@@ -6,7 +6,7 @@ import { AboutImpact } from "@/components/AboutImpact";
 export const Route = createFileRoute("/sobre-nos")({
   head: () => ({
     meta: [
-      { title: "Sobre nós — Extensão USP São Carlos" },
+      { title: "Sobre nós — Extensão USP | ICMC" },
       {
         name: "description",
         content:

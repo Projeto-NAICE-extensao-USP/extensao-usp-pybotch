@@ -32,13 +32,13 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Extensão USP São Carlos — Python, Scratch e Robótica" },
+      { title: "Extensão USP | ICMC — Python, Scratch e Robótica" },
       {
         name: "description",
         content:
-          "Materiais didáticos abertos de Python, Scratch e Robótica para escolas públicas. Projeto extensionista da USP São Carlos.",
+          "Materiais didáticos abertos de Python, Scratch e Robótica para escolas públicas. Projeto extensionista da USP — ICMC, São Carlos.",
       },
-      { property: "og:title", content: "Extensão USP São Carlos — Python, Scratch e Robótica" },
+      { property: "og:title", content: "Extensão USP | ICMC — Python, Scratch e Robótica" },
       {
         property: "og:description",
         content:
@@ -46,7 +46,7 @@ export const Route = createRootRoute({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Extensão USP São Carlos — Python, Scratch e Robótica" },
+      { name: "twitter:title", content: "Extensão USP | ICMC — Python, Scratch e Robótica" },
       { name: "description", content: "Projetos Extensão USP: Promovendo o conhecimento tecnológico para estudantes do ensino fundamental." },
       { property: "og:description", content: "Projetos Extensão USP: Promovendo o conhecimento tecnológico para estudantes do ensino fundamental." },
       { name: "twitter:description", content: "Projetos Extensão USP: Promovendo o conhecimento tecnológico para estudantes do ensino fundamental." },
