@@ -77,18 +77,18 @@
   --input: oklch(0.9 0.012 240);
   --ring: oklch(0.55 0.1 250);
 
-  /* Cores das disciplinas — tons mais fortes/saturados */
-  --python: oklch(0.55 0.20 145);
+  /* Cores das disciplinas — tons fortes e saturados */
+  --python: oklch(0.48 0.20 145);
   --python-foreground: oklch(0.99 0.005 145);
-  --python-soft: oklch(0.93 0.07 145);
+  --python-soft: oklch(0.86 0.14 145);
 
-  --robotica: oklch(0.48 0.22 260);
+  --robotica: oklch(0.42 0.22 260);
   --robotica-foreground: oklch(0.99 0.005 260);
-  --robotica-soft: oklch(0.93 0.07 260);
+  --robotica-soft: oklch(0.84 0.13 260);
 
-  --scratch: oklch(0.64 0.22 45);
+  --scratch: oklch(0.58 0.22 45);
   --scratch-foreground: oklch(0.99 0.005 45);
-  --scratch-soft: oklch(0.94 0.08 55);
+  --scratch-soft: oklch(0.86 0.15 55);
 
   /* Equipe — tom sóbrio (slate/teal escuro) */
   --equipe: oklch(0.42 0.05 220);
