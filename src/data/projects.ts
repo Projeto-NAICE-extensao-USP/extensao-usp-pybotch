@@ -1,14 +1,32 @@
 import convite1 from "@/assets/projects/super-scratch-24-01/convite-1.jpg.asset.json";
 import convite2 from "@/assets/projects/super-scratch-24-01/convite-2.jpg.asset.json";
 import convite3 from "@/assets/projects/super-scratch-24-01/convite-3.jpg.asset.json";
+import aula1 from "@/assets/projects/super-scratch-24-01/aula-1.jpg.asset.json";
+import aula2 from "@/assets/projects/super-scratch-24-01/aula-2.jpg.asset.json";
+import aula3 from "@/assets/projects/super-scratch-24-01/aula-3.jpg.asset.json";
+import aula4 from "@/assets/projects/super-scratch-24-01/aula-4.jpg.asset.json";
+import aula5 from "@/assets/projects/super-scratch-24-01/aula-5.jpg.asset.json";
+import aula6 from "@/assets/projects/super-scratch-24-01/aula-6.jpg.asset.json";
+import aula7 from "@/assets/projects/super-scratch-24-01/aula-7.jpg.asset.json";
+import aula8 from "@/assets/projects/super-scratch-24-01/aula-8.jpg.asset.json";
+import aula9 from "@/assets/projects/super-scratch-24-01/aula-9.jpg.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
+
+export type PhotoCategory = "aula" | "visita" | "convite" | "culminancia";
 
 export interface ProjectFile {
   name: string;
   size: string;
   type: string;
   url: string;
+}
+
+export interface ProjectPhoto {
+  src: string;
+  alt: string;
+  caption?: string;
+  category?: PhotoCategory;
 }
 
 export interface Project {
@@ -21,13 +39,7 @@ export interface Project {
   files: ProjectFile[];
   /** Pessoas que participaram do projeto (monitores / coordenação) */
   team?: string[];
-  photos?: { src: string; alt: string; caption?: string }[];
-}
-
-export interface GalleryPhoto {
-  src?: string;
-  alt: string;
-  caption?: string;
+  photos?: ProjectPhoto[];
 }
 
 export interface Discipline {
@@ -36,7 +48,6 @@ export interface Discipline {
   tagline: string;
   description: string;
   projects: Project[];
-  gallery: GalleryPhoto[];
 }
 
 const placeholder = "#";

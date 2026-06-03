@@ -1,16 +1,17 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin } from "lucide-react";
+import logo from "@/assets/logo.png.asset.json";
 
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-muted/30 mt-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 grid gap-10 md:grid-cols-3">
         <div>
-          <div className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground font-display font-bold">
-              E+
-            </div>
-            <span className="font-display font-semibold">Extensão USP São Carlos</span>
+          <div className="flex items-center gap-3">
+            <img src={logo.url} alt="Logo Extensão USP ICMC" className="h-10 w-10 object-contain" />
+            <span className="font-display font-semibold">
+              Extensão USP <span className="text-muted-foreground font-normal">|</span> ICMC
+            </span>
           </div>
           <p className="mt-4 text-sm text-muted-foreground max-w-sm">
             Projeto extensionista de ensino de Python, Scratch e Robótica em escolas
