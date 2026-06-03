@@ -350,7 +350,6 @@ export const disciplines: Record<DisciplineId, Discipline> = {
     ],
   },
 };
-};
 
 export const disciplineList: Discipline[] = [
   disciplines.python,
