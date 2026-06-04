@@ -10,6 +10,15 @@ import aula6 from "@/assets/projects/super-scratch-24-01/aula-6.jpg.asset.json";
 import aula7 from "@/assets/projects/super-scratch-24-01/aula-7.jpg.asset.json";
 import aula8 from "@/assets/projects/super-scratch-24-01/aula-8.jpg.asset.json";
 import aula9 from "@/assets/projects/super-scratch-24-01/aula-9.jpg.asset.json";
+import aula10 from "@/assets/projects/super-scratch-24-01/aula-10.jpg.asset.json";
+import aula11 from "@/assets/projects/super-scratch-24-01/aula-11.jpg.asset.json";
+import aula12 from "@/assets/projects/super-scratch-24-01/aula-12.jpg.asset.json";
+import aula13 from "@/assets/projects/super-scratch-24-01/aula-13.jpg.asset.json";
+import visita1 from "@/assets/projects/super-scratch-24-01/visita-1.jpg.asset.json";
+import visita2 from "@/assets/projects/super-scratch-24-01/visita-2.jpg.asset.json";
+import visita3 from "@/assets/projects/super-scratch-24-01/visita-3.jpg.asset.json";
+import visita4 from "@/assets/projects/super-scratch-24-01/visita-4.jpg.asset.json";
+import visita5 from "@/assets/projects/super-scratch-24-01/visita-5.jpg.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
 
@@ -168,6 +177,15 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: aula7.url, alt: "Atividade de Kahoot com a turma", caption: "Atividade gamificada com Kahoot", category: "aula" },
           { src: aula8.url, alt: "Apresentação inicial sobre lógica de programação", caption: "Apresentação da eletiva", category: "aula" },
           { src: aula9.url, alt: "Discussão sobre algoritmos com a turma", caption: "Introdução a algoritmos", category: "aula" },
+          { src: aula10.url, alt: "Aluna mostrando projeto impresso ao lado da professora", caption: "Aluna apresenta seu projeto", category: "aula" },
+          { src: aula11.url, alt: "Aluno mostrando personagem desenhado", caption: "Personagens autorais", category: "aula" },
+          { src: aula12.url, alt: "Sala completa com monitor explicando a eletiva", caption: "Apresentação da eletiva à turma", category: "aula" },
+          { src: aula13.url, alt: "Turma inteira programando no Scratch", caption: "Turma engajada no laboratório", category: "aula" },
+          { src: visita1.url, alt: "Aluno observando réguas de cálculo no museu da computação", caption: "Museu da Computação do ICMC", category: "visita" },
+          { src: visita2.url, alt: "Alunos experimentando máquina de escrever antiga", caption: "Conhecendo tecnologias do passado", category: "visita" },
+          { src: visita3.url, alt: "Alunos usando computadores antigos no museu", caption: "Computadores históricos em ação", category: "visita" },
+          { src: visita4.url, alt: "Professora guiando alunos pelo museu da computação", caption: "Visita guiada no museu", category: "visita" },
+          { src: visita5.url, alt: "Palestra para alunos no auditório da USP", caption: "Palestra no auditório do ICMC", category: "visita" },
         ],
       },
       {
