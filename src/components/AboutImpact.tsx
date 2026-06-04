@@ -91,7 +91,7 @@ export function AboutImpact() {
         {/* Texto */}
         <div className="rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-soft)]">
           <h3 className="font-display text-2xl sm:text-3xl font-bold text-foreground">
-            Levando programação e robótica para escolas públicas 🚀
+            Levando programação e robótica para escolas públicas
           </h3>
           <div className="mt-5 space-y-4 text-muted-foreground leading-relaxed">
             <p>
@@ -117,7 +117,7 @@ export function AboutImpact() {
             <p>
               Acreditamos que a tecnologia tem o poder de transformar vidas e abrir novas
               oportunidades. Cada linha de código ensinada é uma{" "}
-              <strong className="text-foreground">semente plantada para o futuro</strong>. 🌱
+              <strong className="text-foreground">semente plantada para o futuro</strong>.
             </p>
           </div>
         </div>
