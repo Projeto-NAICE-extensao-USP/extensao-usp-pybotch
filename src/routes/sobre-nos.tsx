@@ -63,7 +63,7 @@ function SobreNosPage() {
       {/* Texto institucional (vindo da home) */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16">
         <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground">
-          Levando programação e robótica para escolas públicas 🚀
+          Levando programação e robótica para escolas públicas
         </h2>
         <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed text-lg">
           <p>
@@ -89,7 +89,7 @@ function SobreNosPage() {
           <p>
             Acreditamos que a tecnologia tem o poder de transformar vidas e abrir novas
             oportunidades. Cada linha de código ensinada é uma{" "}
-            <strong className="text-foreground">semente plantada para o futuro</strong>. 🌱
+            <strong className="text-foreground">semente plantada para o futuro</strong>.
           </p>
         </div>
       </section>
