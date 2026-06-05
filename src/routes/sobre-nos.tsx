@@ -142,10 +142,10 @@ function SobreNosPage() {
               key={v.title}
               className="overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-soft)]"
             >
-              <div className="relative aspect-video bg-muted">
-                {v.url ? (
+              <div className={`relative bg-muted ${v.embedUrl ? "aspect-[9/16]" : "aspect-video"}`}>
+                {v.url || v.embedUrl ? (
                   <iframe
-                    src={v.url}
+                    src={v.embedUrl ?? v.url}
                     title={v.title}
                     className="absolute inset-0 h-full w-full"
                     loading="lazy"
