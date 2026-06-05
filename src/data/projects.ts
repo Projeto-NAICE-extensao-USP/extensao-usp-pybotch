@@ -29,6 +29,12 @@ import visita12 from "@/assets/projects/super-scratch-24-01/visita-12.jpg.asset.
 import visita13 from "@/assets/projects/super-scratch-24-01/visita-13.jpg.asset.json";
 import visita14 from "@/assets/projects/super-scratch-24-01/visita-14.jpg.asset.json";
 import visita15 from "@/assets/projects/super-scratch-24-01/visita-15.jpg.asset.json";
+import culminancia1 from "@/assets/projects/super-scratch-24-01/culminancia-1.jpg.asset.json";
+import culminancia2 from "@/assets/projects/super-scratch-24-01/culminancia-2.jpg.asset.json";
+import culminancia3 from "@/assets/projects/super-scratch-24-01/culminancia-3.jpg.asset.json";
+import culminancia4 from "@/assets/projects/super-scratch-24-01/culminancia-4.jpg.asset.json";
+import culminancia5 from "@/assets/projects/super-scratch-24-01/culminancia-5.jpg.asset.json";
+import culminancia6 from "@/assets/projects/super-scratch-24-01/culminancia-6.jpg.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
 
