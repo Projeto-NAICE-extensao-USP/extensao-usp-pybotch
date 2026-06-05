@@ -186,8 +186,9 @@ export function DisciplinePage({ discipline, cover }: Props) {
                       <Camera className={`h-4 w-4 ${theme.text}`} /> Registros do projeto
                     </h3>
                     <p className="mt-1 text-xs text-muted-foreground">
-                      Clique em uma imagem para ampliar e navegar.
+                      Clique em uma seção para abrir, e em uma imagem para ampliar.
                     </p>
+
 
                     <div className="mt-5 space-y-8">
                       {categoryOrder

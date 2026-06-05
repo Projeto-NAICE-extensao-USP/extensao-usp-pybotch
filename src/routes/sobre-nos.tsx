@@ -21,10 +21,14 @@ export const Route = createFileRoute("/sobre-nos")({
 // Cole aqui os links (YouTube ou MP4). Para YouTube, use o link no formato:
 //   https://www.youtube.com/embed/VIDEO_ID
 // Os cards vazios aparecem como placeholders até serem preenchidos.
-const videos: { title: string; url?: string; description?: string }[] = [
+const videos: { title: string; url?: string; embedUrl?: string; description?: string }[] = [
+  {
+    title: "Reel sobre o projeto",
+    embedUrl: "https://www.instagram.com/reel/DDrn9-OO8dL/embed",
+    description: "Bastidores e momentos do projeto no Instagram.",
+  },
   { title: "Reportagem sobre o projeto", description: "Cole aqui o link de incorporação do YouTube." },
   { title: "Depoimento dos alunos", description: "Cole aqui o link de incorporação do YouTube." },
-  { title: "Bastidores de uma aula", description: "Cole aqui o link de incorporação do YouTube." },
 ];
 
 function SobreNosPage() {
