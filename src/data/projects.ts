@@ -19,6 +19,16 @@ import visita2 from "@/assets/projects/super-scratch-24-01/visita-2.jpg.asset.js
 import visita3 from "@/assets/projects/super-scratch-24-01/visita-3.jpg.asset.json";
 import visita4 from "@/assets/projects/super-scratch-24-01/visita-4.jpg.asset.json";
 import visita5 from "@/assets/projects/super-scratch-24-01/visita-5.jpg.asset.json";
+import visita6 from "@/assets/projects/super-scratch-24-01/visita-6.jpg.asset.json";
+import visita7 from "@/assets/projects/super-scratch-24-01/visita-7.jpg.asset.json";
+import visita8 from "@/assets/projects/super-scratch-24-01/visita-8.jpg.asset.json";
+import visita9 from "@/assets/projects/super-scratch-24-01/visita-9.jpg.asset.json";
+import visita10 from "@/assets/projects/super-scratch-24-01/visita-10.jpg.asset.json";
+import visita11 from "@/assets/projects/super-scratch-24-01/visita-11.jpg.asset.json";
+import visita12 from "@/assets/projects/super-scratch-24-01/visita-12.jpg.asset.json";
+import visita13 from "@/assets/projects/super-scratch-24-01/visita-13.jpg.asset.json";
+import visita14 from "@/assets/projects/super-scratch-24-01/visita-14.jpg.asset.json";
+import visita15 from "@/assets/projects/super-scratch-24-01/visita-15.jpg.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
 
@@ -186,6 +196,16 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: visita3.url, alt: "Alunos usando computadores antigos no museu", caption: "Computadores históricos em ação", category: "visita" },
           { src: visita4.url, alt: "Professora guiando alunos pelo museu da computação", caption: "Visita guiada no museu", category: "visita" },
           { src: visita5.url, alt: "Palestra para alunos no auditório da USP", caption: "Palestra no auditório do ICMC", category: "visita" },
+          { src: visita6.url, alt: "Alunos no museu da computação", caption: "Explorando o museu", category: "visita" },
+          { src: visita7.url, alt: "Alunos com professora em frente a computador antigo", caption: "Computadores antigos em ação", category: "visita" },
+          { src: visita8.url, alt: "Aluna usando telefone antigo ao lado da professora", caption: "Tecnologia de outras épocas", category: "visita" },
+          { src: visita9.url, alt: "Visão geral da exposição com alunos", caption: "Sala da exposição cheia", category: "visita" },
+          { src: visita10.url, alt: "Foto da turma na escadaria do ICMC", caption: "Foto da turma no ICMC", category: "visita" },
+          { src: visita11.url, alt: "Alunos usando computador com Windows 95", caption: "Conhecendo o Windows 95", category: "visita" },
+          { src: visita12.url, alt: "Alunos no auditório aguardando a palestra", caption: "Aguardando a palestra", category: "visita" },
+          { src: visita13.url, alt: "Monitora apresentando consoles antigos", caption: "Consoles e jogos retrô", category: "visita" },
+          { src: visita14.url, alt: "Alunos observando jogos de console antigos", caption: "Cartuchos e fitas de jogos", category: "visita" },
+          { src: visita15.url, alt: "Aluna fotografando com câmera antiga", caption: "Experimentando uma câmera analógica", category: "visita" },
         ],
       },
       {

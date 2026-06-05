@@ -1,5 +1,5 @@
-import { useMemo, useState } from "react";
-import { Download, FileText, Clock, GraduationCap, Target, Camera, Users } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import { ChevronDown, Download, FileText, Clock, GraduationCap, Target, Camera, Users } from "lucide-react";
 import type { Discipline, DisciplineId, ProjectPhoto, PhotoCategory } from "@/data/projects";
 import { disciplineTheme } from "@/lib/discipline-theme";
 import { Lightbox } from "@/components/Lightbox";
@@ -11,7 +11,7 @@ interface Props {
 
 const categoryLabels: Record<PhotoCategory, string> = {
   aula: "Aulas",
-  visita: "Visita",
+  visita: "Visita USP",
   convite: "Convite aos alunos",
   culminancia: "Culminância",
 };
