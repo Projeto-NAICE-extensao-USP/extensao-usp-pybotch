@@ -29,6 +29,12 @@ import visita12 from "@/assets/projects/super-scratch-24-01/visita-12.jpg.asset.
 import visita13 from "@/assets/projects/super-scratch-24-01/visita-13.jpg.asset.json";
 import visita14 from "@/assets/projects/super-scratch-24-01/visita-14.jpg.asset.json";
 import visita15 from "@/assets/projects/super-scratch-24-01/visita-15.jpg.asset.json";
+import culminancia1 from "@/assets/projects/super-scratch-24-01/culminancia-1.jpg.asset.json";
+import culminancia2 from "@/assets/projects/super-scratch-24-01/culminancia-2.jpg.asset.json";
+import culminancia3 from "@/assets/projects/super-scratch-24-01/culminancia-3.jpg.asset.json";
+import culminancia4 from "@/assets/projects/super-scratch-24-01/culminancia-4.jpg.asset.json";
+import culminancia5 from "@/assets/projects/super-scratch-24-01/culminancia-5.jpg.asset.json";
+import culminancia6 from "@/assets/projects/super-scratch-24-01/culminancia-6.jpg.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
 
@@ -206,6 +212,12 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: visita13.url, alt: "Monitora apresentando consoles antigos", caption: "Consoles e jogos retrô", category: "visita" },
           { src: visita14.url, alt: "Alunos observando jogos de console antigos", caption: "Cartuchos e fitas de jogos", category: "visita" },
           { src: visita15.url, alt: "Aluna fotografando com câmera antiga", caption: "Experimentando uma câmera analógica", category: "visita" },
+          { src: culminancia1.url, alt: "Aluna jogando Terra-Chrome no computador", caption: "Apresentação do jogo Terra-Chrome", category: "culminancia" },
+          { src: culminancia2.url, alt: "Aluno mostrando o Jogo da Cobrinha feito em Scratch", caption: "Demonstração do Jogo da Cobrinha", category: "culminancia" },
+          { src: culminancia3.url, alt: "Foto da turma com os jogos finais nos notebooks", caption: "Turma reunida com os projetos finais", category: "culminancia" },
+          { src: culminancia4.url, alt: "Alunos posando com os jogos criados em Scratch", caption: "Apresentação coletiva dos jogos", category: "culminancia" },
+          { src: culminancia5.url, alt: "Turma e monitores na culminância do Super Scratch", caption: "Turma e monitores na culminância", category: "culminancia" },
+          { src: culminancia6.url, alt: "Aluno e professora jogando um Flappy Bird criado em Scratch", caption: "Testando o Flappy Bird criado pela turma", category: "culminancia" },
         ],
       },
       {
