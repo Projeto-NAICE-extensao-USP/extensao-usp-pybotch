@@ -23,6 +23,7 @@ export function DisciplinePage({ discipline, cover }: Props) {
   const [activeId, setActiveId] = useState(discipline.projects[0]?.id);
   const active = discipline.projects.find((p) => p.id === activeId) ?? discipline.projects[0];
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
+  const [openCats, setOpenCats] = useState<Record<string, boolean>>({});
 
   const groupedPhotos = useMemo(() => {
     const photos = active?.photos ?? [];
@@ -35,7 +36,19 @@ export function DisciplinePage({ discipline, cover }: Props) {
     return groups;
   }, [active]);
 
+  // Reset/collapse all categories when project changes (default: first open)
+  useEffect(() => {
+    const cats = Array.from(groupedPhotos.keys());
+    const next: Record<string, boolean> = {};
+    cats.forEach((c, i) => { next[c] = i === 0; });
+    setOpenCats(next);
+  }, [activeId, groupedPhotos]);
+
   const allPhotos = active?.photos ?? [];
+
+  const toggleCat = (cat: string) =>
+    setOpenCats((prev) => ({ ...prev, [cat]: !prev[cat] }));
+
 
   return (
     <div>
@@ -181,44 +194,58 @@ export function DisciplinePage({ discipline, cover }: Props) {
                         .filter((cat) => groupedPhotos.has(cat))
                         .map((cat) => {
                           const photosInCat = groupedPhotos.get(cat)!;
+                          const isOpen = openCats[cat] ?? false;
                           return (
-                            <div key={cat}>
-                              <div className="flex items-center gap-2 mb-3">
-                                <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-[11px] font-semibold ${theme.chip}`}>
-                                  {categoryLabels[cat]}
-                                </span>
-                                <span className="text-xs text-muted-foreground">
-                                  {photosInCat.length} {photosInCat.length === 1 ? "foto" : "fotos"}
-                                </span>
-                              </div>
-                              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                                {photosInCat.map((p) => {
-                                  const globalIdx = allPhotos.indexOf(p);
-                                  return (
-                                    <button
-                                      type="button"
-                                      key={globalIdx}
-                                      onClick={() => setLightboxIdx(globalIdx)}
-                                      className="group relative aspect-[4/3] overflow-hidden rounded-xl border border-border bg-muted text-left focus:outline-none focus:ring-2 focus:ring-ring"
-                                    >
-                                      <img
-                                        src={p.src}
-                                        alt={p.alt}
-                                        loading="lazy"
-                                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                      />
-                                      {p.caption && (
-                                        <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 to-transparent p-3 text-xs font-medium text-white">
-                                          {p.caption}
-                                        </span>
-                                      )}
-                                    </button>
-                                  );
-                                })}
-                              </div>
+                            <div key={cat} className="rounded-xl border border-border overflow-hidden">
+                              <button
+                                type="button"
+                                onClick={() => toggleCat(cat)}
+                                aria-expanded={isOpen}
+                                className="flex w-full items-center justify-between gap-3 bg-muted/40 px-4 py-3 text-left hover:bg-muted transition-colors"
+                              >
+                                <div className="flex items-center gap-2">
+                                  <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-[11px] font-semibold ${theme.chip}`}>
+                                    {categoryLabels[cat]}
+                                  </span>
+                                  <span className="text-xs text-muted-foreground">
+                                    {photosInCat.length} {photosInCat.length === 1 ? "foto" : "fotos"}
+                                  </span>
+                                </div>
+                                <ChevronDown
+                                  className={`h-4 w-4 text-muted-foreground transition-transform ${isOpen ? "rotate-180" : ""}`}
+                                />
+                              </button>
+                              {isOpen && (
+                                <div className="grid gap-3 p-4 sm:grid-cols-2 lg:grid-cols-3">
+                                  {photosInCat.map((p) => {
+                                    const globalIdx = allPhotos.indexOf(p);
+                                    return (
+                                      <button
+                                        type="button"
+                                        key={globalIdx}
+                                        onClick={() => setLightboxIdx(globalIdx)}
+                                        className="group relative aspect-[4/3] overflow-hidden rounded-xl border border-border bg-muted text-left focus:outline-none focus:ring-2 focus:ring-ring"
+                                      >
+                                        <img
+                                          src={p.src}
+                                          alt={p.alt}
+                                          loading="lazy"
+                                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        />
+                                        {p.caption && (
+                                          <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 to-transparent p-3 text-xs font-medium text-white">
+                                            {p.caption}
+                                          </span>
+                                        )}
+                                      </button>
+                                    );
+                                  })}
+                                </div>
+                              )}
                             </div>
                           );
                         })}
+
 
                       {/* Fotos sem categoria */}
                       {groupedPhotos.has("outros") && (
