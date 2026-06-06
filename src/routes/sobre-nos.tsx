@@ -18,17 +18,12 @@ export const Route = createFileRoute("/sobre-nos")({
 });
 
 // === VÍDEOS ===
-// Cole aqui os links (YouTube ou MP4). Para YouTube, use o link no formato:
-//   https://www.youtube.com/embed/VIDEO_ID
-// Os cards vazios aparecem como placeholders até serem preenchidos.
 const videos: { title: string; url?: string; embedUrl?: string; description?: string }[] = [
   {
     title: "Reel sobre o projeto",
     embedUrl: "https://www.instagram.com/reel/DDrn9-OO8dL/embed",
     description: "Bastidores e momentos do projeto no Instagram.",
   },
-  { title: "Reportagem sobre o projeto", description: "Cole aqui o link de incorporação do YouTube." },
-  { title: "Depoimento dos alunos", description: "Cole aqui o link de incorporação do YouTube." },
 ];
 
 function SobreNosPage() {
@@ -64,42 +59,9 @@ function SobreNosPage() {
         </div>
       </section>
 
-      {/* Texto institucional (vindo da home) */}
-      <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16">
-        <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground">
-          Levando programação e robótica para escolas públicas
-        </h2>
-        <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed text-lg">
-          <p>
-            Somos um grupo de estudantes da{" "}
-            <strong className="text-foreground">Universidade de São Paulo (USP), campus São Carlos</strong>,
-            dedicados a democratizar o acesso à educação em tecnologia para estudantes do
-            ensino fundamental II de escolas públicas da região.
-          </p>
-          <p>
-            Através do nosso projeto de <strong className="text-foreground">atividade extensionista</strong>,
-            ministramos aulas semanais de{" "}
-            <span className="font-semibold text-python">Python</span>,{" "}
-            <span className="font-semibold text-scratch">Scratch</span> e{" "}
-            <span className="font-semibold text-robotica">Robótica</span>, adaptando os
-            conteúdos para a faixa etária e realidade dos alunos.
-          </p>
-          <p>
-            Este site foi criado para{" "}
-            <strong className="text-foreground">compartilhar nossos materiais</strong> com a
-            comunidade educacional. Professores, estudantes e outros projetos podem acessar,
-            baixar e utilizar todo o conteúdo gratuitamente.
-          </p>
-          <p>
-            Acreditamos que a tecnologia tem o poder de transformar vidas e abrir novas
-            oportunidades. Cada linha de código ensinada é uma{" "}
-            <strong className="text-foreground">semente plantada para o futuro</strong>.
-          </p>
-        </div>
-      </section>
-
       {/* Impacto */}
       <AboutImpact />
+
 
       {/* Organização */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
