@@ -35,6 +35,16 @@ import culminancia3 from "@/assets/projects/super-scratch-24-01/culminancia-3.jp
 import culminancia4 from "@/assets/projects/super-scratch-24-01/culminancia-4.jpg.asset.json";
 import culminancia5 from "@/assets/projects/super-scratch-24-01/culminancia-5.jpg.asset.json";
 import culminancia6 from "@/assets/projects/super-scratch-24-01/culminancia-6.jpg.asset.json";
+import esporteVisita1 from "@/assets/projects/esporte-scratch-24-02/visita-1.jpg.asset.json";
+import esporteVisita2 from "@/assets/projects/esporte-scratch-24-02/visita-2.jpg.asset.json";
+import esporteVisita3 from "@/assets/projects/esporte-scratch-24-02/visita-3.jpg.asset.json";
+import esporteVisita4 from "@/assets/projects/esporte-scratch-24-02/visita-4.jpg.asset.json";
+import esporteVisita5 from "@/assets/projects/esporte-scratch-24-02/visita-5.jpg.asset.json";
+import sustentaVisita1 from "@/assets/projects/sustenta-scratch-24-02/visita-1.jpg.asset.json";
+import sustentaVisita2 from "@/assets/projects/sustenta-scratch-24-02/visita-2.jpg.asset.json";
+import sustentaVisita3 from "@/assets/projects/sustenta-scratch-24-02/visita-3.jpg.asset.json";
+import sustentaVisita4 from "@/assets/projects/sustenta-scratch-24-02/visita-4.jpg.asset.json";
+import sustentaVisita5 from "@/assets/projects/sustenta-scratch-24-02/visita-5.jpg.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
 
@@ -240,6 +250,13 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           "Thales do Espírito Santo Silva",
           "Vitória Gomes Guimarães",
         ],
+        photos: [
+          { src: esporteVisita1.url, alt: "Alunos no refeitório da USP durante visita", caption: "Visita à USP", category: "visita" },
+          { src: esporteVisita2.url, alt: "Apresentação no museu da computação do ICMC", caption: "Museu da Computação do ICMC", category: "visita" },
+          { src: esporteVisita3.url, alt: "Aluna experimentando calculadora mecânica antiga", caption: "Calculadoras mecânicas históricas", category: "visita" },
+          { src: esporteVisita4.url, alt: "Turma observando equipamentos antigos na visita", caption: "Conhecendo tecnologias do passado", category: "visita" },
+          { src: esporteVisita5.url, alt: "Alunos no saguão da exposição do ICMC", caption: "Exposição do ICMC", category: "visita" },
+        ],
       },
       {
         id: "sc-sustenta-24-02",
@@ -261,6 +278,13 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           "Daniel Martins Arrais",
           "João Victor Alonso de Mello",
           "Paulo Henrique Vedovatto Turquetti",
+        ],
+        photos: [
+          { src: sustentaVisita1.url, alt: "Turma na exposição do museu da computação", caption: "Museu da Computação do ICMC", category: "visita" },
+          { src: sustentaVisita2.url, alt: "Alunos visitando laboratório de robótica", caption: "Visita ao laboratório de robótica", category: "visita" },
+          { src: sustentaVisita3.url, alt: "Aluna interagindo com robô durante a visita", caption: "Interagindo com os robôs", category: "visita" },
+          { src: sustentaVisita4.url, alt: "Apresentação do robô da equipe SEMEAR", caption: "Apresentação do grupo SEMEAR", category: "visita" },
+          { src: sustentaVisita5.url, alt: "Turma percorrendo o ICMC durante a visita", caption: "Tour pelo ICMC", category: "visita" },
         ],
       },
       {

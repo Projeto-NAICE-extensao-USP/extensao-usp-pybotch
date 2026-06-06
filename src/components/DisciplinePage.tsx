@@ -72,35 +72,37 @@ export function DisciplinePage({ discipline, cover }: Props) {
 
       {/* Conteúdo + abas */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <div className="grid gap-8 lg:grid-cols-[280px_1fr]">
-          <aside>
-            <h2 className="font-display text-sm font-semibold uppercase tracking-wide text-muted-foreground mb-3">
-              Projetos
-            </h2>
-            <div className="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0">
-              {discipline.projects.map((p) => {
-                const isActive = p.id === active?.id;
-                return (
-                  <button
-                    key={p.id}
-                    onClick={() => setActiveId(p.id)}
-                    className={`group text-left shrink-0 lg:shrink rounded-lg border px-4 py-3 transition-all ${
-                      isActive
-                        ? `${theme.border} ${theme.soft} shadow-sm`
-                        : "border-border bg-card hover:border-foreground/20 hover:bg-muted/50"
-                    }`}
-                  >
-                    <div className={`text-sm font-semibold ${isActive ? theme.text : "text-foreground"}`}>
-                      {p.title}
-                    </div>
-                    <div className="text-xs text-muted-foreground mt-1 line-clamp-2 max-w-[240px]">
-                      {p.summary}
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
-          </aside>
+        <div className="mb-6">
+          <h2 className="font-display text-sm font-semibold uppercase tracking-wide text-muted-foreground mb-3">
+            Projetos
+          </h2>
+          <div className="flex gap-2 overflow-x-auto pb-2 -mx-1 px-1 snap-x">
+            {discipline.projects.map((p) => {
+              const isActive = p.id === active?.id;
+              return (
+                <button
+                  key={p.id}
+                  onClick={() => setActiveId(p.id)}
+                  className={`group text-left shrink-0 snap-start rounded-lg border px-4 py-3 w-[240px] transition-all ${
+                    isActive
+                      ? `${theme.border} ${theme.soft} shadow-sm`
+                      : "border-border bg-card hover:border-foreground/20 hover:bg-muted/50"
+                  }`}
+                >
+                  <div className={`text-sm font-semibold ${isActive ? theme.text : "text-foreground"}`}>
+                    {p.title}
+                  </div>
+                  <div className="text-xs text-muted-foreground mt-1 line-clamp-2">
+                    {p.summary}
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        <div>
+
 
           {active && (
             <article className="rounded-2xl border border-border bg-card shadow-[var(--shadow-card)] overflow-hidden">
