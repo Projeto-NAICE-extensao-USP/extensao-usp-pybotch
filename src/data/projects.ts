@@ -300,6 +300,11 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: sustentaVisita3.url, alt: "Aluna interagindo com robô durante a visita", caption: "Interagindo com os robôs", category: "visita" },
           { src: sustentaVisita4.url, alt: "Apresentação do robô da equipe SEMEAR", caption: "Apresentação do grupo SEMEAR", category: "visita" },
           { src: sustentaVisita5.url, alt: "Turma percorrendo o ICMC durante a visita", caption: "Tour pelo ICMC", category: "visita" },
+          { src: sustentaVisita6.url, alt: "Drone exposto na bancada do laboratório com alunos ao fundo", caption: "Drones do laboratório", category: "visita" },
+          { src: sustentaVisita7.url, alt: "Apresentação do robô LISA pela equipe SEMEAR", caption: "Conhecendo a robô LISA", category: "visita" },
+          { src: sustentaVisita8.url, alt: "Aluno apontando para o rosto digital do robô LISA", caption: "Interagindo com a LISA", category: "visita" },
+          { src: sustentaVisita9.url, alt: "Aluna fazendo sinal de paz para o robô LISA", caption: "Diversão com a equipe SEMEAR", category: "visita" },
+          { src: sustentaVisita10.url, alt: "Foto da turma reunida na escadaria do ICMC", caption: "Foto da turma no ICMC", category: "visita" },
         ],
       },
       {
