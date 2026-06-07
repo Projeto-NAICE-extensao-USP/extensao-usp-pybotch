@@ -55,6 +55,15 @@ import sustentaVisita7 from "@/assets/projects/sustenta-scratch-24-02/visita-7.j
 import sustentaVisita8 from "@/assets/projects/sustenta-scratch-24-02/visita-8.jpg.asset.json";
 import sustentaVisita9 from "@/assets/projects/sustenta-scratch-24-02/visita-9.jpg.asset.json";
 import sustentaVisita10 from "@/assets/projects/sustenta-scratch-24-02/visita-10.jpg.asset.json";
+import esporteVisita11 from "@/assets/projects/esporte-scratch-24-02/visita-11.jpg.asset.json";
+import esporteVisita12 from "@/assets/projects/esporte-scratch-24-02/visita-12.jpg.asset.json";
+import esporteVisita13 from "@/assets/projects/esporte-scratch-24-02/visita-13.jpg.asset.json";
+import esporteVisita14 from "@/assets/projects/esporte-scratch-24-02/visita-14.jpg.asset.json";
+import esporteVisitaVideo1 from "@/assets/projects/esporte-scratch-24-02/visita-video-1.mp4.asset.json";
+import sustentaVisita11 from "@/assets/projects/sustenta-scratch-24-02/visita-11.jpg.asset.json";
+import sustentaVisita12 from "@/assets/projects/sustenta-scratch-24-02/visita-12.jpg.asset.json";
+import sustentaVisita13 from "@/assets/projects/sustenta-scratch-24-02/visita-13.jpg.asset.json";
+import sustentaVisitaVideo1 from "@/assets/projects/sustenta-scratch-24-02/visita-video-1.mp4.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
 
