@@ -328,6 +328,12 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: sustentaVisita8.url, alt: "Aluno apontando para o rosto digital do robô LISA", caption: "Interagindo com a LISA", category: "visita" },
           { src: sustentaVisita9.url, alt: "Aluna fazendo sinal de paz para o robô LISA", caption: "Diversão com a equipe SEMEAR", category: "visita" },
           { src: sustentaVisita10.url, alt: "Foto da turma reunida na escadaria do ICMC", caption: "Foto da turma no ICMC", category: "visita" },
+          { src: sustentaVisita11.url, alt: "Aluna utilizando máquina de escrever antiga na exposição", caption: "Máquinas de escrever históricas", category: "visita" },
+          { src: sustentaVisita12.url, alt: "Alunas experimentando câmeras analógicas antigas", caption: "Câmeras analógicas do acervo", category: "visita" },
+          { src: sustentaVisita13.url, alt: "Turma reunida em frente às vitrines da exposição", caption: "Turma na exposição do ICMC", category: "visita" },
+        ],
+        videos: [
+          { src: sustentaVisitaVideo1.url, caption: "Visita à USP — registros em vídeo", category: "visita" },
         ],
       },
       {
