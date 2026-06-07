@@ -55,6 +55,15 @@ import sustentaVisita7 from "@/assets/projects/sustenta-scratch-24-02/visita-7.j
 import sustentaVisita8 from "@/assets/projects/sustenta-scratch-24-02/visita-8.jpg.asset.json";
 import sustentaVisita9 from "@/assets/projects/sustenta-scratch-24-02/visita-9.jpg.asset.json";
 import sustentaVisita10 from "@/assets/projects/sustenta-scratch-24-02/visita-10.jpg.asset.json";
+import esporteVisita11 from "@/assets/projects/esporte-scratch-24-02/visita-11.jpg.asset.json";
+import esporteVisita12 from "@/assets/projects/esporte-scratch-24-02/visita-12.jpg.asset.json";
+import esporteVisita13 from "@/assets/projects/esporte-scratch-24-02/visita-13.jpg.asset.json";
+import esporteVisita14 from "@/assets/projects/esporte-scratch-24-02/visita-14.jpg.asset.json";
+import esporteVisitaVideo1 from "@/assets/projects/esporte-scratch-24-02/visita-video-1.mp4.asset.json";
+import sustentaVisita11 from "@/assets/projects/sustenta-scratch-24-02/visita-11.jpg.asset.json";
+import sustentaVisita12 from "@/assets/projects/sustenta-scratch-24-02/visita-12.jpg.asset.json";
+import sustentaVisita13 from "@/assets/projects/sustenta-scratch-24-02/visita-13.jpg.asset.json";
+import sustentaVisitaVideo1 from "@/assets/projects/sustenta-scratch-24-02/visita-video-1.mp4.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
 
@@ -85,6 +94,13 @@ export interface Project {
   /** Pessoas que participaram do projeto (monitores / coordenação) */
   team?: string[];
   photos?: ProjectPhoto[];
+  videos?: ProjectVideo[];
+}
+
+export interface ProjectVideo {
+  src: string;
+  caption?: string;
+  category?: PhotoCategory;
 }
 
 export interface Discipline {
@@ -271,6 +287,13 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: esporteVisita8.url, alt: "Alunos utilizando computadores e tablets na exposição", caption: "Experiências interativas", category: "visita" },
           { src: esporteVisita9.url, alt: "Aluno fotografando com câmera analógica antiga", caption: "Experimentando uma câmera analógica", category: "visita" },
           { src: esporteVisita10.url, alt: "Aluno manuseando mouses antigos em exposição", caption: "Periféricos históricos", category: "visita" },
+          { src: esporteVisita11.url, alt: "Alunos jogando em um computador retrô durante visita", caption: "Jogos em computador retrô", category: "visita" },
+          { src: esporteVisita12.url, alt: "Alunos experimentando consoles Atari na exposição", caption: "Jogos clássicos do Atari", category: "visita" },
+          { src: esporteVisita13.url, alt: "Alunos jogando games antigos em monitores", caption: "Games retrô na exposição", category: "visita" },
+          { src: esporteVisita14.url, alt: "Alunos interagindo com jogo Kinect na exposição", caption: "Atividade com Kinect", category: "visita" },
+        ],
+        videos: [
+          { src: esporteVisitaVideo1.url, caption: "Visita à USP — registros em vídeo", category: "visita" },
         ],
       },
       {
@@ -305,6 +328,12 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: sustentaVisita8.url, alt: "Aluno apontando para o rosto digital do robô LISA", caption: "Interagindo com a LISA", category: "visita" },
           { src: sustentaVisita9.url, alt: "Aluna fazendo sinal de paz para o robô LISA", caption: "Diversão com a equipe SEMEAR", category: "visita" },
           { src: sustentaVisita10.url, alt: "Foto da turma reunida na escadaria do ICMC", caption: "Foto da turma no ICMC", category: "visita" },
+          { src: sustentaVisita11.url, alt: "Aluna utilizando máquina de escrever antiga na exposição", caption: "Máquinas de escrever históricas", category: "visita" },
+          { src: sustentaVisita12.url, alt: "Alunas experimentando câmeras analógicas antigas", caption: "Câmeras analógicas do acervo", category: "visita" },
+          { src: sustentaVisita13.url, alt: "Turma reunida em frente às vitrines da exposição", caption: "Turma na exposição do ICMC", category: "visita" },
+        ],
+        videos: [
+          { src: sustentaVisitaVideo1.url, caption: "Visita à USP — registros em vídeo", category: "visita" },
         ],
       },
       {
