@@ -40,11 +40,21 @@ import esporteVisita2 from "@/assets/projects/esporte-scratch-24-02/visita-2.jpg
 import esporteVisita3 from "@/assets/projects/esporte-scratch-24-02/visita-3.jpg.asset.json";
 import esporteVisita4 from "@/assets/projects/esporte-scratch-24-02/visita-4.jpg.asset.json";
 import esporteVisita5 from "@/assets/projects/esporte-scratch-24-02/visita-5.jpg.asset.json";
+import esporteVisita6 from "@/assets/projects/esporte-scratch-24-02/visita-6.jpg.asset.json";
+import esporteVisita7 from "@/assets/projects/esporte-scratch-24-02/visita-7.jpg.asset.json";
+import esporteVisita8 from "@/assets/projects/esporte-scratch-24-02/visita-8.jpg.asset.json";
+import esporteVisita9 from "@/assets/projects/esporte-scratch-24-02/visita-9.jpg.asset.json";
+import esporteVisita10 from "@/assets/projects/esporte-scratch-24-02/visita-10.jpg.asset.json";
 import sustentaVisita1 from "@/assets/projects/sustenta-scratch-24-02/visita-1.jpg.asset.json";
 import sustentaVisita2 from "@/assets/projects/sustenta-scratch-24-02/visita-2.jpg.asset.json";
 import sustentaVisita3 from "@/assets/projects/sustenta-scratch-24-02/visita-3.jpg.asset.json";
 import sustentaVisita4 from "@/assets/projects/sustenta-scratch-24-02/visita-4.jpg.asset.json";
 import sustentaVisita5 from "@/assets/projects/sustenta-scratch-24-02/visita-5.jpg.asset.json";
+import sustentaVisita6 from "@/assets/projects/sustenta-scratch-24-02/visita-6.jpg.asset.json";
+import sustentaVisita7 from "@/assets/projects/sustenta-scratch-24-02/visita-7.jpg.asset.json";
+import sustentaVisita8 from "@/assets/projects/sustenta-scratch-24-02/visita-8.jpg.asset.json";
+import sustentaVisita9 from "@/assets/projects/sustenta-scratch-24-02/visita-9.jpg.asset.json";
+import sustentaVisita10 from "@/assets/projects/sustenta-scratch-24-02/visita-10.jpg.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
 
@@ -256,6 +266,11 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: esporteVisita3.url, alt: "Aluna experimentando calculadora mecânica antiga", caption: "Calculadoras mecânicas históricas", category: "visita" },
           { src: esporteVisita4.url, alt: "Turma observando equipamentos antigos na visita", caption: "Conhecendo tecnologias do passado", category: "visita" },
           { src: esporteVisita5.url, alt: "Alunos no saguão da exposição do ICMC", caption: "Exposição do ICMC", category: "visita" },
+          { src: esporteVisita6.url, alt: "Monitora apresentando peça do museu da computação", caption: "Apresentação no museu", category: "visita" },
+          { src: esporteVisita7.url, alt: "Alunos observando vitrines do museu da computação", caption: "Explorando o acervo", category: "visita" },
+          { src: esporteVisita8.url, alt: "Alunos utilizando computadores e tablets na exposição", caption: "Experiências interativas", category: "visita" },
+          { src: esporteVisita9.url, alt: "Aluno fotografando com câmera analógica antiga", caption: "Experimentando uma câmera analógica", category: "visita" },
+          { src: esporteVisita10.url, alt: "Aluno manuseando mouses antigos em exposição", caption: "Periféricos históricos", category: "visita" },
         ],
       },
       {
@@ -285,6 +300,11 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: sustentaVisita3.url, alt: "Aluna interagindo com robô durante a visita", caption: "Interagindo com os robôs", category: "visita" },
           { src: sustentaVisita4.url, alt: "Apresentação do robô da equipe SEMEAR", caption: "Apresentação do grupo SEMEAR", category: "visita" },
           { src: sustentaVisita5.url, alt: "Turma percorrendo o ICMC durante a visita", caption: "Tour pelo ICMC", category: "visita" },
+          { src: sustentaVisita6.url, alt: "Drone exposto na bancada do laboratório com alunos ao fundo", caption: "Drones do laboratório", category: "visita" },
+          { src: sustentaVisita7.url, alt: "Apresentação do robô LISA pela equipe SEMEAR", caption: "Conhecendo a robô LISA", category: "visita" },
+          { src: sustentaVisita8.url, alt: "Aluno apontando para o rosto digital do robô LISA", caption: "Interagindo com a LISA", category: "visita" },
+          { src: sustentaVisita9.url, alt: "Aluna fazendo sinal de paz para o robô LISA", caption: "Diversão com a equipe SEMEAR", category: "visita" },
+          { src: sustentaVisita10.url, alt: "Foto da turma reunida na escadaria do ICMC", caption: "Foto da turma no ICMC", category: "visita" },
         ],
       },
       {
