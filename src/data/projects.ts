@@ -60,6 +60,8 @@ import esporteVisita12 from "@/assets/projects/esporte-scratch-24-02/visita-12.j
 import esporteVisita13 from "@/assets/projects/esporte-scratch-24-02/visita-13.jpg.asset.json";
 import esporteVisita14 from "@/assets/projects/esporte-scratch-24-02/visita-14.jpg.asset.json";
 import sustentaVisita11 from "@/assets/projects/sustenta-scratch-24-02/visita-11.jpg.asset.json";
+import sustentaVisita12 from "@/assets/projects/sustenta-scratch-24-02/visita-12.jpg.asset.json";
+import sustentaVisita13 from "@/assets/projects/sustenta-scratch-24-02/visita-13.jpg.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
 
