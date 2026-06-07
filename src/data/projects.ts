@@ -94,6 +94,13 @@ export interface Project {
   /** Pessoas que participaram do projeto (monitores / coordenação) */
   team?: string[];
   photos?: ProjectPhoto[];
+  videos?: ProjectVideo[];
+}
+
+export interface ProjectVideo {
+  src: string;
+  caption?: string;
+  category?: PhotoCategory;
 }
 
 export interface Discipline {
