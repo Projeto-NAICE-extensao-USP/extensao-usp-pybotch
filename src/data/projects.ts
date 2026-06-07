@@ -266,6 +266,11 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: esporteVisita3.url, alt: "Aluna experimentando calculadora mecânica antiga", caption: "Calculadoras mecânicas históricas", category: "visita" },
           { src: esporteVisita4.url, alt: "Turma observando equipamentos antigos na visita", caption: "Conhecendo tecnologias do passado", category: "visita" },
           { src: esporteVisita5.url, alt: "Alunos no saguão da exposição do ICMC", caption: "Exposição do ICMC", category: "visita" },
+          { src: esporteVisita6.url, alt: "Monitora apresentando peça do museu da computação", caption: "Apresentação no museu", category: "visita" },
+          { src: esporteVisita7.url, alt: "Alunos observando vitrines do museu da computação", caption: "Explorando o acervo", category: "visita" },
+          { src: esporteVisita8.url, alt: "Alunos utilizando computadores e tablets na exposição", caption: "Experiências interativas", category: "visita" },
+          { src: esporteVisita9.url, alt: "Aluno fotografando com câmera analógica antiga", caption: "Experimentando uma câmera analógica", category: "visita" },
+          { src: esporteVisita10.url, alt: "Aluno manuseando mouses antigos em exposição", caption: "Periféricos históricos", category: "visita" },
         ],
       },
       {
