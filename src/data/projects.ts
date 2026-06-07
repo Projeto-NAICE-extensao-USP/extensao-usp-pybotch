@@ -287,6 +287,13 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: esporteVisita8.url, alt: "Alunos utilizando computadores e tablets na exposição", caption: "Experiências interativas", category: "visita" },
           { src: esporteVisita9.url, alt: "Aluno fotografando com câmera analógica antiga", caption: "Experimentando uma câmera analógica", category: "visita" },
           { src: esporteVisita10.url, alt: "Aluno manuseando mouses antigos em exposição", caption: "Periféricos históricos", category: "visita" },
+          { src: esporteVisita11.url, alt: "Alunos jogando em um computador retrô durante visita", caption: "Jogos em computador retrô", category: "visita" },
+          { src: esporteVisita12.url, alt: "Alunos experimentando consoles Atari na exposição", caption: "Jogos clássicos do Atari", category: "visita" },
+          { src: esporteVisita13.url, alt: "Alunos jogando games antigos em monitores", caption: "Games retrô na exposição", category: "visita" },
+          { src: esporteVisita14.url, alt: "Alunos interagindo com jogo Kinect na exposição", caption: "Atividade com Kinect", category: "visita" },
+        ],
+        videos: [
+          { src: esporteVisitaVideo1.url, caption: "Visita à USP — registros em vídeo", category: "visita" },
         ],
       },
       {
