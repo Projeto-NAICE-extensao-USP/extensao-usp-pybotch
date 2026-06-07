@@ -40,11 +40,21 @@ import esporteVisita2 from "@/assets/projects/esporte-scratch-24-02/visita-2.jpg
 import esporteVisita3 from "@/assets/projects/esporte-scratch-24-02/visita-3.jpg.asset.json";
 import esporteVisita4 from "@/assets/projects/esporte-scratch-24-02/visita-4.jpg.asset.json";
 import esporteVisita5 from "@/assets/projects/esporte-scratch-24-02/visita-5.jpg.asset.json";
+import esporteVisita6 from "@/assets/projects/esporte-scratch-24-02/visita-6.jpg.asset.json";
+import esporteVisita7 from "@/assets/projects/esporte-scratch-24-02/visita-7.jpg.asset.json";
+import esporteVisita8 from "@/assets/projects/esporte-scratch-24-02/visita-8.jpg.asset.json";
+import esporteVisita9 from "@/assets/projects/esporte-scratch-24-02/visita-9.jpg.asset.json";
+import esporteVisita10 from "@/assets/projects/esporte-scratch-24-02/visita-10.jpg.asset.json";
 import sustentaVisita1 from "@/assets/projects/sustenta-scratch-24-02/visita-1.jpg.asset.json";
 import sustentaVisita2 from "@/assets/projects/sustenta-scratch-24-02/visita-2.jpg.asset.json";
 import sustentaVisita3 from "@/assets/projects/sustenta-scratch-24-02/visita-3.jpg.asset.json";
 import sustentaVisita4 from "@/assets/projects/sustenta-scratch-24-02/visita-4.jpg.asset.json";
 import sustentaVisita5 from "@/assets/projects/sustenta-scratch-24-02/visita-5.jpg.asset.json";
+import sustentaVisita6 from "@/assets/projects/sustenta-scratch-24-02/visita-6.jpg.asset.json";
+import sustentaVisita7 from "@/assets/projects/sustenta-scratch-24-02/visita-7.jpg.asset.json";
+import sustentaVisita8 from "@/assets/projects/sustenta-scratch-24-02/visita-8.jpg.asset.json";
+import sustentaVisita9 from "@/assets/projects/sustenta-scratch-24-02/visita-9.jpg.asset.json";
+import sustentaVisita10 from "@/assets/projects/sustenta-scratch-24-02/visita-10.jpg.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
 
