@@ -59,11 +59,9 @@ import esporteVisita11 from "@/assets/projects/esporte-scratch-24-02/visita-11.j
 import esporteVisita12 from "@/assets/projects/esporte-scratch-24-02/visita-12.jpg.asset.json";
 import esporteVisita13 from "@/assets/projects/esporte-scratch-24-02/visita-13.jpg.asset.json";
 import esporteVisita14 from "@/assets/projects/esporte-scratch-24-02/visita-14.jpg.asset.json";
-import esporteVisitaVideo1 from "@/assets/projects/esporte-scratch-24-02/visita-video-1.mp4.asset.json";
 import sustentaVisita11 from "@/assets/projects/sustenta-scratch-24-02/visita-11.jpg.asset.json";
 import sustentaVisita12 from "@/assets/projects/sustenta-scratch-24-02/visita-12.jpg.asset.json";
 import sustentaVisita13 from "@/assets/projects/sustenta-scratch-24-02/visita-13.jpg.asset.json";
-import sustentaVisitaVideo1 from "@/assets/projects/sustenta-scratch-24-02/visita-video-1.mp4.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
 
@@ -292,9 +290,6 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: esporteVisita13.url, alt: "Alunos jogando games antigos em monitores", caption: "Games retrô na exposição", category: "visita" },
           { src: esporteVisita14.url, alt: "Alunos interagindo com jogo Kinect na exposição", caption: "Atividade com Kinect", category: "visita" },
         ],
-        videos: [
-          { src: esporteVisitaVideo1.url, caption: "Visita à USP — registros em vídeo", category: "visita" },
-        ],
       },
       {
         id: "sc-sustenta-24-02",
@@ -331,9 +326,6 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: sustentaVisita11.url, alt: "Aluna utilizando máquina de escrever antiga na exposição", caption: "Máquinas de escrever históricas", category: "visita" },
           { src: sustentaVisita12.url, alt: "Alunas experimentando câmeras analógicas antigas", caption: "Câmeras analógicas do acervo", category: "visita" },
           { src: sustentaVisita13.url, alt: "Turma reunida em frente às vitrines da exposição", caption: "Turma na exposição do ICMC", category: "visita" },
-        ],
-        videos: [
-          { src: sustentaVisitaVideo1.url, caption: "Visita à USP — registros em vídeo", category: "visita" },
         ],
       },
       {

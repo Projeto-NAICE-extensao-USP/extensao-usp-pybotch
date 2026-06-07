@@ -284,30 +284,6 @@ export function DisciplinePage({ discipline, cover }: Props) {
                   </div>
                 )}
 
-                {active.videos && active.videos.length > 0 && (
-                  <div className="mt-10">
-                    <h3 className="flex items-center gap-2 font-display text-sm font-semibold uppercase tracking-wide text-foreground">
-                      <Camera className={`h-4 w-4 ${theme.text}`} /> Vídeos
-                    </h3>
-                    <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                      {active.videos.map((v) => (
-                        <figure key={v.src} className="overflow-hidden rounded-xl border border-border bg-muted">
-                          <video
-                            src={v.src}
-                            controls
-                            preload="metadata"
-                            className="w-full aspect-video bg-black"
-                          />
-                          {v.caption && (
-                            <figcaption className="px-3 py-2 text-xs text-muted-foreground">
-                              {v.caption}
-                            </figcaption>
-                          )}
-                        </figure>
-                      ))}
-                    </div>
-                  </div>
-                )}
               </div>
             </article>
           )}
