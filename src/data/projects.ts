@@ -62,6 +62,16 @@ import esporteVisita14 from "@/assets/projects/esporte-scratch-24-02/visita-14.j
 import sustentaVisita11 from "@/assets/projects/sustenta-scratch-24-02/visita-11.jpg.asset.json";
 import sustentaVisita12 from "@/assets/projects/sustenta-scratch-24-02/visita-12.jpg.asset.json";
 import sustentaVisita13 from "@/assets/projects/sustenta-scratch-24-02/visita-13.jpg.asset.json";
+import esporteCulm1 from "@/assets/projects/esporte-scratch-24-02/culminancia-1.jpg.asset.json";
+import esporteCulm2 from "@/assets/projects/esporte-scratch-24-02/culminancia-2.jpg.asset.json";
+import esporteCulm3 from "@/assets/projects/esporte-scratch-24-02/culminancia-3.jpg.asset.json";
+import esporteCulm4 from "@/assets/projects/esporte-scratch-24-02/culminancia-4.jpg.asset.json";
+import esporteCulm5 from "@/assets/projects/esporte-scratch-24-02/culminancia-5.jpg.asset.json";
+import sustentaCulm1 from "@/assets/projects/sustenta-scratch-24-02/culminancia-1.jpg.asset.json";
+import sustentaCulm2 from "@/assets/projects/sustenta-scratch-24-02/culminancia-2.jpg.asset.json";
+import sustentaCulm3 from "@/assets/projects/sustenta-scratch-24-02/culminancia-3.jpg.asset.json";
+import sustentaCulm4 from "@/assets/projects/sustenta-scratch-24-02/culminancia-4.jpg.asset.json";
+import sustentaCulm5 from "@/assets/projects/sustenta-scratch-24-02/culminancia-5.jpg.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
 
@@ -289,6 +299,11 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: esporteVisita12.url, alt: "Alunos experimentando consoles Atari na exposição", caption: "Jogos clássicos do Atari", category: "visita" },
           { src: esporteVisita13.url, alt: "Alunos jogando games antigos em monitores", caption: "Games retrô na exposição", category: "visita" },
           { src: esporteVisita14.url, alt: "Alunos interagindo com jogo Kinect na exposição", caption: "Atividade com Kinect", category: "visita" },
+          { src: esporteCulm1.url, alt: "Alunos jogando o jogo de futebol criado em Scratch", caption: "Apresentação do jogo de futebol", category: "culminancia" },
+          { src: esporteCulm2.url, alt: "Aluno mostrando seu projeto de Scratch para a turma", caption: "Demonstração do projeto final", category: "culminancia" },
+          { src: esporteCulm3.url, alt: "Sala de aula durante a culminância", caption: "Turma reunida na culminância", category: "culminancia" },
+          { src: esporteCulm4.url, alt: "Aluno jogando o projeto de futebol no notebook", caption: "Jogo de futebol em ação", category: "culminancia" },
+          { src: esporteCulm5.url, alt: "Aluno apresentando o jogo criado durante a culminância", caption: "Apresentação dos projetos", category: "culminancia" },
         ],
       },
       {
@@ -326,6 +341,11 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: sustentaVisita11.url, alt: "Aluna utilizando máquina de escrever antiga na exposição", caption: "Máquinas de escrever históricas", category: "visita" },
           { src: sustentaVisita12.url, alt: "Alunas experimentando câmeras analógicas antigas", caption: "Câmeras analógicas do acervo", category: "visita" },
           { src: sustentaVisita13.url, alt: "Turma reunida em frente às vitrines da exposição", caption: "Turma na exposição do ICMC", category: "visita" },
+          { src: sustentaCulm1.url, alt: "Monitora ajudando aluna em projeto de Scratch", caption: "Atendimento individual na culminância", category: "culminancia" },
+          { src: sustentaCulm2.url, alt: "Alunas conversando com monitora durante apresentação", caption: "Apresentação dos projetos", category: "culminancia" },
+          { src: sustentaCulm3.url, alt: "Monitores conversando na sala durante a culminância", caption: "Monitores na culminância", category: "culminancia" },
+          { src: sustentaCulm4.url, alt: "Aluno mostrando projeto com cenário urbano em Scratch", caption: "Projeto com cenário urbano", category: "culminancia" },
+          { src: sustentaCulm5.url, alt: "Visão geral da sala durante a culminância", caption: "Sala cheia na culminância", category: "culminancia" },
         ],
       },
       {

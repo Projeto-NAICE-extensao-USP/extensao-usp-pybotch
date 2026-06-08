@@ -138,7 +138,7 @@ function SobreNosPage() {
               key={v.title}
               className="overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-soft)]"
             >
-              <div className={`relative bg-muted ${v.embedUrl ? "aspect-[9/16]" : "aspect-video"}`}>
+              <div className="relative bg-muted aspect-video">
                 {v.url || v.embedUrl ? (
                   <iframe
                     src={v.embedUrl ?? v.url}
