@@ -341,6 +341,11 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: sustentaVisita11.url, alt: "Aluna utilizando máquina de escrever antiga na exposição", caption: "Máquinas de escrever históricas", category: "visita" },
           { src: sustentaVisita12.url, alt: "Alunas experimentando câmeras analógicas antigas", caption: "Câmeras analógicas do acervo", category: "visita" },
           { src: sustentaVisita13.url, alt: "Turma reunida em frente às vitrines da exposição", caption: "Turma na exposição do ICMC", category: "visita" },
+          { src: sustentaCulm1.url, alt: "Monitora ajudando aluna em projeto de Scratch", caption: "Atendimento individual na culminância", category: "culminancia" },
+          { src: sustentaCulm2.url, alt: "Alunas conversando com monitora durante apresentação", caption: "Apresentação dos projetos", category: "culminancia" },
+          { src: sustentaCulm3.url, alt: "Monitores conversando na sala durante a culminância", caption: "Monitores na culminância", category: "culminancia" },
+          { src: sustentaCulm4.url, alt: "Aluno mostrando projeto com cenário urbano em Scratch", caption: "Projeto com cenário urbano", category: "culminancia" },
+          { src: sustentaCulm5.url, alt: "Visão geral da sala durante a culminância", caption: "Sala cheia na culminância", category: "culminancia" },
         ],
       },
       {
