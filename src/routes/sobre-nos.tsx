@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { team } from "@/data/team";
-import { User, PlayCircle } from "lucide-react";
+import { User, PlayCircle, Maximize2 } from "lucide-react";
 import { AboutImpact } from "@/components/AboutImpact";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+
 
 export const Route = createFileRoute("/sobre-nos")({
   head: () => ({
@@ -138,16 +140,47 @@ function SobreNosPage() {
               key={v.title}
               className="overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-soft)]"
             >
-              <div className="relative bg-muted aspect-video">
+              <div className="relative bg-muted aspect-video overflow-hidden">
                 {v.url || v.embedUrl ? (
-                  <iframe
-                    src={v.embedUrl ?? v.url}
-                    title={v.title}
-                    className="absolute inset-0 h-full w-full"
-                    loading="lazy"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
+                  <>
+                    <iframe
+                      src={v.embedUrl ?? v.url}
+                      title={v.title}
+                      className="absolute left-1/2 top-1/2 w-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                      style={{ height: "316%" }}
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    />
+                    {v.embedUrl && (
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <button
+                            type="button"
+                            aria-label="Abrir vídeo em tamanho maior"
+                            className="absolute right-3 top-3 z-10 inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/60 text-white backdrop-blur transition hover:bg-black/80 hover:scale-105"
+                          >
+                            <Maximize2 className="h-4 w-4" />
+                          </button>
+                        </DialogTrigger>
+                        <DialogContent className="max-w-md p-0 overflow-hidden bg-black border-0">
+                          <DialogTitle className="sr-only">{v.title}</DialogTitle>
+                          <DialogDescription className="sr-only">
+                            {v.description ?? "Vídeo do projeto no Instagram"}
+                          </DialogDescription>
+                          <div className="relative aspect-[9/16] w-full">
+                            <iframe
+                              src={v.embedUrl}
+                              title={v.title}
+                              className="absolute inset-0 h-full w-full"
+                              loading="lazy"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            />
+                          </div>
+                        </DialogContent>
+                      </Dialog>
+                    )}
+                  </>
                 ) : (
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground">
                     <PlayCircle className="h-10 w-10 opacity-50" />
@@ -155,6 +188,7 @@ function SobreNosPage() {
                   </div>
                 )}
               </div>
+
               <div className="p-5">
                 <h3 className="font-display text-lg font-semibold text-foreground">{v.title}</h3>
                 {v.description && (
