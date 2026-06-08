@@ -299,6 +299,11 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: esporteVisita12.url, alt: "Alunos experimentando consoles Atari na exposição", caption: "Jogos clássicos do Atari", category: "visita" },
           { src: esporteVisita13.url, alt: "Alunos jogando games antigos em monitores", caption: "Games retrô na exposição", category: "visita" },
           { src: esporteVisita14.url, alt: "Alunos interagindo com jogo Kinect na exposição", caption: "Atividade com Kinect", category: "visita" },
+          { src: esporteCulm1.url, alt: "Alunos jogando o jogo de futebol criado em Scratch", caption: "Apresentação do jogo de futebol", category: "culminancia" },
+          { src: esporteCulm2.url, alt: "Aluno mostrando seu projeto de Scratch para a turma", caption: "Demonstração do projeto final", category: "culminancia" },
+          { src: esporteCulm3.url, alt: "Sala de aula durante a culminância", caption: "Turma reunida na culminância", category: "culminancia" },
+          { src: esporteCulm4.url, alt: "Aluno jogando o projeto de futebol no notebook", caption: "Jogo de futebol em ação", category: "culminancia" },
+          { src: esporteCulm5.url, alt: "Aluno apresentando o jogo criado durante a culminância", caption: "Apresentação dos projetos", category: "culminancia" },
         ],
       },
       {
