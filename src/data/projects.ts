@@ -72,6 +72,16 @@ import sustentaCulm2 from "@/assets/projects/sustenta-scratch-24-02/culminancia-
 import sustentaCulm3 from "@/assets/projects/sustenta-scratch-24-02/culminancia-3.jpg.asset.json";
 import sustentaCulm4 from "@/assets/projects/sustenta-scratch-24-02/culminancia-4.jpg.asset.json";
 import sustentaCulm5 from "@/assets/projects/sustenta-scratch-24-02/culminancia-5.jpg.asset.json";
+import ss25Aula1 from "@/assets/projects/super-scratch-25-01/aula-1.jpg.asset.json";
+import ss25Aula2 from "@/assets/projects/super-scratch-25-01/aula-2.jpg.asset.json";
+import ss25Aula3 from "@/assets/projects/super-scratch-25-01/aula-3.jpg.asset.json";
+import ss25Aula4 from "@/assets/projects/super-scratch-25-01/aula-4.jpg.asset.json";
+import ss25Aula5 from "@/assets/projects/super-scratch-25-01/aula-5.jpg.asset.json";
+import ss25Aula6 from "@/assets/projects/super-scratch-25-01/aula-6.jpg.asset.json";
+import ss25Aula7 from "@/assets/projects/super-scratch-25-01/aula-7.jpg.asset.json";
+import ss25Aula8 from "@/assets/projects/super-scratch-25-01/aula-8.jpg.asset.json";
+import ss25Aula9 from "@/assets/projects/super-scratch-25-01/aula-9.jpg.asset.json";
+import ss25Aula10 from "@/assets/projects/super-scratch-25-01/aula-10.jpg.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
 
@@ -367,6 +377,18 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           "Francisco Rafael Argueta Pérez (coordenação)",
           "Thales do Espírito Santo Silva",
           "Vitória Gomes Guimarães",
+        ],
+        photos: [
+          { src: ss25Aula1.url, alt: "Aluno programando no Scratch com projeção do plano cartesiano", caption: "Explicação do plano cartesiano no Scratch", category: "aula" },
+          { src: ss25Aula2.url, alt: "Alunos em dupla trabalhando nos Chromebooks", caption: "Alunos trabalhando em dupla", category: "aula" },
+          { src: ss25Aula3.url, alt: "Monitora ajudando alunos com atividade de plano cartesiano", caption: "Atendimento durante a atividade", category: "aula" },
+          { src: ss25Aula4.url, alt: "Notebook mostrando código Python no Google Colab", caption: "Introdução ao Python no Colab", category: "aula" },
+          { src: ss25Aula5.url, alt: "Alunos praticando exercícios de variáveis", caption: "Exercícios de variáveis", category: "aula" },
+          { src: ss25Aula6.url, alt: "Aluna praticando input e variáveis em Python", caption: "Atividade prática de input", category: "aula" },
+          { src: ss25Aula7.url, alt: "Turma acompanhando explicação com projeção do Scratch", caption: "Aula expositiva na sala", category: "aula" },
+          { src: ss25Aula8.url, alt: "Monitor explicando labirinto na lousa", caption: "Explicação do projeto do labirinto", category: "aula" },
+          { src: ss25Aula9.url, alt: "Visão geral da sala com projeção do labirinto no Scratch", caption: "Turma desenvolvendo o labirinto", category: "aula" },
+          { src: ss25Aula10.url, alt: "Alunos criando labirintos personalizados no Scratch", caption: "Labirintos personalizados dos alunos", category: "aula" },
         ],
       },
       {
