@@ -378,6 +378,18 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           "Thales do Espírito Santo Silva",
           "Vitória Gomes Guimarães",
         ],
+        photos: [
+          { src: ss25Aula1.url, alt: "Aluno programando no Scratch com projeção do plano cartesiano", caption: "Explicação do plano cartesiano no Scratch", category: "aula" },
+          { src: ss25Aula2.url, alt: "Alunos em dupla trabalhando nos Chromebooks", caption: "Alunos trabalhando em dupla", category: "aula" },
+          { src: ss25Aula3.url, alt: "Monitora ajudando alunos com atividade de plano cartesiano", caption: "Atendimento durante a atividade", category: "aula" },
+          { src: ss25Aula4.url, alt: "Notebook mostrando código Python no Google Colab", caption: "Introdução ao Python no Colab", category: "aula" },
+          { src: ss25Aula5.url, alt: "Alunos praticando exercícios de variáveis", caption: "Exercícios de variáveis", category: "aula" },
+          { src: ss25Aula6.url, alt: "Aluna praticando input e variáveis em Python", caption: "Atividade prática de input", category: "aula" },
+          { src: ss25Aula7.url, alt: "Turma acompanhando explicação com projeção do Scratch", caption: "Aula expositiva na sala", category: "aula" },
+          { src: ss25Aula8.url, alt: "Monitor explicando labirinto na lousa", caption: "Explicação do projeto do labirinto", category: "aula" },
+          { src: ss25Aula9.url, alt: "Visão geral da sala com projeção do labirinto no Scratch", caption: "Turma desenvolvendo o labirinto", category: "aula" },
+          { src: ss25Aula10.url, alt: "Alunos criando labirintos personalizados no Scratch", caption: "Labirintos personalizados dos alunos", category: "aula" },
+        ],
       },
       {
         id: "sc-super-scratch-25-02",
