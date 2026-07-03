@@ -23,6 +23,16 @@ import sm2601Visita17 from "@/assets/projects/scratchmat-26-01/visita-17.jpg.ass
 import sm2601Visita18 from "@/assets/projects/scratchmat-26-01/visita-18.jpg.asset.json";
 import sm2601Visita19 from "@/assets/projects/scratchmat-26-01/visita-19.jpg.asset.json";
 import sm2601Visita20 from "@/assets/projects/scratchmat-26-01/visita-20.jpg.asset.json";
+import sm2601Visita21 from "@/assets/projects/scratchmat-26-01/visita-21.jpg.asset.json";
+import sm2601Visita22 from "@/assets/projects/scratchmat-26-01/visita-22.jpg.asset.json";
+import sm2601Visita23 from "@/assets/projects/scratchmat-26-01/visita-23.jpg.asset.json";
+import sm2601Visita24 from "@/assets/projects/scratchmat-26-01/visita-24.jpg.asset.json";
+import sm2601Visita25 from "@/assets/projects/scratchmat-26-01/visita-25.jpg.asset.json";
+import sm2601Visita26 from "@/assets/projects/scratchmat-26-01/visita-26.jpg.asset.json";
+import sm2601Visita27 from "@/assets/projects/scratchmat-26-01/visita-27.jpg.asset.json";
+import sm2601Visita28 from "@/assets/projects/scratchmat-26-01/visita-28.jpg.asset.json";
+import sm2601Visita29 from "@/assets/projects/scratchmat-26-01/visita-29.jpg.asset.json";
+import sm2601Visita30 from "@/assets/projects/scratchmat-26-01/visita-30.jpg.asset.json";
 import convite1 from "@/assets/projects/super-scratch-24-01/convite-1.jpg.asset.json";
 import convite2 from "@/assets/projects/super-scratch-24-01/convite-2.jpg.asset.json";
 import convite3 from "@/assets/projects/super-scratch-24-01/convite-3.jpg.asset.json";
@@ -645,6 +655,16 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: sm2601Visita18.url, alt: "Monitora conduzindo grupo de alunos por corredor do museu", caption: "Percurso pelo Museu de Computação", category: "visita" },
           { src: sm2601Visita19.url, alt: "Alunos reunidos ouvindo explicação em sala do museu do ICMC-USP", caption: "Explicação em sala do museu do ICMC", category: "visita" },
           { src: sm2601Visita20.url, alt: "Turma ao final da visita ouvindo encerramento da monitora do museu", caption: "Encerramento da visita ao museu", category: "visita" },
+          { src: sm2601Visita21.url, alt: "Alunos observando exposição do museu com celulares em mãos", caption: "Alunos explorando a exposição", category: "visita" },
+          { src: sm2601Visita22.url, alt: "Grupo de alunos atento à explicação da monitora no museu", caption: "Atenção à explicação da monitora", category: "visita" },
+          { src: sm2601Visita23.url, alt: "Alunos observando computadores antigos em vitrines do museu", caption: "Observando computadores históricos", category: "visita" },
+          { src: sm2601Visita24.url, alt: "Turma passando por corredor do museu com equipamentos antigos", caption: "Corredor do Museu de Computação", category: "visita" },
+          { src: sm2601Visita25.url, alt: "Alunos concentrados observando peças históricas nas vitrines", caption: "Descobrindo a história da computação", category: "visita" },
+          { src: sm2601Visita26.url, alt: "Alunos jogando em consoles e arcades na exposição interativa", caption: "Exposição interativa de games", category: "visita" },
+          { src: sm2601Visita27.url, alt: "Foto de grupo com toda a turma e monitores ao final da visita", caption: "Foto oficial da turma", category: "visita" },
+          { src: sm2601Visita28.url, alt: "Foto de grupo da turma com professores e monitores", caption: "Turma reunida com os monitores", category: "visita" },
+          { src: sm2601Visita29.url, alt: "Foto de grupo da turma sorrindo ao final da visita à USP", caption: "Encerrando a visita à USP", category: "visita" },
+          { src: sm2601Visita30.url, alt: "Foto de grupo descontraída da turma ao final do passeio", caption: "Momento descontraído da turma", category: "visita" },
         ],
       },
     ],
