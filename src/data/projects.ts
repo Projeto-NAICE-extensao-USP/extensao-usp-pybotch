@@ -97,6 +97,16 @@ import ss25Culm7 from "@/assets/projects/super-scratch-25-01/culminancia-7.jpg.a
 import ss25Culm8 from "@/assets/projects/super-scratch-25-01/culminancia-8.jpg.asset.json";
 import ss25Culm9 from "@/assets/projects/super-scratch-25-01/culminancia-9.jpg.asset.json";
 import ss25Culm10 from "@/assets/projects/super-scratch-25-01/culminancia-10.jpg.asset.json";
+import ss25Culm11 from "@/assets/projects/super-scratch-25-01/culminancia-11.jpg.asset.json";
+import ss25Culm12 from "@/assets/projects/super-scratch-25-01/culminancia-12.jpg.asset.json";
+import ss25Culm13 from "@/assets/projects/super-scratch-25-01/culminancia-13.jpg.asset.json";
+import ss25Culm14 from "@/assets/projects/super-scratch-25-01/culminancia-14.jpg.asset.json";
+import ss25Culm15 from "@/assets/projects/super-scratch-25-01/culminancia-15.jpg.asset.json";
+import ss25Culm16 from "@/assets/projects/super-scratch-25-01/culminancia-16.jpg.asset.json";
+import ss25Culm17 from "@/assets/projects/super-scratch-25-01/culminancia-17.jpg.asset.json";
+import ss25Culm18 from "@/assets/projects/super-scratch-25-01/culminancia-18.jpg.asset.json";
+import ss25Culm19 from "@/assets/projects/super-scratch-25-01/culminancia-19.jpg.asset.json";
+import ss25Culm20 from "@/assets/projects/super-scratch-25-01/culminancia-20.jpg.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
 
@@ -419,6 +429,16 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: ss25Culm8.url, alt: "Monitora acompanhando dupla de alunos apresentando o projeto", caption: "Monitoria durante a apresentação", category: "culminancia" },
           { src: ss25Culm9.url, alt: "Alunos apresentando jogo Sustenta Scratch em Chromebook para colega fantasiado", caption: "Apresentação do jogo entre alunos", category: "culminancia" },
           { src: ss25Culm10.url, alt: "Vista da sala com várias duplas apresentando projetos simultaneamente", caption: "Diversas apresentações simultâneas", category: "culminancia" },
+          { src: ss25Culm11.url, alt: "Alunos concentrados trabalhando em duplas com notebooks durante a culminância", caption: "Alunos trabalhando em duplas", category: "culminancia" },
+          { src: ss25Culm12.url, alt: "Aluno conversando com colegas ao redor de notebook durante apresentação", caption: "Discussão em grupo durante a culminância", category: "culminancia" },
+          { src: ss25Culm13.url, alt: "Trio de alunos observando projeto rodando no notebook em frente à lousa", caption: "Trio apresentando o jogo desenvolvido", category: "culminancia" },
+          { src: ss25Culm14.url, alt: "Quatro alunas posando ao lado do mural com trabalhos da culminância", caption: "Alunas com o mural dos projetos", category: "culminancia" },
+          { src: ss25Culm15.url, alt: "Monitoras posando com aluna ao lado do projeto Perdido no Mapa", caption: "Monitoras com aluna apresentadora", category: "culminancia" },
+          { src: ss25Culm16.url, alt: "Alunas apresentando jogo Sustainability in the World em Chromebook", caption: "Apresentação do jogo Sustainability", category: "culminancia" },
+          { src: ss25Culm17.url, alt: "Alunos concentrados observando tela com aviso do jogo em desenvolvimento", caption: "Alunos testando o jogo do colega", category: "culminancia" },
+          { src: ss25Culm18.url, alt: "Sala cheia de alunos com Chromebooks e lousa escrita Super Scratch e Python", caption: "Sala ambientada com Super Scratch e Python", category: "culminancia" },
+          { src: ss25Culm19.url, alt: "Vista ampla da culminância com várias mesas, cartazes e alunos apresentando", caption: "Panorama do evento de culminância", category: "culminancia" },
+          { src: ss25Culm20.url, alt: "Alunos apresentando jogo Sustainability in the World para colegas em sala", caption: "Apresentação entre colegas de turma", category: "culminancia" },
         ],
       },
       {
