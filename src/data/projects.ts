@@ -117,6 +117,16 @@ import ro25Aula7 from "@/assets/projects/robotica-25-01/aula-7.jpg.asset.json";
 import ro25Aula8 from "@/assets/projects/robotica-25-01/aula-8.jpg.asset.json";
 import ro25Aula9 from "@/assets/projects/robotica-25-01/aula-9.jpg.asset.json";
 import ro25Aula10 from "@/assets/projects/robotica-25-01/aula-10.jpg.asset.json";
+import ro25Aula11 from "@/assets/projects/robotica-25-01/aula-11.jpg.asset.json";
+import ro25Aula12 from "@/assets/projects/robotica-25-01/aula-12.jpg.asset.json";
+import ro25Aula13 from "@/assets/projects/robotica-25-01/aula-13.jpg.asset.json";
+import ro25Aula14 from "@/assets/projects/robotica-25-01/aula-14.jpg.asset.json";
+import ro25Aula15 from "@/assets/projects/robotica-25-01/aula-15.jpg.asset.json";
+import ro25Aula16 from "@/assets/projects/robotica-25-01/aula-16.jpg.asset.json";
+import ro25Aula17 from "@/assets/projects/robotica-25-01/aula-17.jpg.asset.json";
+import ro25Aula18 from "@/assets/projects/robotica-25-01/aula-18.jpg.asset.json";
+import ro25Aula19 from "@/assets/projects/robotica-25-01/aula-19.jpg.asset.json";
+import ro25Aula20 from "@/assets/projects/robotica-25-01/aula-20.jpg.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
 
@@ -552,6 +562,16 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: ro25Aula8.url, alt: "Sala de aula cheia com alunos manipulando componentes e monitora orientando", caption: "Turma engajada na atividade", category: "aula" },
           { src: ro25Aula9.url, alt: "Vista da sala com várias duplas trabalhando na montagem dos kits", caption: "Vista geral da aula de robótica", category: "aula" },
           { src: ro25Aula10.url, alt: "Monitor da USP apresentando o ambiente MakeCode com micro:bit na lousa digital", caption: "Apresentação do MakeCode com micro:bit", category: "aula" },
+          { src: ro25Aula11.url, alt: "Monitor da USP explicando conteúdo projetado com blocos do MakeCode aos alunos", caption: "Explicação com projeção do MakeCode", category: "aula" },
+          { src: ro25Aula12.url, alt: "Vista ampla da sala com alunos organizados em grupos manipulando kits", caption: "Sala organizada para trabalho em grupos", category: "aula" },
+          { src: ro25Aula13.url, alt: "Turma trabalhando em grupos com monitora acompanhando pela sala", caption: "Monitora circulando entre os grupos", category: "aula" },
+          { src: ro25Aula14.url, alt: "Aluno concentrado lendo folha de instruções enquanto colega organiza peças", caption: "Aluno estudando as instruções do kit", category: "aula" },
+          { src: ro25Aula15.url, alt: "Dupla de alunos sorrindo enquanto manuseia componentes do micro:bit", caption: "Dupla animada com a atividade", category: "aula" },
+          { src: ro25Aula16.url, alt: "Monitor do Grupo Semear orientando alunos com peças do kit sobre a mesa", caption: "Orientação do Grupo Semear", category: "aula" },
+          { src: ro25Aula17.url, alt: "Monitor acompanhando dois alunos que examinam cabos e componentes", caption: "Acompanhamento próximo dos alunos", category: "aula" },
+          { src: ro25Aula18.url, alt: "Monitor gesticulando ao explicar detalhes de montagem para os alunos", caption: "Explicação sobre montagem do kit", category: "aula" },
+          { src: ro25Aula19.url, alt: "Alunos analisando componentes eletrônicos enquanto monitor observa", caption: "Análise dos componentes eletrônicos", category: "aula" },
+          { src: ro25Aula20.url, alt: "Monitor conduzindo atividade com dois alunos examinando peças do kit", caption: "Atividade prática com o kit micro:bit", category: "aula" },
         ],
       },
       {
