@@ -541,6 +541,18 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           "Henrique Ribeiro de Figueiredo (coordenação)",
           "Pedro da Silva Panini",
         ],
+        photos: [
+          { src: ro25Aula1.url, alt: "Aluno sorrindo segurando componente eletrônico micro:bit em sala de aula", caption: "Aluno explorando o micro:bit", category: "aula" },
+          { src: ro25Aula2.url, alt: "Grupo de alunos examinando componentes eletrônicos com monitores da USP ao fundo", caption: "Alunos analisando os componentes do kit", category: "aula" },
+          { src: ro25Aula3.url, alt: "Turma reunida em duplas mexendo em placas micro:bit na sala de aula", caption: "Turma trabalhando em duplas", category: "aula" },
+          { src: ro25Aula4.url, alt: "Alunos sorrindo com placas de micro:bit em mãos durante a aula", caption: "Alunos animados com o kit de robótica", category: "aula" },
+          { src: ro25Aula5.url, alt: "Grupo manipulando componentes eletrônicos com monitores USP acompanhando", caption: "Monitores da USP acompanhando os grupos", category: "aula" },
+          { src: ro25Aula6.url, alt: "Duas duplas de alunos organizando os componentes do kit sobre as carteiras", caption: "Organização dos componentes do kit", category: "aula" },
+          { src: ro25Aula7.url, alt: "Alunos conversando em duplas durante a atividade de robótica", caption: "Discussão em duplas durante a atividade", category: "aula" },
+          { src: ro25Aula8.url, alt: "Sala de aula cheia com alunos manipulando componentes e monitora orientando", caption: "Turma engajada na atividade", category: "aula" },
+          { src: ro25Aula9.url, alt: "Vista da sala com várias duplas trabalhando na montagem dos kits", caption: "Vista geral da aula de robótica", category: "aula" },
+          { src: ro25Aula10.url, alt: "Monitor da USP apresentando o ambiente MakeCode com micro:bit na lousa digital", caption: "Apresentação do MakeCode com micro:bit", category: "aula" },
+        ],
       },
       {
         id: "ro-disciplina-26-01",
