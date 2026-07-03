@@ -33,6 +33,16 @@ import sm2601Visita27 from "@/assets/projects/scratchmat-26-01/visita-27.jpg.ass
 import sm2601Visita28 from "@/assets/projects/scratchmat-26-01/visita-28.jpg.asset.json";
 import sm2601Visita29 from "@/assets/projects/scratchmat-26-01/visita-29.jpg.asset.json";
 import sm2601Visita30 from "@/assets/projects/scratchmat-26-01/visita-30.jpg.asset.json";
+import sm2601Visita31 from "@/assets/projects/scratchmat-26-01/visita-31.jpg.asset.json";
+import sm2601Visita32 from "@/assets/projects/scratchmat-26-01/visita-32.jpg.asset.json";
+import sm2601Visita33 from "@/assets/projects/scratchmat-26-01/visita-33.jpg.asset.json";
+import sm2601Visita34 from "@/assets/projects/scratchmat-26-01/visita-34.jpg.asset.json";
+import sm2601Visita35 from "@/assets/projects/scratchmat-26-01/visita-35.jpg.asset.json";
+import sm2601Visita36 from "@/assets/projects/scratchmat-26-01/visita-36.jpg.asset.json";
+import sm2601Visita37 from "@/assets/projects/scratchmat-26-01/visita-37.jpg.asset.json";
+import sm2601Visita38 from "@/assets/projects/scratchmat-26-01/visita-38.jpg.asset.json";
+import sm2601Visita39 from "@/assets/projects/scratchmat-26-01/visita-39.jpg.asset.json";
+import sm2601Visita40 from "@/assets/projects/scratchmat-26-01/visita-40.jpg.asset.json";
 import convite1 from "@/assets/projects/super-scratch-24-01/convite-1.jpg.asset.json";
 import convite2 from "@/assets/projects/super-scratch-24-01/convite-2.jpg.asset.json";
 import convite3 from "@/assets/projects/super-scratch-24-01/convite-3.jpg.asset.json";
@@ -665,6 +675,16 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: sm2601Visita28.url, alt: "Foto de grupo da turma com professores e monitores", caption: "Turma reunida com os monitores", category: "visita" },
           { src: sm2601Visita29.url, alt: "Foto de grupo da turma sorrindo ao final da visita à USP", caption: "Encerrando a visita à USP", category: "visita" },
           { src: sm2601Visita30.url, alt: "Foto de grupo descontraída da turma ao final do passeio", caption: "Momento descontraído da turma", category: "visita" },
+          { src: sm2601Visita31.url, alt: "Outra foto de grupo da turma com professores e monitores", caption: "Registro final com a turma", category: "visita" },
+          { src: sm2601Visita32.url, alt: "Alunos explorando exposição interativa do museu com computadores antigos", caption: "Explorando a exposição interativa", category: "visita" },
+          { src: sm2601Visita33.url, alt: "Alunos jogando games clássicos em monitores CRT antigos", caption: "Jogando games clássicos", category: "visita" },
+          { src: sm2601Visita34.url, alt: "Aluno usando computador Macintosh antigo em exposição do museu", caption: "Interagindo com computador Macintosh clássico", category: "visita" },
+          { src: sm2601Visita35.url, alt: "Aluno jogando em máquina de arcade clássica no museu", caption: "Diversão na máquina de arcade", category: "visita" },
+          { src: sm2601Visita36.url, alt: "Alunos observando peças históricas de hardware em vitrines do museu", caption: "Observando peças históricas de hardware", category: "visita" },
+          { src: sm2601Visita37.url, alt: "Alunos interagindo com jogos e simuladores em telas do museu", caption: "Jogos e simuladores no museu", category: "visita" },
+          { src: sm2601Visita38.url, alt: "Alunos assistindo apresentação sobre o Professor Odelar", caption: "Homenagem ao Professor Odelar", category: "visita" },
+          { src: sm2601Visita39.url, alt: "Monitor apresentando exposição de réguas de cálculo para a turma", caption: "Apresentação sobre réguas de cálculo", category: "visita" },
+          { src: sm2601Visita40.url, alt: "Aluna da USP conduzindo atividade prática de matemática com formas geométricas", caption: "Atividade prática no CEM", category: "visita" },
         ],
       },
     ],
