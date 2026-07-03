@@ -147,6 +147,16 @@ import ss2502Aula7 from "@/assets/projects/super-scratch-25-02/aula-7.jpg.asset.
 import ss2502Aula8 from "@/assets/projects/super-scratch-25-02/aula-8.jpg.asset.json";
 import ss2502Aula9 from "@/assets/projects/super-scratch-25-02/aula-9.jpg.asset.json";
 import ss2502Aula10 from "@/assets/projects/super-scratch-25-02/aula-10.jpg.asset.json";
+import ss2502Aula11 from "@/assets/projects/super-scratch-25-02/aula-11.jpg.asset.json";
+import ss2502Aula12 from "@/assets/projects/super-scratch-25-02/aula-12.jpg.asset.json";
+import ss2502Aula13 from "@/assets/projects/super-scratch-25-02/aula-13.jpg.asset.json";
+import ss2502Aula14 from "@/assets/projects/super-scratch-25-02/aula-14.jpg.asset.json";
+import ss2502Aula15 from "@/assets/projects/super-scratch-25-02/aula-15.jpg.asset.json";
+import ss2502Aula16 from "@/assets/projects/super-scratch-25-02/aula-16.jpg.asset.json";
+import ss2502Aula17 from "@/assets/projects/super-scratch-25-02/aula-17.jpg.asset.json";
+import ss2502Aula18 from "@/assets/projects/super-scratch-25-02/aula-18.jpg.asset.json";
+import ss2502Aula19 from "@/assets/projects/super-scratch-25-02/aula-19.jpg.asset.json";
+import ss2502Aula20 from "@/assets/projects/super-scratch-25-02/aula-20.jpg.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
 
