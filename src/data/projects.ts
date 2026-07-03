@@ -97,6 +97,16 @@ import ss25Culm7 from "@/assets/projects/super-scratch-25-01/culminancia-7.jpg.a
 import ss25Culm8 from "@/assets/projects/super-scratch-25-01/culminancia-8.jpg.asset.json";
 import ss25Culm9 from "@/assets/projects/super-scratch-25-01/culminancia-9.jpg.asset.json";
 import ss25Culm10 from "@/assets/projects/super-scratch-25-01/culminancia-10.jpg.asset.json";
+import ss25Culm11 from "@/assets/projects/super-scratch-25-01/culminancia-11.jpg.asset.json";
+import ss25Culm12 from "@/assets/projects/super-scratch-25-01/culminancia-12.jpg.asset.json";
+import ss25Culm13 from "@/assets/projects/super-scratch-25-01/culminancia-13.jpg.asset.json";
+import ss25Culm14 from "@/assets/projects/super-scratch-25-01/culminancia-14.jpg.asset.json";
+import ss25Culm15 from "@/assets/projects/super-scratch-25-01/culminancia-15.jpg.asset.json";
+import ss25Culm16 from "@/assets/projects/super-scratch-25-01/culminancia-16.jpg.asset.json";
+import ss25Culm17 from "@/assets/projects/super-scratch-25-01/culminancia-17.jpg.asset.json";
+import ss25Culm18 from "@/assets/projects/super-scratch-25-01/culminancia-18.jpg.asset.json";
+import ss25Culm19 from "@/assets/projects/super-scratch-25-01/culminancia-19.jpg.asset.json";
+import ss25Culm20 from "@/assets/projects/super-scratch-25-01/culminancia-20.jpg.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
 
