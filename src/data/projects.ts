@@ -3,6 +3,16 @@ import py2502Aula2 from "@/assets/projects/python-25-02/aula-2.jpg.asset.json";
 import py2502Aula3 from "@/assets/projects/python-25-02/aula-3.jpg.asset.json";
 import py2502Aula4 from "@/assets/projects/python-25-02/aula-4.jpg.asset.json";
 import py2502Aula5 from "@/assets/projects/python-25-02/aula-5.jpg.asset.json";
+import sm2601Visita1 from "@/assets/projects/scratchmat-26-01/visita-1.jpg.asset.json";
+import sm2601Visita2 from "@/assets/projects/scratchmat-26-01/visita-2.jpg.asset.json";
+import sm2601Visita3 from "@/assets/projects/scratchmat-26-01/visita-3.jpg.asset.json";
+import sm2601Visita4 from "@/assets/projects/scratchmat-26-01/visita-4.jpg.asset.json";
+import sm2601Visita5 from "@/assets/projects/scratchmat-26-01/visita-5.jpg.asset.json";
+import sm2601Visita6 from "@/assets/projects/scratchmat-26-01/visita-6.jpg.asset.json";
+import sm2601Visita7 from "@/assets/projects/scratchmat-26-01/visita-7.jpg.asset.json";
+import sm2601Visita8 from "@/assets/projects/scratchmat-26-01/visita-8.jpg.asset.json";
+import sm2601Visita9 from "@/assets/projects/scratchmat-26-01/visita-9.jpg.asset.json";
+import sm2601Visita10 from "@/assets/projects/scratchmat-26-01/visita-10.jpg.asset.json";
 import convite1 from "@/assets/projects/super-scratch-24-01/convite-1.jpg.asset.json";
 import convite2 from "@/assets/projects/super-scratch-24-01/convite-2.jpg.asset.json";
 import convite3 from "@/assets/projects/super-scratch-24-01/convite-3.jpg.asset.json";
@@ -603,6 +613,18 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           "João Pedro Boiago Gomes Santana (coordenação)",
           "Felipe Volkweis de Oliveira",
           "Lúcia Karoline Marques de Azevedo",
+        ],
+        photos: [
+          { src: sm2601Visita1.url, alt: "Alunos observando exposição sobre calculadoras mecânicas no Museu de Computação da USP", caption: "Turma explorando a exposição de calculadoras", category: "visita" },
+          { src: sm2601Visita2.url, alt: "Grupo de alunos em frente à vitrine com painéis sobre história da computação", caption: "Alunos atentos aos painéis históricos", category: "visita" },
+          { src: sm2601Visita3.url, alt: "Alunos observando painel do Professor Odelar e calculadoras de bolso", caption: "Painel sobre o Professor Odelar", category: "visita" },
+          { src: sm2601Visita4.url, alt: "Turma reunida em torno de mesa com calculadoras e celulares antigos", caption: "Contato com celulares e calculadoras antigas", category: "visita" },
+          { src: sm2601Visita5.url, alt: "Monitora do museu acompanhando alunos que observam artefatos históricos", caption: "Monitora do museu conduzindo o grupo", category: "visita" },
+          { src: sm2601Visita6.url, alt: "Alunos enfileirados escutando explicação da guia do Museu de Computação", caption: "Explicação da guia no museu", category: "visita" },
+          { src: sm2601Visita7.url, alt: "Alunos examinando calculadora antiga em exposição de artefatos", caption: "Observando uma calculadora antiga", category: "visita" },
+          { src: sm2601Visita8.url, alt: "Turma reunida em torno de exposição com calculadoras e telefones", caption: "Turma explorando o acervo do museu", category: "visita" },
+          { src: sm2601Visita9.url, alt: "Alunos escutando explicação da guia dentro do Museu de Computação", caption: "Alunos atentos à explicação da guia", category: "visita" },
+          { src: sm2601Visita10.url, alt: "Alunos observando exposição sobre a doação para o Museu de Computação", caption: "Painel sobre a doação ao Museu de Computação", category: "visita" },
         ],
       },
     ],
