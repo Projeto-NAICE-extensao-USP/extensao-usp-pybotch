@@ -280,6 +280,13 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           "Antonio Feolsa",
           "Rafael Senger",
         ],
+        photos: [
+          { src: py2502Aula1.url, alt: "Turma de alunos posando em frente à lousa com códigos de Python", caption: "Turma reunida após a aula de Python", category: "aula" },
+          { src: py2502Aula2.url, alt: "Alunos abraçados sorrindo em frente à lousa com anotações de Python", caption: "Descontração entre os alunos no fim da aula", category: "aula" },
+          { src: py2502Aula3.url, alt: "Monitores e alunos posando juntos na sala de aula com notebook ao fundo", caption: "Monitores e alunos juntos ao final da aula", category: "aula" },
+          { src: py2502Aula4.url, alt: "Turma e monitores em foto de grupo com lousa de Python ao fundo", caption: "Foto de grupo com toda a turma", category: "aula" },
+          { src: py2502Aula5.url, alt: "Alunos e monitores sorrindo em frente à lousa com códigos Python", caption: "Encerramento descontraído da aula", category: "aula" },
+        ],
       },
       {
         id: "py-akd-26-01",
