@@ -82,6 +82,11 @@ import ss25Aula7 from "@/assets/projects/super-scratch-25-01/aula-7.jpg.asset.js
 import ss25Aula8 from "@/assets/projects/super-scratch-25-01/aula-8.jpg.asset.json";
 import ss25Aula9 from "@/assets/projects/super-scratch-25-01/aula-9.jpg.asset.json";
 import ss25Aula10 from "@/assets/projects/super-scratch-25-01/aula-10.jpg.asset.json";
+import ss25Aula11 from "@/assets/projects/super-scratch-25-01/aula-11.jpg.asset.json";
+import ss25Aula12 from "@/assets/projects/super-scratch-25-01/aula-12.jpg.asset.json";
+import ss25Aula13 from "@/assets/projects/super-scratch-25-01/aula-13.jpg.asset.json";
+import ss25Aula14 from "@/assets/projects/super-scratch-25-01/aula-14.jpg.asset.json";
+import ss25Aula15 from "@/assets/projects/super-scratch-25-01/aula-15.jpg.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
 
@@ -389,6 +394,11 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: ss25Aula8.url, alt: "Monitor explicando labirinto na lousa", caption: "Explicação do projeto do labirinto", category: "aula" },
           { src: ss25Aula9.url, alt: "Visão geral da sala com projeção do labirinto no Scratch", caption: "Turma desenvolvendo o labirinto", category: "aula" },
           { src: ss25Aula10.url, alt: "Alunos criando labirintos personalizados no Scratch", caption: "Labirintos personalizados dos alunos", category: "aula" },
+          { src: ss25Aula11.url, alt: "Monitor tirando dúvida enquanto alunos trabalham no labirinto", caption: "Monitoria durante a atividade do labirinto", category: "aula" },
+          { src: ss25Aula12.url, alt: "Aluna desenvolvendo cenário de projeto no Scratch", caption: "Aluna desenvolvendo seu cenário", category: "aula" },
+          { src: ss25Aula13.url, alt: "Monitor explicando o plano cartesiano na lousa", caption: "Aula sobre plano cartesiano", category: "aula" },
+          { src: ss25Aula14.url, alt: "Turma acompanhando explicação sobre plano cartesiano", caption: "Turma acompanhando a explicação", category: "aula" },
+          { src: ss25Aula15.url, alt: "Alunos observando projeção do Scratch com o gato no plano cartesiano", caption: "Projeção do Scratch com plano cartesiano", category: "aula" },
         ],
       },
       {
