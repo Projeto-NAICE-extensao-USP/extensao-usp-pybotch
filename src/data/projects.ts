@@ -127,6 +127,16 @@ import ro25Aula17 from "@/assets/projects/robotica-25-01/aula-17.jpg.asset.json"
 import ro25Aula18 from "@/assets/projects/robotica-25-01/aula-18.jpg.asset.json";
 import ro25Aula19 from "@/assets/projects/robotica-25-01/aula-19.jpg.asset.json";
 import ro25Aula20 from "@/assets/projects/robotica-25-01/aula-20.jpg.asset.json";
+import ro25Aula21 from "@/assets/projects/robotica-25-01/aula-21.jpg.asset.json";
+import ro25Aula22 from "@/assets/projects/robotica-25-01/aula-22.jpg.asset.json";
+import ro25Aula23 from "@/assets/projects/robotica-25-01/aula-23.jpg.asset.json";
+import ro25Aula24 from "@/assets/projects/robotica-25-01/aula-24.jpg.asset.json";
+import ro25Aula25 from "@/assets/projects/robotica-25-01/aula-25.jpg.asset.json";
+import ro25Aula26 from "@/assets/projects/robotica-25-01/aula-26.jpg.asset.json";
+import ro25Aula27 from "@/assets/projects/robotica-25-01/aula-27.jpg.asset.json";
+import ro25Aula28 from "@/assets/projects/robotica-25-01/aula-28.jpg.asset.json";
+import ro25Aula29 from "@/assets/projects/robotica-25-01/aula-29.jpg.asset.json";
+import ro25Aula30 from "@/assets/projects/robotica-25-01/aula-30.jpg.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
 
