@@ -125,6 +125,9 @@ function Home() {
           </h2>
           <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
             Somos alunos da{" "}
+            <strong className="text-foreground">USP São Carlos (ICMC)</strong> que
+            dedicam suas tardes para levar tecnologia, criatividade e oportunidade
+            a estudantes da rede pública. Cada turma tem professores e universitários
             acompanhando de perto, com material próprio e projetos que os alunos
             constroem do zero.
           </p>
