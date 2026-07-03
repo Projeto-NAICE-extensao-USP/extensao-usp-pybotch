@@ -137,6 +137,16 @@ import ro25Aula27 from "@/assets/projects/robotica-25-01/aula-27.jpg.asset.json"
 import ro25Aula28 from "@/assets/projects/robotica-25-01/aula-28.jpg.asset.json";
 import ro25Aula29 from "@/assets/projects/robotica-25-01/aula-29.jpg.asset.json";
 import ro25Aula30 from "@/assets/projects/robotica-25-01/aula-30.jpg.asset.json";
+import ss2502Aula1 from "@/assets/projects/super-scratch-25-02/aula-1.jpg.asset.json";
+import ss2502Aula2 from "@/assets/projects/super-scratch-25-02/aula-2.jpg.asset.json";
+import ss2502Aula3 from "@/assets/projects/super-scratch-25-02/aula-3.jpg.asset.json";
+import ss2502Aula4 from "@/assets/projects/super-scratch-25-02/aula-4.jpg.asset.json";
+import ss2502Aula5 from "@/assets/projects/super-scratch-25-02/aula-5.jpg.asset.json";
+import ss2502Aula6 from "@/assets/projects/super-scratch-25-02/aula-6.jpg.asset.json";
+import ss2502Aula7 from "@/assets/projects/super-scratch-25-02/aula-7.jpg.asset.json";
+import ss2502Aula8 from "@/assets/projects/super-scratch-25-02/aula-8.jpg.asset.json";
+import ss2502Aula9 from "@/assets/projects/super-scratch-25-02/aula-9.jpg.asset.json";
+import ss2502Aula10 from "@/assets/projects/super-scratch-25-02/aula-10.jpg.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
 
@@ -490,6 +500,18 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           "Vitória Gomes Guimarães (coordenação)",
           "José Carlos Andrade do Nascimento",
           "João Pedro Boiago Gomes Santana",
+        ],
+        photos: [
+          { src: ss2502Aula1.url, alt: "Sala de informática cheia de alunos usando notebooks durante a aula de Super Scratch", caption: "Sala de informática durante a aula", category: "aula" },
+          { src: ss2502Aula2.url, alt: "Notebook Positivo com projeto do Scratch aberto sobre a bancada", caption: "Projeto no Scratch em desenvolvimento", category: "aula" },
+          { src: ss2502Aula3.url, alt: "Três notebooks lado a lado exibindo blocos de código no Scratch", caption: "Alunos programando em paralelo no Scratch", category: "aula" },
+          { src: ss2502Aula4.url, alt: "Notebook com questionário sobre programação em primeiro plano na aula", caption: "Atividade avaliativa sobre programação", category: "aula" },
+          { src: ss2502Aula5.url, alt: "Professora apontando para tela com projeto do Scratch enquanto monitor auxilia aluno", caption: "Explicação com projeção e apoio dos monitores", category: "aula" },
+          { src: ss2502Aula6.url, alt: "Três alunas concentradas programando no Scratch em seus notebooks", caption: "Alunas concentradas em suas produções", category: "aula" },
+          { src: ss2502Aula7.url, alt: "Aluna acompanhando explicação enquanto professora apresenta o Scratch na TV", caption: "Aluna acompanhando a explicação da professora", category: "aula" },
+          { src: ss2502Aula8.url, alt: "Professora apontando para a TV com blocos do Scratch enquanto turma observa", caption: "Professora conduzindo a aula com a turma", category: "aula" },
+          { src: ss2502Aula9.url, alt: "Duas alunas sorridentes lado a lado com seus projetos abertos no Scratch", caption: "Alunas apresentando seus projetos no Scratch", category: "aula" },
+          { src: ss2502Aula10.url, alt: "Três alunas sorridentes mostrando os projetos do Scratch nos notebooks", caption: "Alunas exibindo com orgulho seus projetos", category: "aula" },
         ],
       },
       {
