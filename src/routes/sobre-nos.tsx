@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { team } from "@/data/team";
 import { User, PlayCircle, Maximize2 } from "lucide-react";
-import { AboutImpact } from "@/components/AboutImpact";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 
 
@@ -94,10 +93,6 @@ function SobreNosPage() {
           </p>
         </div>
       </section>
-
-      {/* Impacto */}
-      <AboutImpact />
-
 
       {/* Organização */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
