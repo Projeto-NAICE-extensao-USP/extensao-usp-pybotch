@@ -147,6 +147,16 @@ import ss2502Aula7 from "@/assets/projects/super-scratch-25-02/aula-7.jpg.asset.
 import ss2502Aula8 from "@/assets/projects/super-scratch-25-02/aula-8.jpg.asset.json";
 import ss2502Aula9 from "@/assets/projects/super-scratch-25-02/aula-9.jpg.asset.json";
 import ss2502Aula10 from "@/assets/projects/super-scratch-25-02/aula-10.jpg.asset.json";
+import ss2502Aula11 from "@/assets/projects/super-scratch-25-02/aula-11.jpg.asset.json";
+import ss2502Aula12 from "@/assets/projects/super-scratch-25-02/aula-12.jpg.asset.json";
+import ss2502Aula13 from "@/assets/projects/super-scratch-25-02/aula-13.jpg.asset.json";
+import ss2502Aula14 from "@/assets/projects/super-scratch-25-02/aula-14.jpg.asset.json";
+import ss2502Aula15 from "@/assets/projects/super-scratch-25-02/aula-15.jpg.asset.json";
+import ss2502Aula16 from "@/assets/projects/super-scratch-25-02/aula-16.jpg.asset.json";
+import ss2502Aula17 from "@/assets/projects/super-scratch-25-02/aula-17.jpg.asset.json";
+import ss2502Aula18 from "@/assets/projects/super-scratch-25-02/aula-18.jpg.asset.json";
+import ss2502Aula19 from "@/assets/projects/super-scratch-25-02/aula-19.jpg.asset.json";
+import ss2502Aula20 from "@/assets/projects/super-scratch-25-02/aula-20.jpg.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
 
@@ -512,6 +522,16 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: ss2502Aula8.url, alt: "Professora apontando para a TV com blocos do Scratch enquanto turma observa", caption: "Professora conduzindo a aula com a turma", category: "aula" },
           { src: ss2502Aula9.url, alt: "Duas alunas sorridentes lado a lado com seus projetos abertos no Scratch", caption: "Alunas apresentando seus projetos no Scratch", category: "aula" },
           { src: ss2502Aula10.url, alt: "Três alunas sorridentes mostrando os projetos do Scratch nos notebooks", caption: "Alunas exibindo com orgulho seus projetos", category: "aula" },
+          { src: ss2502Aula11.url, alt: "Vista ampla da sala com muitos alunos programando em notebooks", caption: "Turma completa em atividade no laboratório", category: "aula" },
+          { src: ss2502Aula12.url, alt: "Aluna desenhando uma casa em papel com transferidor ao lado do notebook", caption: "Planejamento em papel do projeto no Scratch", category: "aula" },
+          { src: ss2502Aula13.url, alt: "Alunas escrevendo passo a passo e desenhando personagem para o Scratch", caption: "Roteiro e esboço do personagem", category: "aula" },
+          { src: ss2502Aula14.url, alt: "Alunas rascunhando personagem robô e anotando instruções no caderno", caption: "Criação de personagem e instruções", category: "aula" },
+          { src: ss2502Aula15.url, alt: "Folha 'Passo a Passo' com instruções e desenho de personagem gato ao lado", caption: "Roteiro passo a passo do projeto", category: "aula" },
+          { src: ss2502Aula16.url, alt: "Aluno escrevendo instruções ao lado de desenho de personagem", caption: "Aluno detalhando as instruções do projeto", category: "aula" },
+          { src: ss2502Aula17.url, alt: "Alunos sorrindo enquanto desenham personagens no papel durante a aula", caption: "Alunos criando personagens em equipe", category: "aula" },
+          { src: ss2502Aula18.url, alt: "Alunos usando régua para desenhar personagem geométrico e anotando ideias", caption: "Uso de régua no traçado do personagem", category: "aula" },
+          { src: ss2502Aula19.url, alt: "Aluno desenhando personagem em folha ao lado de roteiro escrito", caption: "Roteiro escrito e desenho do projeto", category: "aula" },
+          { src: ss2502Aula20.url, alt: "Alunos usando esquadro para desenhar cenário do projeto no papel", caption: "Traçado com esquadro para o cenário", category: "aula" },
         ],
       },
       {
