@@ -128,74 +128,74 @@ function SobreNosPage() {
             Mídia
           </span>
           <h2 className="mt-4 font-display text-3xl sm:text-4xl font-bold text-foreground">
-            Vídeos sobre o projeto
+            Conheça um pouco mais de nós
           </h2>
           <p className="mt-3 text-muted-foreground">
-            Reportagens, depoimentos e bastidores das nossas aulas.
+            Bastidores e momentos do projeto no Instagram.
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="space-y-6">
           {videos.map((v) => (
-            <div
-              key={v.title}
-              className="overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-soft)]"
-            >
-              <div className="relative bg-muted aspect-video overflow-hidden">
-                {v.url || v.embedUrl ? (
-                  <>
+            <Dialog key={v.title}>
+              <div className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-soft)]">
+                {/* Faixa horizontal minimizada: mostra o vídeo cortado como um banner */}
+                <div className="relative h-40 sm:h-56 w-full overflow-hidden bg-black">
+                  {v.embedUrl ? (
                     <iframe
-                      src={v.embedUrl ?? v.url}
+                      src={v.embedUrl}
                       title={v.title}
-                      className="absolute left-1/2 top-1/2 w-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-                      style={{ height: "316%" }}
+                      className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                      style={{ width: "100%", height: "500%" }}
                       loading="lazy"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center text-white/70">
+                      <PlayCircle className="h-10 w-10" />
+                    </div>
+                  )}
+                  {/* Overlay + botão expandir */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-black/60" />
+                  <div className="absolute inset-0 flex items-center justify-between px-6 sm:px-10">
+                    <div className="text-white">
+                      <h3 className="font-display text-xl sm:text-2xl font-semibold">{v.title}</h3>
+                      {v.description && (
+                        <p className="mt-1 text-sm text-white/85 max-w-xl">{v.description}</p>
+                      )}
+                    </div>
                     {v.embedUrl && (
-                      <Dialog>
-                        <DialogTrigger asChild>
-                          <button
-                            type="button"
-                            aria-label="Abrir vídeo em tamanho maior"
-                            className="absolute right-3 top-3 z-10 inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/60 text-white backdrop-blur transition hover:bg-black/80 hover:scale-105"
-                          >
-                            <Maximize2 className="h-4 w-4" />
-                          </button>
-                        </DialogTrigger>
-                        <DialogContent className="max-w-md p-0 overflow-hidden bg-black border-0">
-                          <DialogTitle className="sr-only">{v.title}</DialogTitle>
-                          <DialogDescription className="sr-only">
-                            {v.description ?? "Vídeo do projeto no Instagram"}
-                          </DialogDescription>
-                          <div className="relative aspect-[9/16] w-full">
-                            <iframe
-                              src={v.embedUrl}
-                              title={v.title}
-                              className="absolute inset-0 h-full w-full"
-                              loading="lazy"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowFullScreen
-                            />
-                          </div>
-                        </DialogContent>
-                      </Dialog>
+                      <DialogTrigger asChild>
+                        <button
+                          type="button"
+                          aria-label="Abrir vídeo em tamanho maior"
+                          className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/95 text-foreground shadow-lg transition hover:scale-110 hover:bg-white"
+                        >
+                          <Maximize2 className="h-5 w-5" />
+                        </button>
+                      </DialogTrigger>
                     )}
-                  </>
-                ) : (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground">
-                    <PlayCircle className="h-10 w-10 opacity-50" />
-                    <span className="mt-2 text-xs">Vídeo em breve</span>
                   </div>
-                )}
+                </div>
               </div>
-
-              <div className="p-5">
-                <h3 className="font-display text-lg font-semibold text-foreground">{v.title}</h3>
-                {v.description && (
-                  <p className="mt-1.5 text-sm text-muted-foreground">{v.description}</p>
-                )}
-              </div>
-            </div>
+              {v.embedUrl && (
+                <DialogContent className="max-w-md p-0 overflow-hidden bg-black border-0">
+                  <DialogTitle className="sr-only">{v.title}</DialogTitle>
+                  <DialogDescription className="sr-only">
+                    {v.description ?? "Vídeo do projeto no Instagram"}
+                  </DialogDescription>
+                  <div className="relative aspect-[9/16] w-full">
+                    <iframe
+                      src={v.embedUrl}
+                      title={v.title}
+                      className="absolute inset-0 h-full w-full"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                </DialogContent>
+              )}
+            </Dialog>
           ))}
         </div>
       </section>
