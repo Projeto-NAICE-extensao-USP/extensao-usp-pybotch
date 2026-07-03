@@ -157,6 +157,16 @@ import ss2502Aula17 from "@/assets/projects/super-scratch-25-02/aula-17.jpg.asse
 import ss2502Aula18 from "@/assets/projects/super-scratch-25-02/aula-18.jpg.asset.json";
 import ss2502Aula19 from "@/assets/projects/super-scratch-25-02/aula-19.jpg.asset.json";
 import ss2502Aula20 from "@/assets/projects/super-scratch-25-02/aula-20.jpg.asset.json";
+import ss2502Aula21 from "@/assets/projects/super-scratch-25-02/aula-21.jpg.asset.json";
+import ss2502Aula22 from "@/assets/projects/super-scratch-25-02/aula-22.jpg.asset.json";
+import ss2502Aula23 from "@/assets/projects/super-scratch-25-02/aula-23.jpg.asset.json";
+import ss2502Aula24 from "@/assets/projects/super-scratch-25-02/aula-24.jpg.asset.json";
+import ss2502Aula25 from "@/assets/projects/super-scratch-25-02/aula-25.jpg.asset.json";
+import ss2502Aula26 from "@/assets/projects/super-scratch-25-02/aula-26.jpg.asset.json";
+import ss2502Aula27 from "@/assets/projects/super-scratch-25-02/aula-27.jpg.asset.json";
+import ss2502Aula28 from "@/assets/projects/super-scratch-25-02/aula-28.jpg.asset.json";
+import ss2502Aula29 from "@/assets/projects/super-scratch-25-02/aula-29.jpg.asset.json";
+import ss2502Aula30 from "@/assets/projects/super-scratch-25-02/aula-30.jpg.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
 
@@ -532,6 +542,16 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: ss2502Aula18.url, alt: "Alunos usando régua para desenhar personagem geométrico e anotando ideias", caption: "Uso de régua no traçado do personagem", category: "aula" },
           { src: ss2502Aula19.url, alt: "Aluno desenhando personagem em folha ao lado de roteiro escrito", caption: "Roteiro escrito e desenho do projeto", category: "aula" },
           { src: ss2502Aula20.url, alt: "Alunos usando esquadro para desenhar cenário do projeto no papel", caption: "Traçado com esquadro para o cenário", category: "aula" },
+          { src: ss2502Aula21.url, alt: "Três alunas sorridentes mostrando desenhos de personagens em folhas", caption: "Alunas apresentando seus personagens", category: "aula" },
+          { src: ss2502Aula22.url, alt: "Dois alunos exibindo desenhos de personagens robôs feitos com formas geométricas", caption: "Personagens robôs criados com formas geométricas", category: "aula" },
+          { src: ss2502Aula23.url, alt: "Quatro alunas mostrando desenhos de cenários com casa e sol", caption: "Cenários planejados no papel", category: "aula" },
+          { src: ss2502Aula24.url, alt: "Alunos exibindo roteiro escrito e desenhos de cenários para o projeto", caption: "Roteiros e cenários do projeto", category: "aula" },
+          { src: ss2502Aula25.url, alt: "Três alunos mostrando desenhos de formas geométricas e roteiro do projeto", caption: "Estudo de formas e roteiro", category: "aula" },
+          { src: ss2502Aula26.url, alt: "Quatro alunos apresentando desenhos de cenários com geladeira e sofá", caption: "Cenários de ambientes desenhados pelos alunos", category: "aula" },
+          { src: ss2502Aula27.url, alt: "Alunos exibindo roteiro e desenho de personagem gato para o Scratch", caption: "Personagem gato e seu roteiro", category: "aula" },
+          { src: ss2502Aula28.url, alt: "Quatro alunos com desenhos de personagens fofos criados para o projeto", caption: "Personagens criativos da turma", category: "aula" },
+          { src: ss2502Aula29.url, alt: "Alunos mostrando roteiros escritos e desenhos de casas para o cenário", caption: "Roteiros e cenários de casas", category: "aula" },
+          { src: ss2502Aula30.url, alt: "Quatro alunos exibindo desenhos coloridos de casas com jardim", caption: "Cenários coloridos finalizados", category: "aula" },
         ],
       },
       {
