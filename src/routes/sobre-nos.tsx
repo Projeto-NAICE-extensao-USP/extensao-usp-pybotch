@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { team } from "@/data/team";
 import { User, PlayCircle, Maximize2 } from "lucide-react";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { AboutImpact } from "@/components/AboutImpact";
 
 
 export const Route = createFileRoute("/sobre-nos")({
@@ -93,6 +94,17 @@ function SobreNosPage() {
           </p>
         </div>
       </section>
+
+      {/* Impacto (reaproveita componente) sobre fundo colorido */}
+      <div
+        className="border-b border-border"
+        style={{
+          background:
+            "linear-gradient(135deg, var(--equipe, oklch(0.35 0.08 230)) 0%, oklch(0.32 0.06 230) 60%, oklch(0.26 0.05 250) 100%)",
+        }}
+      >
+        <AboutImpact />
+      </div>
 
       {/* Organização */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
