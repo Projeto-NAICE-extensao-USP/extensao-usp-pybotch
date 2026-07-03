@@ -43,6 +43,16 @@ import sm2601Visita37 from "@/assets/projects/scratchmat-26-01/visita-37.jpg.ass
 import sm2601Visita38 from "@/assets/projects/scratchmat-26-01/visita-38.jpg.asset.json";
 import sm2601Visita39 from "@/assets/projects/scratchmat-26-01/visita-39.jpg.asset.json";
 import sm2601Visita40 from "@/assets/projects/scratchmat-26-01/visita-40.jpg.asset.json";
+import sm2601Visita41 from "@/assets/projects/scratchmat-26-01/visita-41.jpg.asset.json";
+import sm2601Visita42 from "@/assets/projects/scratchmat-26-01/visita-42.jpg.asset.json";
+import sm2601Visita43 from "@/assets/projects/scratchmat-26-01/visita-43.jpg.asset.json";
+import sm2601Visita44 from "@/assets/projects/scratchmat-26-01/visita-44.jpg.asset.json";
+import sm2601Visita45 from "@/assets/projects/scratchmat-26-01/visita-45.jpg.asset.json";
+import sm2601Visita46 from "@/assets/projects/scratchmat-26-01/visita-46.jpg.asset.json";
+import sm2601Visita47 from "@/assets/projects/scratchmat-26-01/visita-47.jpg.asset.json";
+import sm2601Visita48 from "@/assets/projects/scratchmat-26-01/visita-48.jpg.asset.json";
+import sm2601Visita49 from "@/assets/projects/scratchmat-26-01/visita-49.jpg.asset.json";
+import sm2601Visita50 from "@/assets/projects/scratchmat-26-01/visita-50.jpg.asset.json";
 import convite1 from "@/assets/projects/super-scratch-24-01/convite-1.jpg.asset.json";
 import convite2 from "@/assets/projects/super-scratch-24-01/convite-2.jpg.asset.json";
 import convite3 from "@/assets/projects/super-scratch-24-01/convite-3.jpg.asset.json";
