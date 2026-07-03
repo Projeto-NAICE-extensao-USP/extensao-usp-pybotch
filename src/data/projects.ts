@@ -514,7 +514,6 @@ export const disciplines: Record<DisciplineId, Discipline> = {
           { src: ss2502Aula10.url, alt: "Três alunas sorridentes mostrando os projetos do Scratch nos notebooks", caption: "Alunas exibindo com orgulho seus projetos", category: "aula" },
         ],
       },
-      },
       {
         id: "sc-scratchmat-26-01",
         title: "ScratchMat (26-01)",
