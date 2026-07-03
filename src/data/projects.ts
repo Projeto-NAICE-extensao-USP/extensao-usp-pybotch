@@ -167,6 +167,15 @@ import ss2502Aula27 from "@/assets/projects/super-scratch-25-02/aula-27.jpg.asse
 import ss2502Aula28 from "@/assets/projects/super-scratch-25-02/aula-28.jpg.asset.json";
 import ss2502Aula29 from "@/assets/projects/super-scratch-25-02/aula-29.jpg.asset.json";
 import ss2502Aula30 from "@/assets/projects/super-scratch-25-02/aula-30.jpg.asset.json";
+import ss2502Culm2 from "@/assets/projects/super-scratch-25-02/culminancia-2.jpg.asset.json";
+import ss2502Culm3 from "@/assets/projects/super-scratch-25-02/culminancia-3.jpg.asset.json";
+import ss2502Culm4 from "@/assets/projects/super-scratch-25-02/culminancia-4.jpg.asset.json";
+import ss2502Culm5 from "@/assets/projects/super-scratch-25-02/culminancia-5.jpg.asset.json";
+import ss2502Culm6 from "@/assets/projects/super-scratch-25-02/culminancia-6.jpg.asset.json";
+import ss2502Culm7 from "@/assets/projects/super-scratch-25-02/culminancia-7.jpg.asset.json";
+import ss2502Culm8 from "@/assets/projects/super-scratch-25-02/culminancia-8.jpg.asset.json";
+import ss2502Culm9 from "@/assets/projects/super-scratch-25-02/culminancia-9.jpg.asset.json";
+import ss2502Culm10 from "@/assets/projects/super-scratch-25-02/culminancia-10.jpg.asset.json";
 
 export type DisciplineId = "python" | "scratch" | "robotica";
 
