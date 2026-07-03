@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { team } from "@/data/team";
 import { User, PlayCircle, Maximize2 } from "lucide-react";
-import { AboutImpact } from "@/components/AboutImpact";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 
 
