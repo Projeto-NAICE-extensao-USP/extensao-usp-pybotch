@@ -4,7 +4,6 @@ import heroImg from "@/assets/hero-students.jpg";
 import pythonImg from "@/assets/python-cover.jpg";
 import scratchImg from "@/assets/scratch-cover.jpg";
 import roboticaImg from "@/assets/robotica-cover.jpg";
-import { AboutImpact } from "@/components/AboutImpact";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -186,17 +185,6 @@ function Home() {
           </div>
         </div>
       </section>
-
-      {/* Impacto (reaproveita componente) sobre fundo colorido */}
-      <div
-        className="border-b border-border"
-        style={{
-          background:
-            "linear-gradient(135deg, var(--equipe, oklch(0.35 0.08 230)) 0%, oklch(0.32 0.06 230) 60%, oklch(0.26 0.05 250) 100%)",
-        }}
-      >
-        <AboutImpact />
-      </div>
 
       {/* Disciplinas */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
