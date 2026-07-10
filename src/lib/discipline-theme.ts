@@ -1,7 +1,5 @@
-import type { DisciplineId } from "@/data/projects";
-
 export const disciplineTheme: Record<
-  DisciplineId,
+  string,
   {
     bg: string;
     text: string;
@@ -38,5 +36,14 @@ export const disciplineTheme: Record<
     chip: "bg-scratch-soft text-scratch-foreground border border-scratch/20",
     button: "bg-scratch text-scratch-foreground hover:opacity-90",
     ring: "ring-scratch/40",
+  },
+  clubes: {
+    bg: "bg-clubes",
+    text: "text-clubes",
+    soft: "bg-clubes-soft",
+    border: "border-clubes/30",
+    chip: "bg-clubes-soft text-clubes border border-clubes/20",
+    button: "bg-clubes text-clubes-foreground hover:opacity-90",
+    ring: "ring-clubes/40",
   },
 };

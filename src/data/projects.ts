@@ -271,7 +271,7 @@ export interface ProjectVideo {
 }
 
 export interface Discipline {
-  id: DisciplineId;
+  id: DisciplineId | string;
   name: string;
   tagline: string;
   description: string;
