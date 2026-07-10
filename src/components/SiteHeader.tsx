@@ -71,6 +71,7 @@ export function SiteHeader() {
             )}
           </div>
 
+          <NavLinkItem to="/clubes-de-estudo" label="Clubes de Estudo" />
           <NavLinkItem to="/escolas" label="Escolas" />
           <NavLinkItem to="/sobre-nos" label="Sobre nós" />
         </div>
@@ -94,6 +95,7 @@ export function SiteHeader() {
             {professoresLinks.map((l) => (
               <MobileLink key={l.to} to={l.to} label={l.label} onClick={() => setOpen(false)} />
             ))}
+            <MobileLink to="/clubes-de-estudo" label="Clubes de Estudo" onClick={() => setOpen(false)} />
             <MobileLink to="/escolas" label="Escolas" onClick={() => setOpen(false)} />
             <MobileLink to="/sobre-nos" label="Sobre nós" onClick={() => setOpen(false)} />
           </nav>
@@ -103,7 +105,7 @@ export function SiteHeader() {
   );
 }
 
-function NavLinkItem({ to, label, exact }: { to: "/" | "/escolas" | "/sobre-nos"; label: string; exact?: boolean }) {
+function NavLinkItem({ to, label, exact }: { to: "/" | "/escolas" | "/sobre-nos" | "/clubes-de-estudo"; label: string; exact?: boolean }) {
   return (
     <Link
       to={to}
@@ -122,7 +124,7 @@ function MobileLink({
   exact,
   onClick,
 }: {
-  to: "/" | "/escolas" | "/sobre-nos" | "/python" | "/scratch" | "/robotica";
+  to: "/" | "/escolas" | "/sobre-nos" | "/python" | "/scratch" | "/robotica" | "/clubes-de-estudo";
   label: string;
   exact?: boolean;
   onClick: () => void;

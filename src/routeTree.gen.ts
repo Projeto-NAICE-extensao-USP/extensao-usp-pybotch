@@ -14,6 +14,7 @@ import { Route as ScratchRouteImport } from './routes/scratch'
 import { Route as RoboticaRouteImport } from './routes/robotica'
 import { Route as PythonRouteImport } from './routes/python'
 import { Route as EscolasRouteImport } from './routes/escolas'
+import { Route as ClubesDeEstudoRouteImport } from './routes/clubes-de-estudo'
 import { Route as IndexRouteImport } from './routes/index'
 
 const SobreNosRoute = SobreNosRouteImport.update({
@@ -41,6 +42,11 @@ const EscolasRoute = EscolasRouteImport.update({
   path: '/escolas',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ClubesDeEstudoRoute = ClubesDeEstudoRouteImport.update({
+  id: '/clubes-de-estudo',
+  path: '/clubes-de-estudo',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -49,6 +55,7 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/clubes-de-estudo': typeof ClubesDeEstudoRoute
   '/escolas': typeof EscolasRoute
   '/python': typeof PythonRoute
   '/robotica': typeof RoboticaRoute
@@ -57,6 +64,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/clubes-de-estudo': typeof ClubesDeEstudoRoute
   '/escolas': typeof EscolasRoute
   '/python': typeof PythonRoute
   '/robotica': typeof RoboticaRoute
@@ -66,6 +74,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/clubes-de-estudo': typeof ClubesDeEstudoRoute
   '/escolas': typeof EscolasRoute
   '/python': typeof PythonRoute
   '/robotica': typeof RoboticaRoute
@@ -76,16 +85,25 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/clubes-de-estudo'
     | '/escolas'
     | '/python'
     | '/robotica'
     | '/scratch'
     | '/sobre-nos'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/escolas' | '/python' | '/robotica' | '/scratch' | '/sobre-nos'
+  to:
+    | '/'
+    | '/clubes-de-estudo'
+    | '/escolas'
+    | '/python'
+    | '/robotica'
+    | '/scratch'
+    | '/sobre-nos'
   id:
     | '__root__'
     | '/'
+    | '/clubes-de-estudo'
     | '/escolas'
     | '/python'
     | '/robotica'
@@ -95,6 +113,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ClubesDeEstudoRoute: typeof ClubesDeEstudoRoute
   EscolasRoute: typeof EscolasRoute
   PythonRoute: typeof PythonRoute
   RoboticaRoute: typeof RoboticaRoute
@@ -139,6 +158,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EscolasRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/clubes-de-estudo': {
+      id: '/clubes-de-estudo'
+      path: '/clubes-de-estudo'
+      fullPath: '/clubes-de-estudo'
+      preLoaderRoute: typeof ClubesDeEstudoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -151,6 +177,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ClubesDeEstudoRoute: ClubesDeEstudoRoute,
   EscolasRoute: EscolasRoute,
   PythonRoute: PythonRoute,
   RoboticaRoute: RoboticaRoute,
