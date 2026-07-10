@@ -1,7 +1,5 @@
-import type { DisciplineId } from "@/data/projects";
-
 export const disciplineTheme: Record<
-  DisciplineId,
+  string,
   {
     bg: string;
     text: string;
