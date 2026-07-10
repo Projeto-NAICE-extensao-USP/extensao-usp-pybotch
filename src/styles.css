@@ -41,6 +41,11 @@
   --color-scratch-foreground: var(--scratch-foreground);
   --color-scratch-soft: var(--scratch-soft);
 
+  --color-clubes: var(--clubes);
+  --color-clubes-foreground: var(--clubes-foreground);
+  --color-clubes-soft: var(--clubes-soft);
+
+
   --font-sans:
     "Karla", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-display: "Cormorant Garamond", "Cormorant", ui-serif, Georgia, serif;
