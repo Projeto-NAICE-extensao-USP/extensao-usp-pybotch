@@ -95,6 +95,11 @@
   --scratch-foreground: oklch(0.99 0.005 45);
   --scratch-soft: oklch(0.86 0.15 55);
 
+  /* Clubes de Estudo — vermelho vibrante */
+  --clubes: oklch(0.52 0.22 25);
+  --clubes-foreground: oklch(0.99 0.005 25);
+  --clubes-soft: oklch(0.88 0.10 25);
+
   /* Equipe — tom sóbrio (slate/teal escuro) */
   --equipe: oklch(0.42 0.05 220);
   --equipe-soft: oklch(0.95 0.02 220);
