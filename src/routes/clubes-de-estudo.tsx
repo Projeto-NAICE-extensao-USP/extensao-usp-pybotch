@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { DisciplinePage } from "@/components/DisciplinePage";
 import { clubes } from "@/data/clubes";
-import cover from "@/assets/robotica-cover.jpg";
+import coverAsset from "@/assets/clubes-cover.jpg.asset.json";
+
+const cover = coverAsset.url;
 
 export const Route = createFileRoute("/clubes-de-estudo")({
   head: () => ({
