@@ -13,9 +13,13 @@ import { Route as SobreNosRouteImport } from './routes/sobre-nos'
 import { Route as ScratchRouteImport } from './routes/scratch'
 import { Route as RoboticaRouteImport } from './routes/robotica'
 import { Route as PythonRouteImport } from './routes/python'
+import { Route as McpRouteImport } from './routes/mcp'
 import { Route as EscolasRouteImport } from './routes/escolas'
 import { Route as ClubesDeEstudoRouteImport } from './routes/clubes-de-estudo'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
+import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
+import { Route as Char91DotmcpChar93InvokeToolToolRouteImport } from './routes/[.mcp]/invoke-tool/$tool'
 
 const SobreNosRoute = SobreNosRouteImport.update({
   id: '/sobre-nos',
@@ -37,6 +41,11 @@ const PythonRoute = PythonRouteImport.update({
   path: '/python',
   getParentRoute: () => rootRouteImport,
 } as any)
+const McpRoute = McpRouteImport.update({
+  id: '/mcp',
+  path: '/mcp',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EscolasRoute = EscolasRouteImport.update({
   id: '/escolas',
   path: '/escolas',
@@ -52,34 +61,64 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Char91DotwellKnownChar93OauthProtectedResourceRoute =
+  Char91DotwellKnownChar93OauthProtectedResourceRouteImport.update({
+    id: '/.well-known/oauth-protected-resource',
+    path: '/.well-known/oauth-protected-resource',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Char91DotmcpChar93ListToolsRoute =
+  Char91DotmcpChar93ListToolsRouteImport.update({
+    id: '/.mcp/list-tools',
+    path: '/.mcp/list-tools',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Char91DotmcpChar93InvokeToolToolRoute =
+  Char91DotmcpChar93InvokeToolToolRouteImport.update({
+    id: '/.mcp/invoke-tool/$tool',
+    path: '/.mcp/invoke-tool/$tool',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/clubes-de-estudo': typeof ClubesDeEstudoRoute
   '/escolas': typeof EscolasRoute
+  '/mcp': typeof McpRoute
   '/python': typeof PythonRoute
   '/robotica': typeof RoboticaRoute
   '/scratch': typeof ScratchRoute
   '/sobre-nos': typeof SobreNosRoute
+  '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/clubes-de-estudo': typeof ClubesDeEstudoRoute
   '/escolas': typeof EscolasRoute
+  '/mcp': typeof McpRoute
   '/python': typeof PythonRoute
   '/robotica': typeof RoboticaRoute
   '/scratch': typeof ScratchRoute
   '/sobre-nos': typeof SobreNosRoute
+  '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/clubes-de-estudo': typeof ClubesDeEstudoRoute
   '/escolas': typeof EscolasRoute
+  '/mcp': typeof McpRoute
   '/python': typeof PythonRoute
   '/robotica': typeof RoboticaRoute
   '/scratch': typeof ScratchRoute
   '/sobre-nos': typeof SobreNosRoute
+  '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -87,38 +126,54 @@ export interface FileRouteTypes {
     | '/'
     | '/clubes-de-estudo'
     | '/escolas'
+    | '/mcp'
     | '/python'
     | '/robotica'
     | '/scratch'
     | '/sobre-nos'
+    | '/.mcp/list-tools'
+    | '/.well-known/oauth-protected-resource'
+    | '/.mcp/invoke-tool/$tool'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/clubes-de-estudo'
     | '/escolas'
+    | '/mcp'
     | '/python'
     | '/robotica'
     | '/scratch'
     | '/sobre-nos'
+    | '/.mcp/list-tools'
+    | '/.well-known/oauth-protected-resource'
+    | '/.mcp/invoke-tool/$tool'
   id:
     | '__root__'
     | '/'
     | '/clubes-de-estudo'
     | '/escolas'
+    | '/mcp'
     | '/python'
     | '/robotica'
     | '/scratch'
     | '/sobre-nos'
+    | '/.mcp/list-tools'
+    | '/.well-known/oauth-protected-resource'
+    | '/.mcp/invoke-tool/$tool'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ClubesDeEstudoRoute: typeof ClubesDeEstudoRoute
   EscolasRoute: typeof EscolasRoute
+  McpRoute: typeof McpRoute
   PythonRoute: typeof PythonRoute
   RoboticaRoute: typeof RoboticaRoute
   ScratchRoute: typeof ScratchRoute
   SobreNosRoute: typeof SobreNosRoute
+  Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
+  Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  Char91DotmcpChar93InvokeToolToolRoute: typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -151,6 +206,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PythonRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/mcp': {
+      id: '/mcp'
+      path: '/mcp'
+      fullPath: '/mcp'
+      preLoaderRoute: typeof McpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/escolas': {
       id: '/escolas'
       path: '/escolas'
@@ -172,6 +234,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/.well-known/oauth-protected-resource': {
+      id: '/.well-known/oauth-protected-resource'
+      path: '/.well-known/oauth-protected-resource'
+      fullPath: '/.well-known/oauth-protected-resource'
+      preLoaderRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.mcp/list-tools': {
+      id: '/.mcp/list-tools'
+      path: '/.mcp/list-tools'
+      fullPath: '/.mcp/list-tools'
+      preLoaderRoute: typeof Char91DotmcpChar93ListToolsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.mcp/invoke-tool/$tool': {
+      id: '/.mcp/invoke-tool/$tool'
+      path: '/.mcp/invoke-tool/$tool'
+      fullPath: '/.mcp/invoke-tool/$tool'
+      preLoaderRoute: typeof Char91DotmcpChar93InvokeToolToolRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -179,10 +262,15 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ClubesDeEstudoRoute: ClubesDeEstudoRoute,
   EscolasRoute: EscolasRoute,
+  McpRoute: McpRoute,
   PythonRoute: PythonRoute,
   RoboticaRoute: RoboticaRoute,
   ScratchRoute: ScratchRoute,
   SobreNosRoute: SobreNosRoute,
+  Char91DotmcpChar93ListToolsRoute: Char91DotmcpChar93ListToolsRoute,
+  Char91DotwellKnownChar93OauthProtectedResourceRoute:
+    Char91DotwellKnownChar93OauthProtectedResourceRoute,
+  Char91DotmcpChar93InvokeToolToolRoute: Char91DotmcpChar93InvokeToolToolRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
