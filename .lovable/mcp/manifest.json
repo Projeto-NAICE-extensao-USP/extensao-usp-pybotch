@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "sdk_version": "0.23.0",
+  "path": "/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "extensao-usp-mcp",
+      "version": "0.1.0",
+      "title": "Extensão USP · ICMC"
+    },
+    "tools": [
+      {
+        "name": "list_disciplines",
+        "title": "Listar disciplinas e clubes",
+        "description": "Lista todas as disciplinas de ensino (Python, Scratch, Robótica) e o grupo de Clubes de Estudo do projeto de extensão USP/ICMC, com nome, chamada curta, descrição e quantidade de projetos.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_discipline",
+        "title": "Detalhes de uma disciplina/clube",
+        "description": "Retorna os projetos completos de uma disciplina (python, scratch, robotica) ou do grupo de clubes (clubes), com objetivos pedagógicos, nível, duração, equipe e materiais.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Identificador da disciplina: python, scratch, robotica ou clubes."
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_team",
+        "title": "Equipe do projeto",
+        "description": "Lista os membros da direção e coordenação do projeto de extensão USP/ICMC (nome, função e status atual/ex-integrante).",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
