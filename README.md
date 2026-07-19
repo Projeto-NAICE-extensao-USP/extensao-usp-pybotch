@@ -53,18 +53,17 @@ bun run dev        # abre em http://localhost:8080
 bun run build      # build de produção
 ```
 
-## Como as imagens funcionam (Lovable Assets)
+## Como as imagens funcionam
 
-Para manter o repositório leve, os arquivos binários (fotos, logos etc.)
-**não ficam no Git**. No lugar de cada imagem existe um arquivo
-`nome.jpg.asset.json` que aponta para a URL definitiva da imagem no CDN da
-Lovable:
+Todas as fotos ficam versionadas no próprio repositório em `public/assets/`
+(cerca de 46 MB, ~235 arquivos). Para cada imagem existe também um pequeno
+arquivo `nome.jpg.asset.json` ao lado, dentro de `src/assets/`, contendo o
+caminho público servido pelo site:
 
 ```json
 {
-  "asset_id": "abc-123",
-  "url": "/__l5e/assets-v1/abc-123/foto.jpg",
-  "content_type": "image/jpeg",
+  "url": "/assets/projects/python-25-02/aula-1.jpg",
+  "original_filename": "aula-1.jpg",
   ...
 }
 ```
@@ -76,26 +75,42 @@ import foto from "@/assets/projects/python-25-02/aula-1.jpg.asset.json";
 <img src={foto.url} alt="Aula" />
 ```
 
-As URLs são estáveis e sobrevivem a qualquer deploy.
+Como as imagens moram em `public/`, elas são servidas por qualquer host
+(Vercel, Netlify, Cloudflare Pages, servidor próprio…) sem depender de
+CDN externo.
 
-### Baixar todas as fotos localmente
+### (Opcional) Rebaixar as fotos
 
-Se você (ou alguém que clonou o repo) quer ter todas as fotos em disco
-— para arquivo, backup, ou para usar fora do site — rode:
-
-```bash
-node scripts/download-assets.mjs
-# → cria a pasta ./assets-export com todas as ~235 imagens
-```
-
-Passe um caminho para escolher outra pasta de saída:
+Se em algum momento o repositório perder as imagens, o script
+`scripts/download-assets.mjs` reconstrói `public/assets/` a partir das URLs
+originais listadas nos `.asset.json`:
 
 ```bash
-node scripts/download-assets.mjs ~/Desktop/fotos-projeto
+node scripts/download-assets.mjs public/assets
 ```
 
-O script não é usado pelo site em si; é só uma ferramenta para exportar as
-imagens quando alguém quiser.
+## Hospedando fora da Lovable
+
+O código é um projeto TanStack Start / Vite normal e roda em qualquer
+provedor. Recomendado: **Vercel** (deploy grátis, HTTPS automático).
+
+1. Crie conta em [vercel.com](https://vercel.com) usando **Login with GitHub**.
+2. **Add New… → Project** e escolha o repositório
+   `Projeto-NAICE-extensao-USP/extensao-usp-pybotch`.
+3. Deixe as configurações padrão detectadas (framework: Vite) e clique
+   **Deploy**. Em ~1 minuto o site fica no ar em uma URL `*.vercel.app`
+   — sem badge nem pop-up da Lovable.
+4. Cada push no GitHub gera um novo deploy automaticamente.
+
+Para conectar um domínio próprio (por exemplo `algum-nome.usp.br`):
+
+1. Na Vercel: **Project → Settings → Domains → Add**.
+2. Copie os registros DNS mostrados (CNAME ou A + TXT).
+3. Envie para a TI da USP pedindo para adicionar no DNS do domínio.
+4. HTTPS é emitido automaticamente após a propagação.
+
+Alternativa equivalente: **Netlify** ou **Cloudflare Pages** seguem o mesmo
+fluxo (login com GitHub → importar repo → deploy).
 
 ## Editando o conteúdo
 
