@@ -27,3 +27,35 @@ Certifique-se de ter o Node.js (v18+) e o `bun` (ou `npm`) instalados.
 1. Instale as dependências:
    ```bash
    bun install
+
+Inicie o servidor de desenvolvimento:
+
+Bash
+bun run dev
+
+Acesse http://localhost:8080.
+
+Para gerar a versão de produção:
+
+Bash
+bun run build
+
+
+Como Atualizar o Conteúdo
+Adicionar turmas ou fotos: Altere o arquivo src/data/projects.ts.
+
+Editar equipe: Altere src/data/team.ts.
+
+Mudar páginas (Home, Sobre nós): Edite os arquivos correspondentes em src/routes/.
+
+Hospedagem e Deploy
+O projeto está pronto para hospedagem na Vercel ou plataformas similares (Netlify, Cloudflare Pages).
+
+Importe este repositório no painel da Vercel.
+
+Mantenha o preset padrão do Vite.
+
+Para conectar um subdomínio oficial (*.usp.br), adicione o domínio nas configurações do projeto na Vercel e solicite o apontamento CNAME à equipe de TI da USP/ICMC.
+
+Licença
+Projeto de extensão universitária — ICMC / USP São Carlos. Uso livre para fins educacionais.
