@@ -29,17 +29,13 @@ Certifique-se de ter o Node.js (v18+) e o `bun` (ou `npm`) instalados.
    bun install
 
 Inicie o servidor de desenvolvimento:
-
-Bash
-bun run dev
+  bun run dev
 
 Acesse http://localhost:8080.
 
 Para gerar a versão de produção:
 
-Bash
 bun run build
-
 
 Como Atualizar o Conteúdo
 Adicionar turmas ou fotos: Altere o arquivo src/data/projects.ts.
